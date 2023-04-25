@@ -2,6 +2,7 @@
 title = "On Minimalism"
 description = "A bold lifestyle choice that goes beyond owning two t-shirts and sleeping on the blank floor."
 date = "2021-01-12"
+draft = true
 +++
 
 Some might find their way into this lifestyle by exessively decluttering their posessions, but Minimalism goes beyond. What it looks like varies from person to person, so it should be seen rather as a mindest.

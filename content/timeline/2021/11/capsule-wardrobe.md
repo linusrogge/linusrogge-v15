@@ -7,11 +7,11 @@ cover = "images/timeline/capsule-wardrobe.jpg"
 
 I used to love shopping at ARKET. Out of curiosity, I did some research on sustainable fashion brands and found out, that my beloved brand is one of the biggest fast fashion brands in the market. To be exact: It is a sub-brand of the giant H&M.
 
-The problem: Hennes & Mauritz GesmbH is the second largest fast-fashion brand in the world</b> – along with brands like <b>ZARA, C&A, COS, Uniqlo, or PULL&BEAR</b>. Supporting this machinery seemed quite unethical after discovering some facts:
+The problem: Hennes & Mauritz GesmbH is the second largest fast-fashion brand in the world – along with brands like ZARA, C&A, COS, Uniqlo, or PULL&BEAR. Supporting this machinery seemed quite unethical after discovering some facts:
 
-<b>Dying and underpaid employees</b> who are working <b>14-16 hours 7 days a week</b>, <b>child labour</b> of around <b>500.000 underaged</b>. An industry that is the <b>second largest pollutor of clean water</b> and extendedly <b>craves coal power</b> in developing countries.
+Dying and underpaid employees who are working 14-16 hours 7 days a week, child labour of around 500.000 underaged. An industry that is the second largest pollutor of clean water and extendedly craves coal power in developing countries.
 
-Lastly, all of these brands encourage <b>exessive overconsumption</b> with items being dumped within 35 days (on average) after they were bought. Sales, coupons, Black Friday – all of these are tools with one specific purpose: making customers buy more.
+Lastly, all of these brands encourage exessive overconsumption with items being dumped within 35 days (on average) after they were bought. Sales, coupons, Black Friday – all of these are tools with one specific purpose: making customers buy more.
 
 > After finding out about all of these facts I was disappointed and eventually saw the need for a change in my shopping behaviour. For the good of the people crafting the clothes and for the environment and our planet.
 

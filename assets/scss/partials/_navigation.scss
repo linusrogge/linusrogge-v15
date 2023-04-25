@@ -53,6 +53,10 @@
                 z-index: -1;
             }
         }
+
+        @include mobile {
+            .avatar { display: none;} 
+        }
     }
 
     @include mobile {

@@ -389,6 +389,9 @@ r-grid {
         object-fit: cover;
         position: relative;
         z-index: -1; }
+    @media screen and (max-width: 768px) {
+      .navigation .name .avatar {
+        display: none; } }
   @media screen and (max-width: 768px) {
     .navigation .name {
       grid-row: span 2; }

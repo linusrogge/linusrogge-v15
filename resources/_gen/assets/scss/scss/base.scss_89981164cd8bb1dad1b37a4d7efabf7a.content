@@ -121,7 +121,7 @@ r-grid {
 .main a:not(.button), .main .link {
   font-size: inherit;
   color: inherit;
-  text-underline-offset: 1px;
+  text-underline-offset: 2px;
   text-decoration: underline;
   white-space: nowrap;
   position: relative;
@@ -137,8 +137,9 @@ r-grid {
     border-radius: 4px;
     background: rgba(105, 105, 105, 0.15);
     opacity: 0;
-    transition: 150ms ease; }
+    transition: transform 150ms 0s ease, opacity 150ms 10ms ease; }
   .main a:not(.button):hover, .main .link:hover {
+    transition: transform 150ms 100ms ease, opacity 150ms 0s ease;
     text-decoration: none; }
     .main a:not(.button):hover::before, .main .link:hover::before {
       opacity: 1;
@@ -219,31 +220,32 @@ r-grid {
   display: flex;
   flex-direction: column;
   list-style: none; }
-  .main ul.--Cols-1, .main ol.--Cols-1 {
-    display: block;
-    column-count: 1; }
-    .main ul.--Cols-1 li, .main ol.--Cols-1 li {
-      break-inside: avoid; }
-  .main ul.--Cols-2, .main ol.--Cols-2 {
-    display: block;
-    column-count: 2; }
-    .main ul.--Cols-2 li, .main ol.--Cols-2 li {
-      break-inside: avoid; }
-  .main ul.--Cols-3, .main ol.--Cols-3 {
-    display: block;
-    column-count: 3; }
-    .main ul.--Cols-3 li, .main ol.--Cols-3 li {
-      break-inside: avoid; }
-  .main ul.--Cols-4, .main ol.--Cols-4 {
-    display: block;
-    column-count: 4; }
-    .main ul.--Cols-4 li, .main ol.--Cols-4 li {
-      break-inside: avoid; }
-  .main ul.--Cols-5, .main ol.--Cols-5 {
-    display: block;
-    column-count: 5; }
-    .main ul.--Cols-5 li, .main ol.--Cols-5 li {
-      break-inside: avoid; }
+  @media screen and (min-width: 768px) {
+    .main ul.--Cols-1, .main ol.--Cols-1 {
+      display: block;
+      column-count: 1; }
+      .main ul.--Cols-1 li, .main ol.--Cols-1 li {
+        break-inside: avoid; }
+    .main ul.--Cols-2, .main ol.--Cols-2 {
+      display: block;
+      column-count: 2; }
+      .main ul.--Cols-2 li, .main ol.--Cols-2 li {
+        break-inside: avoid; }
+    .main ul.--Cols-3, .main ol.--Cols-3 {
+      display: block;
+      column-count: 3; }
+      .main ul.--Cols-3 li, .main ol.--Cols-3 li {
+        break-inside: avoid; }
+    .main ul.--Cols-4, .main ol.--Cols-4 {
+      display: block;
+      column-count: 4; }
+      .main ul.--Cols-4 li, .main ol.--Cols-4 li {
+        break-inside: avoid; }
+    .main ul.--Cols-5, .main ol.--Cols-5 {
+      display: block;
+      column-count: 5; }
+      .main ul.--Cols-5 li, .main ol.--Cols-5 li {
+        break-inside: avoid; } }
   .main ul li, .main ol li {
     font-size: 1rem;
     line-height: 1.5;
@@ -424,6 +426,9 @@ main.--timeline .timeline__item {
       main.--timeline .timeline__item::before {
         left: 1rem;
         width: calc(100% - 2rem); } }
+  main.--timeline .timeline__item__date date {
+    position: sticky;
+    top: 128px; }
   main.--timeline .timeline__item__description {
     margin-bottom: 2rem; }
   main.--timeline .timeline__item__cover {
@@ -431,11 +436,17 @@ main.--timeline .timeline__item {
     margin-bottom: 2rem; }
     main.--timeline .timeline__item__cover + *:not(em) {
       margin-top: 0; }
+  main.--timeline .timeline__item p + blockquote {
+    margin-top: 2rem; }
+  main.--timeline .timeline__item hr {
+    height: 48px; }
   main.--timeline .timeline__item blockquote {
     transform: translate(0);
     margin: 0;
     border-left: 2px solid var(--color-border);
     padding-left: 1rem; }
+    main.--timeline .timeline__item blockquote + p {
+      margin-top: 2rem; }
     main.--timeline .timeline__item blockquote p {
       font-size: 1rem;
       line-height: 1.5;

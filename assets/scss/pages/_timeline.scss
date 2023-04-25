@@ -24,6 +24,13 @@ main.--timeline {
                 }
             }
 
+            &__date {
+                date {
+                    position: sticky;
+                    top: 128px;
+                }
+            }
+
             &__description {
                 margin-bottom: $spacing-32;
             }
@@ -35,11 +42,23 @@ main.--timeline {
                 & + *:not(em) { margin-top: 0; }
             }
 
+            p {
+                & + blockquote { margin-top: $spacing-32; }
+            }
+
+            hr {
+                height: 48px;
+            }
+
             blockquote {
                 transform: translate(0);
                 margin: 0;
                 border-left: 2px solid var(--color-border);
                 padding-left: $spacing-16;
+
+                & + p {
+                    margin-top: $spacing-32;
+                }
 
                 p { 
                     @include Paragraph;

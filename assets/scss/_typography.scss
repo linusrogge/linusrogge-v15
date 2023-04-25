@@ -20,7 +20,7 @@
 @mixin Link($hover: default) {
     font-size: inherit;
     color: inherit;
-    text-underline-offset: 1px;
+    text-underline-offset: 2px;
     text-decoration: underline;
 
     @if $hover == default {
@@ -41,10 +41,11 @@
             border-radius: 4px;
             background: rgba($color-grey, 0.15);
             opacity: 0;
-            transition: 150ms ease;
+            transition: transform 150ms 0s ease, opacity 150ms 10ms ease;
         }
-
+        
         &:hover { 
+            transition: transform 150ms 100ms ease, opacity 150ms 0s ease;
             text-decoration: none;
 
             &::before { 
@@ -155,12 +156,14 @@
         flex-direction: column;
         list-style: none;
 
-        @for $i from 1 through 5 {
-            &.--Cols-#{$i} { 
-                display: block;
-                column-count: $i; 
+        @include mobile(min) {
+            @for $i from 1 through 5 {
+                &.--Cols-#{$i} { 
+                    display: block;
+                    column-count: $i; 
 
-                li { break-inside: avoid; }
+                    li { break-inside: avoid; }
+                }
             }
         }
 

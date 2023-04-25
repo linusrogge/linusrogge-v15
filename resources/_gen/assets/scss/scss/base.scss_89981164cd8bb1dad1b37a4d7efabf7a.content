@@ -409,6 +409,9 @@ main.--timeline .timeline__item {
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 5rem; }
+  @media screen and (max-width: 768px) {
+    main.--timeline .timeline__item {
+      gap: 1rem; } }
   main.--timeline .timeline__item::before {
     content: '';
     position: absolute;
@@ -417,6 +420,10 @@ main.--timeline .timeline__item {
     height: 1px;
     width: calc(100% - 4rem);
     background: var(--color-border); }
+    @media screen and (max-width: 768px) {
+      main.--timeline .timeline__item::before {
+        left: 1rem;
+        width: calc(100% - 2rem); } }
   main.--timeline .timeline__item__description {
     margin-bottom: 2rem; }
   main.--timeline .timeline__item__cover {

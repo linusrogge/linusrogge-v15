@@ -5,6 +5,10 @@ main.--timeline {
             padding-top: $spacing-24;
             padding-bottom: $spacing-80;
 
+            @include mobile {
+                gap: $spacing-16;
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -13,6 +17,11 @@ main.--timeline {
                 height: 1px;
                 width: calc(100% - #{$spacing-64});
                 background: var(--color-border);
+                
+                @include mobile {
+                    left: $spacing-16;
+                    width: calc(100% - #{$spacing-32});
+                }
             }
 
             &__description {

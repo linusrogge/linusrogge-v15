@@ -26,6 +26,7 @@ A new experience which needed a lot of discipline in the beginning. For now, I a
 > I will focus on buying essentials that fit together in almost every combination. This will reduce the number of decisions I have to make, but also lay more weight on the quality and longlivability of my garments. 
 
 I am planning for my capsule wardrobe to look something like this:
+
 - 4 black trousers, 2 beige trousers, 1 blue jeans
 - 1 non-leather belt
 - 6 black sweatshirts, 3 grey sweatshirts, 2 beige sweatshirts

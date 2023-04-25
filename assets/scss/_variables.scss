@@ -28,10 +28,11 @@ $spacing-128: 8rem;
 $spacing-160: 10rem;
 
 
-$color-black: #010005;
+$color-foreground: #010005;
 $color-grey: #696969;
 $color-border: #E6E6E6;
 $color-red: #F30B0B;
+$color-background: #f7f7f7;
 $color-white: #f7f7f7;
 
 $radius-outer: 12px;
@@ -40,11 +41,19 @@ $radius-inner: $radius-outer / 2;
 :root {
     --type-sans: #{$type-sans};
 
-    --color-black: #{$color-black};
+    --color-foreground: #{$color-foreground};
     --color-grey: #{$color-grey};
     --color-red: #{$color-red};
-    --color-white: #{$color-white};
+    --color-background: #{$color-background};
     --color-border: #{$color-border};
+    --color-white: #{$color-white};
+    
+    @include dark {
+        --color-foreground: #f7f7f7;
+        --color-background: #010101;
+        --color-grey: #808080;
+        --color-border: #222222;
+    }
 
     --radius-outer: #{$radius-outer};
     --radius-inner: #{$radius-inner};

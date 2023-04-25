@@ -1,0 +1,43 @@
+{{ define "main" }}
+<r-grid class="Header" columns="12">
+    <r-cell span-s="row" span="4-10" span-l="4+6" class="Title" data-emergence>
+        <h1>{{ .Title }}</h1>
+    </r-cell>
+    <r-cell span-s="row" span="4-10" span-l="4+5" class="Intro" data-emergence>
+        {{ if not .Params.Intro }}
+        {{ with .Description }}<p class="--Primary">{{ . }}</p>{{ end }}
+        {{ else }}
+        <p class="--Primary">{{ .Params.Intro | safeHTML }}</p>
+        {{ end }}
+    </r-cell>
+    {{ with .Params.link }}
+    <r-cell span-s="row" span="4-10" span-l="4-8" class="Link" data-emergence>
+        <p class="--Small"><a href="{{ . }}" target="_blank">Visit published site</a></p>
+    </r-cell>
+    {{ end }}
+    <r-cell span-s="row" span="4-10" span-l="4+6" class="Team" data-emergence>
+        {{ if .Params.team }}
+        {{ range $member := .Params.team }}
+        <a href="{{ with $member.url }}{{ . }}{{ end }}" target="_blank" class="Member">
+            {{ if $member.avatar }}
+            <figure class="Avatar"><img src="{{ $member.avatar }}"></figure>{{ else }}
+            <figure class="Avatar --Dummy"><img src="https://unavatar.io/fallback.png"></figure>
+            {{ end }}
+            <span class="Name">{{ $member.name }}</span>
+        </a>
+        {{ end }}
+        {{ end }}
+    </r-cell>
+</r-grid>
+
+<r-grid class="Content" columns="12">
+    {{ if not (eq .Params.og false) }}
+    <r-cell span-s="row" span="2-11" data-emergence>
+        <figure><img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png"></figure>
+    </r-cell>
+    {{ end }}
+
+    {{ .Content }}
+</r-grid>
+
+{{ end }}

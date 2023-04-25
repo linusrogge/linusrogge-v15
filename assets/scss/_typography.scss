@@ -8,7 +8,7 @@
     letter-spacing: 0.4px;
 
     @if $muted { color: var(--color-grey); } 
-    @else { color: var(--color-black); }
+    @else { color: var(--color-foreground); }
 
     @if $spacing {
         & + * { margin-top: $spacing-32; }
@@ -68,17 +68,22 @@
     font-weight: bold;
     letter-spacing: 0.4px;
     padding: $spacing-6 $spacing-10 $spacing-8;
+    transition: transform 150ms ease;
 
     @if $type == primary {
         background: var(--color-red);
         color: var(--color-white);
 
-        &:hover { color: rgba($color-white, 0.8); }
+        &:hover { color: rgba($color-background, 0.8); }
     } @else if $type == secondary {
         background: var(--color-grey);
         color: var(--color-white);
 
-        &:hover { color: rgba($color-white, 0.8); }
+        &:hover { color: rgba($color-background, 0.8); }
+    }
+
+    &:active {
+        transform: scale(0.98);
     }
 }
 
@@ -121,10 +126,10 @@
             transform: translate(0, 3px);
             border: 1px solid var(--color-border);
             margin-right: $spacing-6;
-            background: $color-white;
+            background: $color-background;
             
             @include dark {
-                border: 1px solid rgba($color-white, 0.1);
+                border: 1px solid rgba($color-background, 0.1);
             }
     
             img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0; }
@@ -173,6 +178,15 @@
             border-bottom: 1px solid var(--color-border);
         }
 
+        &.--ghost {
+            gap: $spacing-2 0;
+
+            li {
+                border-bottom: none;
+                padding: 0;
+            }
+        }
+
         &.--Todo {
             padding-left: 0;
             list-style: none;
@@ -210,7 +224,7 @@
                         }
     
                         @include dark {
-                            background: var(--color-white);
+                            background: var(--color-background);
                         }
                     }
                       
@@ -248,7 +262,7 @@
                     @extend .--Soon;
     
                     &::before {
-                        background: var(--color-black) !important;
+                        background: var(--color-foreground) !important;
                     }
                 }
     
@@ -264,24 +278,24 @@
                         position: absolute;
                         
                         @include dark {
-                            background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00001 15.5857L19.2929 5.29285L20.7071 6.70706L9.00001 18.4142L3.29291 12.7071L4.70712 11.2928L9.00001 15.5857Z' fill='%23" + str-replace(#{$color-white}, '#', '') + "'/%3E%3C/svg%3E%0A");
+                            background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00001 15.5857L19.2929 5.29285L20.7071 6.70706L9.00001 18.4142L3.29291 12.7071L4.70712 11.2928L9.00001 15.5857Z' fill='%23" + str-replace(#{$color-background}, '#', '') + "'/%3E%3C/svg%3E%0A");
                         }
                     }
                 }
     
                 // @include dark {
                 //     &::before {
-                //         border-color: rgba($color-white, 0.2);
+                //         border-color: rgba($color-background, 0.2);
                 //     }
                     
                 //     &.--Checked {
                 //         &::before {
-                //             content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.574 7.42603C20.142 7.99406 20.142 8.91503 19.574 9.48306L11.2103 17.8467C10.6423 18.4147 9.72133 18.4147 9.1533 17.8467L4.42603 13.1194C3.85799 12.5514 3.85799 11.6304 4.42603 11.0624C4.99406 10.4944 5.91503 10.4944 6.48306 11.0624L10.1818 14.7611L17.5169 7.42603C18.085 6.85799 19.0059 6.85799 19.574 7.42603Z' fill='%23" + str-replace(#{$color-white}, '#', '') +"'/%3E%3C/svg%3E%0A");
+                //             content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.574 7.42603C20.142 7.99406 20.142 8.91503 19.574 9.48306L11.2103 17.8467C10.6423 18.4147 9.72133 18.4147 9.1533 17.8467L4.42603 13.1194C3.85799 12.5514 3.85799 11.6304 4.42603 11.0624C4.99406 10.4944 5.91503 10.4944 6.48306 11.0624L10.1818 14.7611L17.5169 7.42603C18.085 6.85799 19.0059 6.85799 19.574 7.42603Z' fill='%23" + str-replace(#{$color-background}, '#', '') +"'/%3E%3C/svg%3E%0A");
                 //             border-color: $color-danger;
                 //             background: $color-danger;
     
                 //             @include mobile {
-                //                 content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.574 7.42603C20.142 7.99406 20.142 8.91503 19.574 9.48306L11.2103 17.8467C10.6423 18.4147 9.72133 18.4147 9.1533 17.8467L4.42603 13.1194C3.85799 12.5514 3.85799 11.6304 4.42603 11.0624C4.99406 10.4944 5.91503 10.4944 6.48306 11.0624L10.1818 14.7611L17.5169 7.42603C18.085 6.85799 19.0059 6.85799 19.574 7.42603Z' fill='%23" + str-replace(#{$color-white}, '#', '') +"'/%3E%3C/svg%3E%0A");
+                //                 content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.574 7.42603C20.142 7.99406 20.142 8.91503 19.574 9.48306L11.2103 17.8467C10.6423 18.4147 9.72133 18.4147 9.1533 17.8467L4.42603 13.1194C3.85799 12.5514 3.85799 11.6304 4.42603 11.0624C4.99406 10.4944 5.91503 10.4944 6.48306 11.0624L10.1818 14.7611L17.5169 7.42603C18.085 6.85799 19.0059 6.85799 19.574 7.42603Z' fill='%23" + str-replace(#{$color-background}, '#', '') +"'/%3E%3C/svg%3E%0A");
                 //             }
                 //         }
                 //     }

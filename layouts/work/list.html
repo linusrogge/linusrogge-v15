@@ -1,0 +1,17 @@
+{{ define "main" }}
+<r-grid columns-s="4" columns="12">
+{{ range where .Site.RegularPages "Section" .Section }}
+    <r-cell span-s="row" span="6" class="project">
+        <a href="{{ .RelPermalink }}">
+            <div class="Information">
+                <h2 class="Title">{{ .Title}} · {{ dateFormat "2006" .Date }}</h2>
+                {{ with .Description }}<p class="Description">{{ . }}</p>{{ end }}
+            </div>
+            <figure class="Image">
+                <img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png">
+            </figure>
+        </a>
+    </r-cell>
+    {{ end }}
+</r-grid>
+{{ end }}

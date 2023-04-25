@@ -1,0 +1,11 @@
+.entry {
+    &__description {
+        margin-bottom: $spacing-32;
+    }
+
+    img {
+        & + em {
+            margin-bottom: $spacing-32;
+        }
+    }
+}

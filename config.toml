@@ -1,0 +1,9 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Linus Rogge'
+
+[Params]
+    description = 'Software Designer'
+
+# [markup.goldmark.renderer]
+#    unsafe = true

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<r-grid columns-s="4" columns="12">
+    <r-cell span-s="row" span="4+6" class="entry__content">
+        <h1 class="entry__title">{{ .Title }}</h1>
+        {{ with .Description }}<p class="entry__description">{{ . | safeHTML }}</p>{{ end }}
+        {{ if and .Params.Cover (not .Params.HideCover) }}<img src="{{ .Site.BaseURL}}{{ .Params.Cover }}">{{ end }}
+        {{ with .Params.LastMod }}
+        <p><date>{{ dateFormat "Last updated January 2, 2006" . }}</date></p>
+    </r-cell>
+    {{ end }}
+    </r-cell>
+
+    {{ .Content | safeHTML }}
+</r-grid>
+{{ end }}

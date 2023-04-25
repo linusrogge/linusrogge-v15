@@ -1,0 +1,45 @@
+main.--timeline {
+    .timeline {
+        &__item {
+            position: relative;
+            padding-top: $spacing-24;
+            padding-bottom: $spacing-80;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: $spacing-32;
+                height: 1px;
+                width: calc(100% - #{$spacing-64});
+                background: var(--color-border);
+            }
+
+            &__description {
+                margin-bottom: $spacing-32;
+            }
+
+            &__cover {
+                margin-top: 0;
+                margin-bottom: $spacing-32;
+
+                & + *:not(em) { margin-top: 0; }
+            }
+
+            blockquote {
+                transform: translate(0);
+                margin: 0;
+                border-left: 2px solid var(--color-border);
+                padding-left: $spacing-16;
+
+                p { 
+                    @include Paragraph;
+                    
+                    em {
+                        @include Paragraph($muted: true);
+                    }
+                }
+            }
+        }
+    }
+}

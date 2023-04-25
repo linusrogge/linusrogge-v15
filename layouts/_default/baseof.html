@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}raster/raster.grid.css">
+    {{ $stylesheet := resources.Get "scss/base.scss" | resources.ToCSS "base.css" }}
+    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}">
+</head>
+<body>
+    {{ partial "navigation" . }}
+
+    <main class="main --{{ lower .Section }}" id="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer" . }}
+</body>
+</html>

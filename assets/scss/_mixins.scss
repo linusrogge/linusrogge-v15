@@ -1,0 +1,7 @@
+@mixin mobile($minmax: max) {
+    @media screen and (#{$minmax}-width: 768px) { @content; }
+}
+
+@mixin dark {
+    @media screen and (prefers-color-scheme: dark) { @content; }
+}

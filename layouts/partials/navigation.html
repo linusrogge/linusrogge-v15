@@ -1,0 +1,37 @@
+<nav class="navigation{{ if not .IsHome }} --muted{{ end }}">
+    <r-grid columns-s="4" columns="12" class="navigation__grid">
+        <r-cell span-s="2" span="3" class="name">
+            <div class="avatar">
+                <img src="https://unavatar.io/linusrogge">
+            </div>
+            <a href="{{ .Site.BaseURL }}" class="navigation__link">
+                <span class="title">{{ .Site.Title }}</span>
+                <span class="description">{{ .Site.Params.Description }}</span>
+            </a>
+        </r-cell>
+        <r-cell span-s="2" span="3" class="work">
+            <a href="{{ .Site.BaseURL }}work" class="navigation__link">
+                <span class="title">Work</span>
+                <span class="description">
+                    {{ $projects := len (where .Site.RegularPages "Section" "work") }}
+                    {{ $projects }} {{ if eq $projects 1 }}project{{ else }}projects{{ end }}
+                </span>
+            </a>
+        </r-cell>
+        <r-cell span-s="2" span="3" class="timeline">
+            <a href="{{ .Site.BaseURL }}timeline" class="navigation__link">
+                <span class="title">Timeline</span>
+                <span class="description">
+                    {{ $projects := len (where .Site.RegularPages "Section" "timeline") }}
+                    {{ $projects }} {{ if eq $projects 1 }}entry{{ else }}entries{{ end }}
+                </span>
+            </a>
+        </r-cell>
+        <r-cell span="3" class="about">
+            <a href="{{ .Site.BaseURL }}about" class="navigation__link">
+                <span class="title">About</span>
+                <span class="description">Get to know me</span>
+            </a>
+        </r-cell>
+    </r-grid>
+</nav>

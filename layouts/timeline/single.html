@@ -1,0 +1,15 @@
+{{ define "main" }}
+<r-grid columns-s="4" columns="12">
+    <r-cell span-s="row" span="3" class="entry__date">
+        <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
+    </r-cell>
+
+    <r-cell span-s="row" span="5" class="entry__content">
+        <h1 class="entry__title">{{ .Title }}</h1>
+        {{ with .Description }}<p class="entry__description">{{ . }}</p>{{ end }}
+        {{ if and .Params.Cover (not .Params.HideCover) }}<img src="{{ .Site.BaseURL}}{{ .Params.Cover }}">{{ end }}
+        
+        {{ .Content | safeHTML }}
+    </r-cell>
+</r-grid>
+{{ end }}

@@ -215,9 +215,6 @@ r-grid {
     border: 1px solid var(--color-border);
     margin-right: 0.375rem;
     background: #f7f7f7; }
-    @media screen and (prefers-color-scheme: dark) {
-      .main p .avatar, .main .paragraph .avatar, .footer p .avatar, .footer .paragraph .avatar {
-        border: 1px solid rgba(247, 247, 247, 0.1); } }
     .main p .avatar img, .main .paragraph .avatar img, .footer p .avatar img, .footer .paragraph .avatar img {
       position: absolute;
       top: 0;

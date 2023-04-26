@@ -9,6 +9,21 @@ main.--timeline {
                 gap: $spacing-16;
             }
 
+            &.--important {
+                p {
+                    color: var(--color-red);
+                }
+
+                blockquote {
+                    border-left-color: rgba($color-red, 0.2);
+
+                    cite, em {
+                        color: var(--color-red);
+                        opacity: 0.4;
+                    }
+                }
+            }
+
             &::before {
                 content: '';
                 position: absolute;

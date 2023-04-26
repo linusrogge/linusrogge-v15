@@ -8,23 +8,23 @@ title = 'Linus Rogge'
 [menu]
 [[menu.footer]]
     name = "Work"
-    pageRef = "/work"
+    url = "/work"
     weight = 1
 [[menu.footer]]
     name = "Timeline"
-    pageRef = "/timeline"
+    url = "/timeline"
     weight = 2
 [[menu.footer]]
     name = "About"
-    pageRef = "/about"
+    url = "/about"
     weight = 3
 # [[menu.footer]]
 #     name = "Now"
-#     pageRef = "/now"
+#     url = "/now"
 #     weight = 4
 [[menu.footer]]
     name = "Uses"
-    pageRef = "/uses"
+    url = "/uses"
     weight = 5
 
 [[menu.socials]]
@@ -42,11 +42,11 @@ title = 'Linus Rogge'
 
 [[menu.legals]]
     name = "Imprint"
-    pageRef = "/imprint"
+    url = "/imprint"
     weight = 2
 [[menu.legals]]
     name = "Colophon"
-    pageRef = "/colophon"
+    url = "/colophon"
     weight = 1
 
 # [markup.goldmark.renderer]

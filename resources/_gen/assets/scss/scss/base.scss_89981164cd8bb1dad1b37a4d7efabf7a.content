@@ -131,6 +131,7 @@ r-grid {
 
 .main h1, .main h2, .main h3, .main h4, .footer h1, .footer h2, .footer h3, .footer h4 {
   font-size: inherit;
+  letter-spacing: 0.4px;
   margin-bottom: 1rem; }
 
 .main a:not(.button), .main .link, .footer a:not(.button), .footer .link {

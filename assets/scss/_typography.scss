@@ -94,7 +94,7 @@
     &.--secondary { @include Button(secondary); }
 }
 
-.main {
+.main, .footer {
     h1, h2, h3, h4 {
         font-size: inherit;
         margin-bottom: $spacing-16;
@@ -109,8 +109,9 @@
     p, .paragraph {
         @include Paragraph;
         
-        &--large { @include Paragraph(large); }
+        &.--large { @include Paragraph(large); }
         
+        &.--muted,
         small {
             @include Paragraph($muted: true);
         }
@@ -152,6 +153,10 @@
                 display: inline-block;
                 width: 32px;
                 // font-feature-settings: "tnum";
+            }
+
+            &.--spacer {
+                margin-top: $spacing-8;
             }
         }
     }

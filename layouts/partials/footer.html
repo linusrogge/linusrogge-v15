@@ -1,3 +1,45 @@
 <footer class="footer">
-    
+    <r-grid columns-s="4" columns="12" class="footer__grid">
+        <r-cell span-s="row" span="4+6" class="footer__divider"></r-cell>
+        <r-cell span-s="1+2" span="4+3" class="footer__pages">
+            <h2>Pages</h2>
+            <ul class="--ghost">
+                {{ range .Site.Menus.footer }}
+                    <li>
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </r-cell>
+        <r-cell span-s="2" span="3" class="footer__connect">
+            <h2>Connect</h2>
+            <ul class="--ghost">
+                {{ range .Site.Menus.socials }}
+                    <li>
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </r-cell>
+        <r-cell span-s="row" span="4+6" class="footer__quote">
+            <blockquote>
+                <p></p>
+                <cite></cite>
+            </blockquote>
+        </r-cell>
+        <r-cell span-s="row" span="4+6" class="footer__divider --dotted"></r-cell>
+        <r-cell span-s="row" span="4+3" class="footer__copyright">
+            <p>&copy;2023 Linus Rogge</p>
+            <p class="--muted">All rights reserved. All wrongs reserved, too.</p>
+        </r-cell>
+        <r-cell span-s="row" span="3" class="footer__legals">
+            <ul class="--ghost">
+                {{ range .Site.Menus.legals }}
+                    <li>
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                {{ end }}   
+            </ul>
+        </r-cell>
+    </r-grid>
 </footer>

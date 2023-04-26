@@ -5,5 +5,49 @@ title = 'Linus Rogge'
 [Params]
     description = 'Software Designer'
 
+[menu]
+[[menu.footer]]
+    name = "Work"
+    pageRef = "/work"
+    weight = 1
+[[menu.footer]]
+    name = "Timeline"
+    pageRef = "/timeline"
+    weight = 2
+[[menu.footer]]
+    name = "About"
+    pageRef = "/about"
+    weight = 3
+# [[menu.footer]]
+#     name = "Now"
+#     pageRef = "/now"
+#     weight = 4
+[[menu.footer]]
+    name = "Uses"
+    pageRef = "/uses"
+    weight = 5
+
+[[menu.socials]]
+    name = "Twitter"
+    url = "https://twitter.com/linusrogge"
+[[menu.socials]]
+    name = "Cosmos"
+    url = "https://cosmos.so/linusrogge"
+[[menu.socials]]
+    name = "Instagram"
+    url = "https://instagram.com/linusrgge"
+[[menu.socials]]
+    name = "Read.CV"
+    url = "https://read.cv/linusrogge"
+
+[[menu.legals]]
+    name = "Imprint"
+    pageRef = "/imprint"
+    weight = 2
+[[menu.legals]]
+    name = "Colophon"
+    pageRef = "/colophon"
+    weight = 1
+
 # [markup.goldmark.renderer]
 #    unsafe = true

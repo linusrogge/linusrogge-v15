@@ -40,9 +40,11 @@ main.--timeline {
             }
 
             &__meta {
-                align-self: flex-start;
-                position: sticky;
-                top: 128px;
+                @include mobile(min) {
+                    align-self: flex-start;
+                    position: sticky;
+                    top: 128px;
+                }
                 
                 h3 {
                     margin-bottom: $spacing-8;

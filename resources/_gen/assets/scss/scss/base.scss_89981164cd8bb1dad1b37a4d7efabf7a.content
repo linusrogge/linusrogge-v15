@@ -334,18 +334,15 @@ r-grid {
             box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } } }
       .main ul.--task li.--now::before, .main ol.--task li.--now::before, .footer ul.--task li.--now::before, .footer ol.--task li.--now::before {
         background: var(--color-foreground) !important; }
-      .main ul.--task li.--Checked, .main ol.--task li.--Checked, .footer ul.--task li.--Checked, .footer ol.--task li.--Checked {
+      .main ul.--task li.--checked, .main ol.--task li.--checked, .footer ul.--task li.--checked, .footer ol.--task li.--checked {
         color: var(--color-grey); }
-        .main ul.--task li.--Checked::before, .main ol.--task li.--Checked::before, .footer ul.--task li.--Checked::before, .footer ol.--task li.--Checked::before {
+        .main ul.--task li.--checked::before, .main ol.--task li.--checked::before, .footer ul.--task li.--checked::before, .footer ol.--task li.--checked::before {
           background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00001 15.5857L19.2929 5.29285L20.7071 6.70706L9.00001 18.4142L3.29291 12.7071L4.70712 11.2928L9.00001 15.5857Z' fill='%23696969'/%3E%3C/svg%3E%0A");
           background-repeat: no-repeat no-repeat;
           background-position: center center;
           background-size: cover;
           line-height: 0.4;
           position: absolute; }
-          @media screen and (prefers-color-scheme: dark) {
-            .main ul.--task li.--Checked::before, .main ol.--task li.--Checked::before, .footer ul.--task li.--Checked::before, .footer ol.--task li.--Checked::before {
-              background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00001 15.5857L19.2929 5.29285L20.7071 6.70706L9.00001 18.4142L3.29291 12.7071L4.70712 11.2928L9.00001 15.5857Z' fill='%23f7f7f7'/%3E%3C/svg%3E%0A"); } }
   .main ul + p, .main ol + p, .footer ul + p, .footer ol + p {
     margin-top: 5rem; }
 

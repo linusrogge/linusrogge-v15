@@ -50,7 +50,7 @@ $radius-inner: $radius-outer / 2;
     --color-white: #{$color-white};
     
     @include dark {
-        --color-foreground: #f7f7f7;
+        --color-foreground: #dadada;
         --color-background: #010101;
         --color-grey: #808080;
         --color-border: #222222;

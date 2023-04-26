@@ -23,7 +23,7 @@
   --radius-inner: 6px; }
   @media screen and (prefers-color-scheme: dark) {
     :root {
-      --color-foreground: #f7f7f7;
+      --color-foreground: #dadada;
       --color-background: #010101;
       --color-grey: #808080;
       --color-border: #222222; } }
@@ -150,9 +150,10 @@ r-grid {
     left: 50%;
     transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
     border-radius: 4px;
-    background: rgba(105, 105, 105, 0.15);
+    background: var(--color-border);
     opacity: 0;
-    transition: transform 150ms 0s ease, opacity 150ms 10ms ease; }
+    transition: transform 150ms 0s ease, opacity 150ms 10ms ease;
+    z-index: -1; }
   .main a:not(.button):hover, .main .link:hover, .footer a:not(.button):hover, .footer .link:hover {
     transition: transform 150ms 100ms ease, opacity 150ms 0s ease;
     text-decoration: none; }
@@ -287,16 +288,16 @@ r-grid {
     .main ul.--ghost li, .main ol.--ghost li, .footer ul.--ghost li, .footer ol.--ghost li {
       border-bottom: none;
       padding: 0; }
-  .main ul.--Todo, .main ol.--Todo, .footer ul.--Todo, .footer ol.--Todo {
+  .main ul.--task, .main ol.--task, .footer ul.--task, .footer ol.--task {
     padding-left: 0;
     list-style: none; }
-    .main ul.--Todo li, .main ol.--Todo li, .footer ul.--Todo li, .footer ol.--Todo li {
+    .main ul.--task li, .main ol.--task li, .footer ul.--task li, .footer ol.--task li {
       position: relative;
       padding-left: 1.5rem; }
       @media screen and (max-width: 768px) {
-        .main ul.--Todo li, .main ol.--Todo li, .footer ul.--Todo li, .footer ol.--Todo li {
+        .main ul.--task li, .main ol.--task li, .footer ul.--task li, .footer ol.--task li {
           padding-left: 2rem; } }
-      .main ul.--Todo li::before, .main ol.--Todo li::before, .footer ul.--Todo li::before, .footer ol.--Todo li::before {
+      .main ul.--task li::before, .main ol.--task li::before, .footer ul.--task li::before, .footer ol.--task li::before {
         content: '';
         width: 16px;
         height: 16px;
@@ -306,7 +307,7 @@ r-grid {
         position: absolute;
         top: 13px;
         transform: translate(-1.5rem, 0); }
-      .main ul.--Todo li.--Planned::before, .main ul.--Todo li.--Soon::before, .main ul.--Todo li.--Now::before, .main ol.--Todo li.--Planned::before, .main ol.--Todo li.--Soon::before, .main ol.--Todo li.--Now::before, .footer ul.--Todo li.--Planned::before, .footer ul.--Todo li.--Soon::before, .footer ul.--Todo li.--Now::before, .footer ol.--Todo li.--Planned::before, .footer ol.--Todo li.--Soon::before, .footer ol.--Todo li.--Now::before {
+      .main ul.--task li.--soon::before, .main ul.--task li.--now::before, .main ol.--task li.--soon::before, .main ol.--task li.--now::before, .footer ul.--task li.--soon::before, .footer ul.--task li.--now::before, .footer ol.--task li.--soon::before, .footer ol.--task li.--now::before {
         background: var(--color-grey);
         width: 4px;
         height: 4px;
@@ -314,11 +315,8 @@ r-grid {
         transform: translate(-16px, 6px);
         animation: pulse 2s infinite; }
         @media screen and (max-width: 768px) {
-          .main ul.--Todo li.--Planned::before, .main ul.--Todo li.--Soon::before, .main ul.--Todo li.--Now::before, .main ol.--Todo li.--Planned::before, .main ol.--Todo li.--Soon::before, .main ol.--Todo li.--Now::before, .footer ul.--Todo li.--Planned::before, .footer ul.--Todo li.--Soon::before, .footer ul.--Todo li.--Now::before, .footer ol.--Todo li.--Planned::before, .footer ol.--Todo li.--Soon::before, .footer ol.--Todo li.--Now::before {
+          .main ul.--task li.--soon::before, .main ul.--task li.--now::before, .main ol.--task li.--soon::before, .main ol.--task li.--now::before, .footer ul.--task li.--soon::before, .footer ul.--task li.--now::before, .footer ol.--task li.--soon::before, .footer ol.--task li.--now::before {
             transform: translate(-16px, calc(0.375rem + 1px)); } }
-        @media screen and (prefers-color-scheme: dark) {
-          .main ul.--Todo li.--Planned::before, .main ul.--Todo li.--Soon::before, .main ul.--Todo li.--Now::before, .main ol.--Todo li.--Planned::before, .main ol.--Todo li.--Soon::before, .main ol.--Todo li.--Now::before, .footer ul.--Todo li.--Planned::before, .footer ul.--Todo li.--Soon::before, .footer ul.--Todo li.--Now::before, .footer ol.--Todo li.--Planned::before, .footer ol.--Todo li.--Soon::before, .footer ol.--Todo li.--Now::before {
-            background: var(--color-background); } }
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
@@ -334,11 +332,11 @@ r-grid {
             box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
           100% {
             box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } } }
-      .main ul.--Todo li.--Now::before, .main ol.--Todo li.--Now::before, .footer ul.--Todo li.--Now::before, .footer ol.--Todo li.--Now::before {
+      .main ul.--task li.--now::before, .main ol.--task li.--now::before, .footer ul.--task li.--now::before, .footer ol.--task li.--now::before {
         background: var(--color-foreground) !important; }
-      .main ul.--Todo li.--Checked, .main ol.--Todo li.--Checked, .footer ul.--Todo li.--Checked, .footer ol.--Todo li.--Checked {
+      .main ul.--task li.--Checked, .main ol.--task li.--Checked, .footer ul.--task li.--Checked, .footer ol.--task li.--Checked {
         color: var(--color-grey); }
-        .main ul.--Todo li.--Checked::before, .main ol.--Todo li.--Checked::before, .footer ul.--Todo li.--Checked::before, .footer ol.--Todo li.--Checked::before {
+        .main ul.--task li.--Checked::before, .main ol.--task li.--Checked::before, .footer ul.--task li.--Checked::before, .footer ol.--task li.--Checked::before {
           background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00001 15.5857L19.2929 5.29285L20.7071 6.70706L9.00001 18.4142L3.29291 12.7071L4.70712 11.2928L9.00001 15.5857Z' fill='%23696969'/%3E%3C/svg%3E%0A");
           background-repeat: no-repeat no-repeat;
           background-position: center center;
@@ -346,7 +344,7 @@ r-grid {
           line-height: 0.4;
           position: absolute; }
           @media screen and (prefers-color-scheme: dark) {
-            .main ul.--Todo li.--Checked::before, .main ol.--Todo li.--Checked::before, .footer ul.--Todo li.--Checked::before, .footer ol.--Todo li.--Checked::before {
+            .main ul.--task li.--Checked::before, .main ol.--task li.--Checked::before, .footer ul.--task li.--Checked::before, .footer ol.--task li.--Checked::before {
               background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00001 15.5857L19.2929 5.29285L20.7071 6.70706L9.00001 18.4142L3.29291 12.7071L4.70712 11.2928L9.00001 15.5857Z' fill='%23f7f7f7'/%3E%3C/svg%3E%0A"); } }
   .main ul + p, .main ol + p, .footer ul + p, .footer ol + p {
     margin-top: 5rem; }

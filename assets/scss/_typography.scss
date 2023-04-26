@@ -39,9 +39,10 @@
             left: 50%;
             transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
             border-radius: 4px;
-            background: rgba($color-grey, 0.15);
+            background: var(--color-border);
             opacity: 0;
             transition: transform 150ms 0s ease, opacity 150ms 10ms ease;
+            z-index: -1;
         }
         
         &:hover { 
@@ -192,7 +193,7 @@
             }
         }
 
-        &.--Todo {
+        &.--task {
             padding-left: 0;
             list-style: none;
     
@@ -214,8 +215,7 @@
                     transform: translate(-#{$spacing-24}, 0);
                 }
     
-                &.--Planned,
-                &.--Soon {
+                &.--soon {
                     &::before {
                         background: var(--color-grey);
                         width: 4px;
@@ -226,10 +226,6 @@
                         
                         @include mobile {
                             transform: translate(-16px, calc(#{$spacing-6} + 1px));
-                        }
-    
-                        @include dark {
-                            background: var(--color-background);
                         }
                     }
                       
@@ -263,8 +259,8 @@
                     }
                 }
     
-                &.--Now {
-                    @extend .--Soon;
+                &.--now {
+                    @extend .--soon;
     
                     &::before {
                         background: var(--color-foreground) !important;

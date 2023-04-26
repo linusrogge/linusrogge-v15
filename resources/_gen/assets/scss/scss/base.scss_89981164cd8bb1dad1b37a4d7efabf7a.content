@@ -491,6 +491,10 @@ r-grid {
       .footer .footer__legals ul li a {
         text-decoration: none; }
 
+@media screen and (max-width: 768px) {
+  .--mobile-margin {
+    margin-top: -4rem; } }
+
 main.--timeline .timeline__item {
   position: relative;
   padding-top: 1.5rem;

@@ -5,13 +5,17 @@
     width: 100%;
     background: var(--color-background);
     z-index: 999;
+    border-bottom: 1px solid transparent;
+    transition: border-color 400ms ease;
 
     &__grid {
-        transition: opacity 150ms ease;
+        transition: opacity 400ms ease;
         gap: $spacing-2 $spacing-16;
     }
 
-    &.--muted {
+    &.--muted {        
+        border-bottom-color: var(--color-border);
+        
         @include mobile(min) {
             .navigation__grid {
                 opacity: 0.4;

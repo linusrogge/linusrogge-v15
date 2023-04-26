@@ -7,6 +7,7 @@ window.onscroll = () => {
         navigation.classList.remove('--muted')
     }
 }
+
 (function() {
     var quotes = [
         {
@@ -34,3 +35,13 @@ window.onscroll = () => {
     document.querySelector('.footer blockquote cite').innerHTML = quote.author ? quote.author : '';
 })();
 
+var timeWrapper = document.querySelector('.time')
+
+function getCurrentTime() {
+    const options = { timeZone: 'Europe/Berlin', hour: "numeric",
+    minute: "numeric" };
+    const today = new Date();
+
+    timeWrapper.innerHTML = Intl.DateTimeFormat("de-DE", options).format(today).replace(/:/g, '.') + " local time";
+}
+if (timeWrapper) { setInterval(getCurrentTime, 100); }

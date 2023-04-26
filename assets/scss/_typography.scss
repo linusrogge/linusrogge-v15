@@ -280,24 +280,6 @@
                         position: absolute;
                     }
                 }
-    
-                // @include dark {
-                //     &::before {
-                //         border-color: rgba($color-background, 0.2);
-                //     }
-                    
-                //     &.--checked {
-                //         &::before {
-                //             content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.574 7.42603C20.142 7.99406 20.142 8.91503 19.574 9.48306L11.2103 17.8467C10.6423 18.4147 9.72133 18.4147 9.1533 17.8467L4.42603 13.1194C3.85799 12.5514 3.85799 11.6304 4.42603 11.0624C4.99406 10.4944 5.91503 10.4944 6.48306 11.0624L10.1818 14.7611L17.5169 7.42603C18.085 6.85799 19.0059 6.85799 19.574 7.42603Z' fill='%23" + str-replace(#{$color-background}, '#', '') +"'/%3E%3C/svg%3E%0A");
-                //             border-color: $color-danger;
-                //             background: $color-danger;
-    
-                //             @include mobile {
-                //                 content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.574 7.42603C20.142 7.99406 20.142 8.91503 19.574 9.48306L11.2103 17.8467C10.6423 18.4147 9.72133 18.4147 9.1533 17.8467L4.42603 13.1194C3.85799 12.5514 3.85799 11.6304 4.42603 11.0624C4.99406 10.4944 5.91503 10.4944 6.48306 11.0624L10.1818 14.7611L17.5169 7.42603C18.085 6.85799 19.0059 6.85799 19.574 7.42603Z' fill='%23" + str-replace(#{$color-background}, '#', '') +"'/%3E%3C/svg%3E%0A");
-                //             }
-                //         }
-                //     }
-                // }
             }
         }
 
@@ -316,7 +298,10 @@
 
         p { 
             @include Paragraph(large);
-            hanging-punctuation: first last;
+
+            @include mobile(min) {
+                hanging-punctuation: first last;
+            }
 
             & + cite,
             em, cite {

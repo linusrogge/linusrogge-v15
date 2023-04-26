@@ -1,5 +1,5 @@
 @mixin mobile($minmax: max) {
-    @media screen and (#{$minmax}-width: 768px) { @content; }
+    @media screen and (#{$minmax}-width: 835px) { @content; }
 }
 
 @mixin dark {

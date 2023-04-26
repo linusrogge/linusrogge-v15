@@ -50,12 +50,12 @@ r-grid {
   gap: 5rem 1rem;
   max-width: 1440px;
   margin: 0 auto; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 835px) {
     r-grid {
       padding: 1rem; } }
 .main {
   margin-top: 10rem; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 835px) {
     .main {
       margin-top: 8rem; } }
   .main img {
@@ -251,7 +251,7 @@ r-grid {
   display: flex;
   flex-direction: column;
   list-style: none; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 835px) {
     .main ul.--Cols-1, .main ol.--Cols-1, .footer ul.--Cols-1, .footer ol.--Cols-1 {
       display: block;
       column-count: 1; }
@@ -295,7 +295,7 @@ r-grid {
     .main ul.--task li, .main ol.--task li, .footer ul.--task li, .footer ol.--task li {
       position: relative;
       padding-left: 1.5rem; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 835px) {
         .main ul.--task li, .main ol.--task li, .footer ul.--task li, .footer ol.--task li {
           padding-left: 2rem; } }
       .main ul.--task li::before, .main ol.--task li::before, .footer ul.--task li::before, .footer ol.--task li::before {
@@ -315,7 +315,7 @@ r-grid {
         border-radius: 9999px;
         transform: translate(-16px, 6px);
         animation: pulse 2s infinite; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 835px) {
           .main ul.--task li.--soon::before, .main ul.--task li.--now::before, .main ol.--task li.--soon::before, .main ol.--task li.--now::before, .footer ul.--task li.--soon::before, .footer ul.--task li.--now::before, .footer ol.--task li.--soon::before, .footer ol.--task li.--now::before {
             transform: translate(-16px, calc(0.375rem + 1px)); } }
 @keyframes pulse {
@@ -350,19 +350,21 @@ r-grid {
 .main blockquote, .footer blockquote {
   margin-top: 5rem;
   display: block; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 835px) {
     .main blockquote, .footer blockquote {
       transform: translate(-80px, 0); } }
   .main blockquote p, .footer blockquote p {
     font-size: 1.5rem;
     line-height: 1.5;
     letter-spacing: 0.4px;
-    color: var(--color-foreground);
-    hanging-punctuation: first last; }
+    color: var(--color-foreground); }
     .main blockquote p + *, .footer blockquote p + * {
       margin-top: 2rem; }
     .main blockquote p + p, .footer blockquote p + p {
       margin-top: 0.75rem; }
+    @media screen and (min-width: 835px) {
+      .main blockquote p, .footer blockquote p {
+        hanging-punctuation: first last; } }
     .main blockquote p + cite,
     .main blockquote p em, .main blockquote p cite, .footer blockquote p + cite,
     .footer blockquote p em, .footer blockquote p cite {
@@ -398,7 +400,7 @@ r-grid {
     gap: 0.125rem 1rem; }
   .navigation.--muted {
     border-bottom-color: var(--color-border); }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 835px) {
       .navigation.--muted .navigation__grid {
         opacity: 0.4; }
         .navigation.--muted .navigation__grid:hover {
@@ -427,10 +429,10 @@ r-grid {
         object-fit: cover;
         position: relative;
         z-index: -1; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 835px) {
       .navigation .name .avatar {
         display: none; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 835px) {
     .navigation .name {
       grid-row: span 2; }
     .navigation .work,
@@ -467,7 +469,7 @@ r-grid {
       line-height: 1.5;
       letter-spacing: 0.4px;
       color: var(--color-foreground); }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 835px) {
         .footer .footer__quote blockquote p {
           max-width: 80%; } }
     .footer .footer__quote blockquote cite {
@@ -483,7 +485,7 @@ r-grid {
     margin-top: 0; }
   .footer .footer__legals {
     display: flex; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 835px) {
       .footer .footer__legals {
         justify-content: flex-end; } }
     .footer .footer__legals ul {
@@ -492,7 +494,7 @@ r-grid {
       .footer .footer__legals ul li a {
         text-decoration: none; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 835px) {
   .--mobile-margin {
     margin-top: -4rem; } }
 
@@ -500,7 +502,7 @@ main.--timeline .timeline__item {
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 5rem; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 835px) {
     main.--timeline .timeline__item {
       padding-top: 1rem;
       padding-bottom: 8rem;
@@ -520,11 +522,11 @@ main.--timeline .timeline__item {
     height: 1px;
     width: calc(100% - 4rem);
     background: var(--color-border); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 835px) {
       main.--timeline .timeline__item::before {
         left: 1rem;
         width: calc(100% - 2rem); } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 835px) {
     main.--timeline .timeline__item__meta {
       align-self: flex-start;
       position: sticky;

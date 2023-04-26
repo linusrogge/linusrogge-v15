@@ -501,7 +501,9 @@ main.--timeline .timeline__item {
   padding-bottom: 5rem; }
   @media screen and (max-width: 768px) {
     main.--timeline .timeline__item {
-      gap: 1rem; } }
+      padding-top: 1rem;
+      padding-bottom: 8rem;
+      gap: 2rem; } }
   main.--timeline .timeline__item.--important p {
     color: var(--color-red); }
   main.--timeline .timeline__item.--important blockquote {
@@ -554,6 +556,18 @@ main.--timeline .timeline__item {
       position: absolute;
       left: 0;
       top: 9px; }
+    @media screen and (prefers-color-scheme: dark) {
+      main.--timeline .timeline__item__meta .relations li::before {
+        content: '';
+        width: 10px;
+        height: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 0V3V3.5H1H5.79289L4.64645 4.64645L5.35355 5.35355L7.35355 3.35355L7.70711 3L7.35355 2.64645L5.35355 0.646447L4.64645 1.35355L5.79289 2.5H1.5V0H0.5Z' fill='%23f7f7f7'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 9px; } }
   main.--timeline .timeline__item__description {
     margin-bottom: 2rem; }
   main.--timeline .timeline__item__cover {

@@ -511,7 +511,7 @@ main.--timeline .timeline__item {
     border-left-color: rgba(243, 11, 11, 0.2); }
     main.--timeline .timeline__item.--important blockquote cite, main.--timeline .timeline__item.--important blockquote em {
       color: var(--color-red);
-      opacity: 0.4; }
+      opacity: 0.6; }
   main.--timeline .timeline__item::before {
     content: '';
     position: absolute;

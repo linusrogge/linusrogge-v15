@@ -26,6 +26,16 @@ r-grid {
     margin: 0 auto;
 
     @include mobile { padding: $spacing-16; }
+
+    r-cell {
+        &.--inline {
+            margin-top: -$spacing-64;
+
+            & + r-cell {
+                margin-top: -$spacing-32;
+            }
+        }
+    }
 }
 
 .main {

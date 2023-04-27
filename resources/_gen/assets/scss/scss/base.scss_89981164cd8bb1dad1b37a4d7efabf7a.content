@@ -53,6 +53,11 @@ r-grid {
   @media screen and (max-width: 835px) {
     r-grid {
       padding: 1rem; } }
+  r-grid r-cell.--inline {
+    margin-top: -4rem; }
+    r-grid r-cell.--inline + r-cell {
+      margin-top: -2rem; }
+
 .main {
   margin-top: 10rem; }
   @media screen and (max-width: 835px) {

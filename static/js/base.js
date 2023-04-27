@@ -19,7 +19,8 @@ window.onscroll = () => {
             author: "Albert Einstein"
         },
         {
-            text: "What you admire in others exist within you"
+            text: "Knowing what you admire in others is a wonderful mirror into your deepest, as yet unborn, self.",
+            author: "Gretchen Rubin"
         },
         {
             text: "We accept the love we think we deserve",

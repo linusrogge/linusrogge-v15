@@ -29,6 +29,10 @@ window.onscroll = () => {
         {
             text: "Always deliver more than expected.",
             author: "Larry Page"
+        },
+        {
+            text: "A [person] who suffers before it is necessary, suffers more than is necessary",
+            author: "Seneca"
         }
     ]
     var quote = quotes[Math.floor(Math.random() * quotes.length)];

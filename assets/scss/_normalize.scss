@@ -27,7 +27,10 @@ r-grid {
     max-width: 1440px;
     margin: 0 auto;
 
-    @include mobile { padding: $spacing-16; }
+    @include mobile {
+        gap: $spacing-80 $spacing-16;
+        padding: $spacing-16; 
+    }
 
     &.header {
         z-index: 98;

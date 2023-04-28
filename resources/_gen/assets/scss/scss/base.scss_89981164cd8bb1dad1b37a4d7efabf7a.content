@@ -726,7 +726,7 @@ main hr, .footer hr {
   text-decoration: underline;
   text-decoration: none;
   display: block;
-  white-space: pre-wrap; }
+  white-space: unset; }
   .template--work .project a::before {
     display: none; }
   .template--work .project a:hover {

@@ -32,7 +32,7 @@
             @include Link(default);
             text-decoration: none;
             display: block;
-            white-space: pre-wrap;
+            white-space: unset;
         }
 
         &__information {

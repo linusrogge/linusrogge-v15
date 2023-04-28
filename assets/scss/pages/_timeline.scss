@@ -2,7 +2,9 @@
     .header {
         margin-bottom: $spacing-32;
 
-        @include mobile { margin-bottom: $spacing-16; }
+        @include mobile {
+            margin-bottom: $spacing-80;
+        }
     } 
 
     .timeline {

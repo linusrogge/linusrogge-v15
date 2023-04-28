@@ -13,10 +13,22 @@
         }
 
         &__year {
-            @include mobile(min) {
-                align-self: flex-start;
-                position: sticky;
-                top: 128px;
+            align-self: flex-start;
+            position: sticky;
+            top: calc(var(--navigation-height) + #{$spacing-32});
+            
+            @include mobile {
+                justify-self: flex-start;
+                z-index: 89;
+                display: inline-block;
+                background: var(--color-border);
+                border-radius: var(--radius-inner);
+                padding: $spacing-2 $spacing-8;
+                top: calc(var(--navigation-height) + #{$spacing-16});
+            }
+
+            & + .project {
+                margin-top: $spacing-40;
             }
         }
 

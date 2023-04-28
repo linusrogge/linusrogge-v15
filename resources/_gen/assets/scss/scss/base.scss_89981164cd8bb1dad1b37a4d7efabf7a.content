@@ -57,6 +57,9 @@ r-grid {
       padding: 1rem; } }
   r-grid.header {
     z-index: 98; }
+    @media screen and (max-width: 835px) {
+      r-grid.header {
+        margin-bottom: 5rem; } }
   r-grid r-cell.--inline {
     margin-top: -5rem; }
     r-grid r-cell.--inline + r-cell {
@@ -543,7 +546,7 @@ main hr, .footer hr {
   margin-bottom: 2rem; }
   @media screen and (max-width: 835px) {
     .template--timeline .header {
-      margin-bottom: 1rem; } }
+      margin-bottom: 5rem; } }
 .template--timeline .timeline__item {
   position: relative;
   padding-top: 1.5rem;
@@ -708,11 +711,21 @@ main hr, .footer hr {
     z-index: 1; }
   .template--work .group:nth-child(20) {
     z-index: 0; }
-  @media screen and (min-width: 835px) {
-    .template--work .group__year {
-      align-self: flex-start;
-      position: sticky;
-      top: 128px; } }
+  .template--work .group__year {
+    align-self: flex-start;
+    position: sticky;
+    top: calc(var(--navigation-height) + 2rem); }
+    @media screen and (max-width: 835px) {
+      .template--work .group__year {
+        justify-self: flex-start;
+        z-index: 89;
+        display: inline-block;
+        background: var(--color-border);
+        border-radius: var(--radius-inner);
+        padding: 0.125rem 0.5rem;
+        top: calc(var(--navigation-height) + 1rem); } }
+    .template--work .group__year + .project {
+      margin-top: 2.5rem; }
   .template--work .group .--divider {
     margin-bottom: 1.5rem; }
 

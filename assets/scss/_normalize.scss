@@ -13,19 +13,25 @@
 body, html {
     min-height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 body { 
-    background: var(--color-background); 
+    background: var(--color-background);
 }
 
 r-grid {
+    position: relative;
     padding: $spacing-32;
     gap: $spacing-128 $spacing-16;
     max-width: 1440px;
     margin: 0 auto;
 
     @include mobile { padding: $spacing-16; }
+
+    &.header {
+        z-index: 98;
+    }
 
     r-cell {
         &.--inline {

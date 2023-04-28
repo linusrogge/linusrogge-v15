@@ -1,17 +1,55 @@
+{{ define "customclasses" }}template--work{{ end }}
+
 {{ define "main" }}
-<r-grid columns-s="4" columns="12">
-{{ range where .Site.RegularPages "Section" .Section }}
-    <r-cell span-s="row" span="6" class="project">
+{{ $projects := where .Site.RegularPages "Section" .Section }}
+<r-grid columns-s="4" columns="12" class="header">
+    <r-cell span-s="row" span="4+6">
+        <h1>Work Archive</h1>
+        {{/*  <p class="--muted">{{ range last 1 $projects }}{{ dateFormat "2006" .Params.Date }}{{ end }} – {{ range first 1 $projects }}{{ dateFormat "2006" .Params.Date }}{{ end }}</p>  */}}
+        <p class="--muted">{{ range sort ($projects.GroupByDate "2006") ".Key" "desc" }}
+            <a href="#{{ .Key }}" class="--ghost">{{ .Key }}</a>
+            {{ end }}
+        </p>
+    </r-cell>
+</r-grid>
+
+{{ range $projects.GroupByDate "2006" }}
+<r-grid columns-s="4" columns="12" class="group" id="{{ .Key }}">
+    <r-cell span-s="row" span="9" class="--divider"></r-cell>
+    <r-cell span-s="row" span="1+3" class="group__year">
+        <date>{{ .Key }}</date>
+    </r-cell>
+
+    {{ range .Pages }}
+    <r-cell span-s="row" span="4+6" class="project">
         <a href="{{ .RelPermalink }}">
-            <div class="Information">
-                <h2 class="Title">{{ .Title}} · {{ dateFormat "2006" .Date }}</h2>
-                {{ with .Description }}<p class="Description">{{ . }}</p>{{ end }}
+            <div class="project__information">
+                <h2 class="project__title">{{ .Title}}</h2>
+                {{ with .Description }}<p class="project__description">{{ . }}</p>{{ end }}
             </div>
-            <figure class="Image">
+            <figure class="project__image">
                 <img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png">
             </figure>
         </a>
     </r-cell>
     {{ end }}
 </r-grid>
+{{ end }}
+
+{{/*  <r-grid columns-s="4" columns="12" class="timeline__item{{ if .Params.Important }} --important{{ end }}">
+    <r-cell span-s="row" span="3" class="timeline__item__meta">
+{{ range where .Site.RegularPages "Section" .Section }}
+    <r-cell span-s="row" span="4+6" class="project">
+        <a href="{{ .RelPermalink }}">
+            <div class="project__information">
+                <h2 class="project__title">{{ .Title}} · {{ dateFormat "2006" .Date }}</h2>
+                {{ with .Description }}<p class="project__description">{{ . }}</p>{{ end }}
+            </div>
+            <figure class="project__image">
+                <img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png">
+            </figure>
+        </a>
+    </r-cell>
+    {{ end }}
+</r-grid>  */}}
 {{ end }}

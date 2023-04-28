@@ -1,7 +1,9 @@
-window.onscroll = () => {
-    var navigation = document.querySelector('.navigation'),
-        main = document.querySelector('.main')
+var navigation = document.querySelector('.navigation'),
+    main = document.querySelector('.main')
 
+document.querySelector(':root').style.setProperty('--navigation-height', `${navigation.clientHeight}px`)
+
+window.onscroll = () => {
     if (window.scrollY > (main.getBoundingClientRect().top - navigation.clientHeight)) {
         navigation.classList.add('--muted')
     } else {

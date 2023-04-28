@@ -24,6 +24,7 @@
     text-decoration: underline;
 
     @if $hover == default {
+        &::before { display: none; }
         &:hover { text-decoration: none; }
     } @else if $hover == box {
         white-space: nowrap;
@@ -96,17 +97,18 @@
     &.--secondary { @include Button(secondary); }
 }
 
-.main, .footer {
+main, .footer {
     h1, h2, h3, h4 {
         font-size: inherit;
         letter-spacing: 0.4px;
-        margin-bottom: $spacing-16;
+        margin-bottom: $spacing-8;
     }
 
     a:not(.button), .link {
         @include Link(box);
 
         &.--nowrap { white-space: nowrap; }
+        &.--ghost { text-decoration: none; }
     }
 
     p, .paragraph {

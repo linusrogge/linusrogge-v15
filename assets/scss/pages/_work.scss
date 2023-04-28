@@ -1,0 +1,54 @@
+.template--work {
+    .group {
+        position: relative;
+        gap: 0 $spacing-16;
+
+        padding-top: var(--navigation-height);
+        margin-top: calc(var(--navigation-height) * -1);
+
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                z-index: 20 - $i;
+            }
+        }
+
+        &__year {
+            @include mobile(min) {
+                align-self: flex-start;
+                position: sticky;
+                top: 128px;
+            }
+        }
+
+        .--divider {
+            margin-bottom: $spacing-24;
+        }
+    }
+
+    .project {
+        & + .project { margin-top: $spacing-80; }
+
+        a { 
+            @include Link(default);
+            text-decoration: none;
+        }
+
+        &__information {
+            margin-bottom: $spacing-16;
+        }
+
+        &__title {
+            margin-bottom: $spacing-8;
+        }
+
+        &__description {
+            color: var(--color-grey);
+            max-width: 80%;
+        }
+
+        &__image {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-inner);
+        }
+    }
+}

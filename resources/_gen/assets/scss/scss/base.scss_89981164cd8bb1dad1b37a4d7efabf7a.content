@@ -402,6 +402,9 @@ r-grid {
   .navigation__grid {
     transition: opacity 400ms ease;
     gap: 0.125rem 1rem; }
+    .navigation__grid r-cell {
+      display: flex;
+      justify-content: start; }
   .navigation.--muted {
     border-bottom-color: var(--color-border); }
     @media screen and (min-width: 835px) {
@@ -410,10 +413,39 @@ r-grid {
         .navigation.--muted .navigation__grid:hover {
           opacity: 1; } }
   .navigation__link {
+    font-size: inherit;
+    color: inherit;
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    margin-left: 0.125rem;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     gap: 0.125rem; }
+    .navigation__link::before {
+      content: '';
+      width: calc(100% + 10px);
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+      border-radius: 4px;
+      background: var(--color-border);
+      opacity: 0;
+      transition: transform 150ms 0s ease, opacity 150ms 10ms ease;
+      z-index: -1; }
+    .navigation__link:hover {
+      transition: transform 150ms 100ms ease, opacity 150ms 0s ease;
+      text-decoration: none; }
+      .navigation__link:hover::before {
+        opacity: 1;
+        transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+    .navigation__link::before {
+      height: calc(100% + 4px); }
     .navigation__link .description {
       color: var(--color-grey); }
   .navigation .name {

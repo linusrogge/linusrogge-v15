@@ -11,6 +11,11 @@
     &__grid {
         transition: opacity 400ms ease;
         gap: $spacing-2 $spacing-16;
+
+        r-cell {
+            display: flex;
+            justify-content: start;
+        }
     }
 
     &.--muted {        
@@ -26,10 +31,15 @@
     }
 
     &__link {
+        @include Link(box);
         text-decoration: none;
         display: flex;
         flex-direction: column;
         gap: $spacing-2;
+
+        &::before {
+            height: calc(100% + 4px);
+        }
 
         .description {
             color: var(--color-grey);

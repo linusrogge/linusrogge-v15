@@ -3,7 +3,7 @@
         &__item {
             position: relative;
             padding-top: $spacing-24;
-            padding-bottom: $spacing-80;
+            padding-bottom: $spacing-160;
 
             @include mobile {
                 padding-top: $spacing-16;

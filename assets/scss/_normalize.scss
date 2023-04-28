@@ -43,10 +43,18 @@ r-grid {
 
     r-cell {
         &.--inline {
-            margin-top: -$spacing-80;
+            margin-top: -$spacing-128 + $spacing-16;
 
             & + r-cell {
+                margin-top: -$spacing-128 + $spacing-16;
+            }
+            
+            @include mobile {
                 margin-top: -$spacing-64;
+    
+                & + r-cell {
+                    margin-top: -$spacing-64;
+                }
             }
         }
 
@@ -80,6 +88,7 @@ r-grid {
 
         & + * { margin-top: $spacing-80; }
 
+        & + figcaption,
         & + em {
             display: inline-block;
             margin-top: $spacing-8;

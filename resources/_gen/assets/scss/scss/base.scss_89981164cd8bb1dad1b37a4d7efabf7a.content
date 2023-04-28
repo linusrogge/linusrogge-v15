@@ -54,6 +54,7 @@ r-grid {
   margin: 0 auto; }
   @media screen and (max-width: 835px) {
     r-grid {
+      gap: 5rem 1rem;
       padding: 1rem; } }
   r-grid.header {
     z-index: 98;
@@ -62,9 +63,14 @@ r-grid {
       r-grid.header {
         margin-bottom: 5rem; } }
   r-grid r-cell.--inline {
-    margin-top: -5rem; }
+    margin-top: -7rem; }
     r-grid r-cell.--inline + r-cell {
-      margin-top: -4rem; }
+      margin-top: -7rem; }
+    @media screen and (max-width: 835px) {
+      r-grid r-cell.--inline {
+        margin-top: -4rem; }
+        r-grid r-cell.--inline + r-cell {
+          margin-top: -4rem; } }
   r-grid r-cell.--divider {
     height: 1px;
     background: var(--color-border); }
@@ -84,12 +90,12 @@ r-grid {
     border-radius: var(--radius-inner); }
     .main img + * {
       margin-top: 5rem; }
-    .main img + em {
+    .main img + figcaption, .main img + em {
       display: inline-block;
       margin-top: 0.5rem;
       font-style: normal;
       color: var(--color-grey); }
-      .main img + em::before {
+      .main img + figcaption::before, .main img + em::before {
         content: '›';
         margin-right: 0.5rem; }
 
@@ -195,6 +201,8 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     margin-top: 2rem; }
   main p + p, main .paragraph + p, .footer p + p, .footer .paragraph + p {
     margin-top: 0.75rem; }
+  main p + blockquote, main .paragraph + blockquote, .footer p + blockquote, .footer .paragraph + blockquote {
+    margin-top: 5rem; }
   main p.--large, main .paragraph.--large, .footer p.--large, .footer .paragraph.--large {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -204,6 +212,8 @@ main p, main .paragraph, .footer p, .footer .paragraph {
       margin-top: 2rem; }
     main p.--large + p, main .paragraph.--large + p, .footer p.--large + p, .footer .paragraph.--large + p {
       margin-top: 0.75rem; }
+    main p.--large + blockquote, main .paragraph.--large + blockquote, .footer p.--large + blockquote, .footer .paragraph.--large + blockquote {
+      margin-top: 5rem; }
   main p.--muted,
   main p small, main .paragraph.--muted,
   main .paragraph small, .footer p.--muted,
@@ -225,6 +235,12 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     .footer p small + p, .footer .paragraph.--muted + p,
     .footer .paragraph small + p {
       margin-top: 0.75rem; }
+    main p.--muted + blockquote,
+    main p small + blockquote, main .paragraph.--muted + blockquote,
+    main .paragraph small + blockquote, .footer p.--muted + blockquote,
+    .footer p small + blockquote, .footer .paragraph.--muted + blockquote,
+    .footer .paragraph small + blockquote {
+      margin-top: 5rem; }
 
 main .avatar, .footer .avatar {
   position: relative;
@@ -255,6 +271,8 @@ main date, .footer date {
     margin-top: 2rem; }
   main date + p, .footer date + p {
     margin-top: 0.75rem; }
+  main date + blockquote, .footer date + blockquote {
+    margin-top: 5rem; }
 
 main ol, .footer ol {
   counter-reset: list; }
@@ -381,6 +399,8 @@ main blockquote, .footer blockquote {
       margin-top: 2rem; }
     main blockquote p + p, .footer blockquote p + p {
       margin-top: 0.75rem; }
+    main blockquote p + blockquote, .footer blockquote p + blockquote {
+      margin-top: 5rem; }
     @media screen and (min-width: 835px) {
       main blockquote p, .footer blockquote p {
         hanging-punctuation: first last; } }
@@ -526,6 +546,8 @@ main hr, .footer hr {
         margin-top: 2rem; }
       .footer .footer__quote blockquote cite + p {
         margin-top: 0.75rem; }
+      .footer .footer__quote blockquote cite + blockquote {
+        margin-top: 5rem; }
   .footer .footer__copyright p {
     margin-top: 0; }
   .footer .footer__legals {
@@ -546,7 +568,7 @@ main hr, .footer hr {
 .template--timeline .timeline__item {
   position: relative;
   padding-top: 1.5rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 10rem; }
   @media screen and (max-width: 835px) {
     .template--timeline .timeline__item {
       padding-top: 1rem;
@@ -643,6 +665,8 @@ main hr, .footer hr {
         margin-top: 2rem; }
       .template--timeline .timeline__item blockquote p + p {
         margin-top: 0.75rem; }
+      .template--timeline .timeline__item blockquote p + blockquote {
+        margin-top: 5rem; }
       .template--timeline .timeline__item blockquote p em {
         font-size: 1rem;
         line-height: 1.5;
@@ -652,6 +676,8 @@ main hr, .footer hr {
           margin-top: 2rem; }
         .template--timeline .timeline__item blockquote p em + p {
           margin-top: 0.75rem; }
+        .template--timeline .timeline__item blockquote p em + blockquote {
+          margin-top: 5rem; }
 
 .template--entry .entry__description {
   margin-bottom: 2rem; }
@@ -747,13 +773,40 @@ main hr, .footer hr {
   color: inherit;
   text-underline-offset: 2px;
   text-decoration: underline;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  margin-left: 0.125rem;
   text-decoration: none;
   display: block;
   white-space: unset; }
   .template--work .project a::before {
-    display: none; }
+    content: '';
+    width: calc(100% + 10px);
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+    border-radius: 4px;
+    background: var(--color-border);
+    opacity: 0;
+    transition: transform 150ms 0s ease, opacity 150ms 10ms ease;
+    z-index: -1; }
   .template--work .project a:hover {
+    transition: transform 150ms 100ms ease, opacity 150ms 0s ease;
     text-decoration: none; }
+    .template--work .project a:hover::before {
+      opacity: 1;
+      transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+  .template--work .project a::before {
+    height: calc(100% + 1.5rem);
+    width: calc(100% + 1.5rem);
+    border-radius: var(--radius-outer);
+    transform: translate(-50%, calc(-50% + 1px)) scale(0.98);
+    z-index: -1; }
+  .template--work .project a:hover .project__image {
+    border-color: var(--color-background); }
 
 .template--work .project__information {
   margin-bottom: 1rem; }
@@ -768,4 +821,5 @@ main hr, .footer hr {
 .template--work .project__image {
   display: flex;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-inner); }
+  border-radius: var(--radius-inner);
+  background: var(--color-background); }

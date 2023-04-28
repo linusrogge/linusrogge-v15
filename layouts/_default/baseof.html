@@ -17,7 +17,7 @@
 <body>
     {{ partial "navigation" . }}
 
-    <main class="main --{{ lower .Section }}" id="main">
+    <main class="main --{{ lower .Section }} {{ block "customclasses" . }}{{ end }}" id="main">
         {{ block "main" . }}{{ end }}
     </main>
 

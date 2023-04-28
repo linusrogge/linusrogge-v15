@@ -1,11 +1,17 @@
-.entry {
-    &__description {
-        margin-bottom: $spacing-32;
-    }
-
-    img {
-        & + em {
+.template--entry {
+    .entry {
+        &__description {
             margin-bottom: $spacing-32;
         }
+        
+        img {
+            & + em {
+                margin-bottom: $spacing-32;
+            }
+        }
+    }
+
+    blockquote {
+        margin-top: $spacing-80;
     }
 }

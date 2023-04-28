@@ -286,7 +286,6 @@
     }
 
     blockquote {
-        margin-top: $spacing-80;
         display: block;
 
         @include mobile(min) {

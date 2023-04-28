@@ -352,7 +352,6 @@ r-grid {
     margin-top: 5rem; }
 
 .main blockquote, .footer blockquote {
-  margin-top: 5rem;
   display: block; }
   @media screen and (min-width: 835px) {
     .main blockquote, .footer blockquote {
@@ -644,8 +643,11 @@ main.--timeline .timeline__item {
         main.--timeline .timeline__item blockquote p em + p {
           margin-top: 0.75rem; }
 
-.entry__description {
+.template--entry .entry__description {
   margin-bottom: 2rem; }
 
-.entry img + em {
+.template--entry .entry img + em {
   margin-bottom: 2rem; }
+
+.template--entry blockquote {
+  margin-top: 5rem; }

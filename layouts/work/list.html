@@ -6,7 +6,7 @@
     <r-cell span-s="row" span="4+6">
         <h1>Work Archive</h1>
         {{/*  <p class="--muted">{{ range last 1 $projects }}{{ dateFormat "2006" .Params.Date }}{{ end }} – {{ range first 1 $projects }}{{ dateFormat "2006" .Params.Date }}{{ end }}</p>  */}}
-        <p class="--muted">{{ range sort ($projects.GroupByDate "2006") ".Key" "desc" }}
+        <p class="header__years --muted">{{ range sort ($projects.GroupByDate "2006") ".Key" "desc" }}
             <a href="#{{ .Key }}" class="--ghost">{{ .Key }}</a>
             {{ end }}
         </p>

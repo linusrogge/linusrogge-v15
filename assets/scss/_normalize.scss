@@ -31,6 +31,7 @@ r-grid {
 
     &.header {
         z-index: 98;
+        margin-bottom: $spacing-32;
 
         @include mobile {
             margin-bottom: $spacing-80;

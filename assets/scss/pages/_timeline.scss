@@ -1,12 +1,4 @@
 .template--timeline {
-    .header {
-        margin-bottom: $spacing-32;
-
-        @include mobile {
-            margin-bottom: $spacing-80;
-        }
-    } 
-
     .timeline {
         &__item {
             position: relative;
@@ -53,7 +45,7 @@
                 @include mobile(min) {
                     align-self: flex-start;
                     position: sticky;
-                    top: 128px;
+                    top: calc(var(--navigation-height) + #{$spacing-32});
                 }
                 
                 h3 {

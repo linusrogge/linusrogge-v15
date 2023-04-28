@@ -1,4 +1,26 @@
 .template--work {
+    .header {
+        &__years {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-24;
+
+            a {
+                position: relative;
+
+                &:not(:last-child) {
+                    &::after {
+                        content: '·';
+                        position: absolute;
+                        top: 50%;
+                        right: -50%;
+                        transform: translate(-100%, calc(-50% - 1px));
+                    }
+                }
+            }
+        }
+    }
+
     .group {
         position: relative;
         gap: 0 $spacing-16;
@@ -27,8 +49,10 @@
                 top: calc(var(--navigation-height) + #{$spacing-16});
             }
 
-            & + .project {
-                margin-top: $spacing-40;
+            @include mobile {
+                & + .project {
+                    margin-top: $spacing-40;
+                }
             }
         }
 

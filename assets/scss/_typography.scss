@@ -13,6 +13,7 @@
     @if $spacing {
         & + * { margin-top: $spacing-32; }
         & + p { margin-top: $spacing-12; }
+        & + blockquote { margin-top: $spacing-80; }
     }
 }
 

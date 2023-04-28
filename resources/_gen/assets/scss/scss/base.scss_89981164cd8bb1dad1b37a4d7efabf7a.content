@@ -47,16 +47,16 @@ body {
 
 r-grid {
   padding: 2rem;
-  gap: 5rem 1rem;
+  gap: 8rem 1rem;
   max-width: 1440px;
   margin: 0 auto; }
   @media screen and (max-width: 835px) {
     r-grid {
       padding: 1rem; } }
   r-grid r-cell.--inline {
-    margin-top: -4rem; }
+    margin-top: -5rem; }
     r-grid r-cell.--inline + r-cell {
-      margin-top: -2rem; }
+      margin-top: -4rem; }
 
 .main {
   margin-top: 10rem; }

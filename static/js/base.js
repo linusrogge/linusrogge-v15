@@ -1,7 +1,11 @@
 var navigation = document.querySelector('.navigation'),
     main = document.querySelector('.main')
 
-document.querySelector(':root').style.setProperty('--navigation-height', `${navigation.clientHeight}px`)
+function setNavigationHeight() {
+    document.querySelector(':root').style.setProperty('--navigation-height', `${navigation.clientHeight}px`)
+}setNavigationHeight()
+
+document.body.onresize = () => { setNavigationHeight() }
 
 window.onscroll = () => {
     if (window.scrollY > (main.getBoundingClientRect().top - navigation.clientHeight)) {

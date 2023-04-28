@@ -724,7 +724,9 @@ main hr, .footer hr {
   color: inherit;
   text-underline-offset: 2px;
   text-decoration: underline;
-  text-decoration: none; }
+  text-decoration: none;
+  display: block;
+  white-space: pre-wrap; }
   .template--work .project a::before {
     display: none; }
   .template--work .project a:hover {
@@ -741,5 +743,6 @@ main hr, .footer hr {
   max-width: 80%; }
 
 .template--work .project__image {
+  display: flex;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-inner); }

@@ -7,22 +7,6 @@
             gap: $spacing-40 $spacing-16;
         }
 
-        &__divider {
-            height: 1px;
-            background: var(--color-border);
-
-            &.--dotted {
-                background: linear-gradient(
-                    to right,
-                    var(--color-border),
-                    var(--color-border) 50%,
-                    transparent 0,
-                    transparent
-                );
-                background-size: 16px 1px;
-            }
-        }
-
         &__pages,
         &__connect {
             ul {

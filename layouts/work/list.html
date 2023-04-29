@@ -25,7 +25,7 @@
         <a href="{{ .RelPermalink }}">
             <div class="project__information">
                 <h2 class="project__title">{{ .Title}}</h2>
-                {{ with .Description }}<p class="project__description">{{ . }}</p>{{ end }}
+                {{ with .Params.Intro }}<p class="project__description">{{ . }}</p>{{ end }}
             </div>
             <figure class="project__image">
                 <img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png">

@@ -2,7 +2,7 @@
 
 {{ define "main" }}
 <r-grid class="header" columns="12">
-    <r-cell span-s="row" span="4-10" span-l="4+6" class="Title" data-emergence>
+    <r-cell span-s="row" span="4+6" span-l="4+5">
         <h1>{{ .Title }}{{ with .Params.Date }} · {{ dateFormat "2006" . }}{{ end }}</h1>
         {{ if not .Params.Intro }}
         {{ with .Description }}<p class="--Primary">{{ . }}</p>{{ end }}

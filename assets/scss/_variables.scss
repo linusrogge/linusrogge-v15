@@ -35,6 +35,7 @@ $color-border: #E6E6E6;
 $color-red: #F30B0B;
 $color-background: #f7f7f7;
 $color-white: #f7f7f7;
+$color-black: #010005;
 
 $radius-outer: 12px;
 $radius-inner: $radius-outer / 2;
@@ -47,7 +48,9 @@ $radius-inner: $radius-outer / 2;
     --color-red: #{$color-red};
     --color-background: #{$color-background};
     --color-border: #{$color-border};
+    
     --color-white: #{$color-white};
+    --color-black: #{$color-black};
     
     @include dark {
         --color-foreground: #dadada;

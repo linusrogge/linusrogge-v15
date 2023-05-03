@@ -19,6 +19,7 @@
   --color-background: #f7f7f7;
   --color-border: #E6E6E6;
   --color-white: #f7f7f7;
+  --color-black: #010005;
   --radius-outer: 12px;
   --radius-inner: 6px; }
   @media screen and (prefers-color-scheme: dark) {
@@ -208,6 +209,9 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     line-height: 1.5;
     letter-spacing: 0.4px;
     color: var(--color-foreground); }
+    @media screen and (max-width: 835px) {
+      main p.--large, main .paragraph.--large, .footer p.--large, .footer .paragraph.--large {
+        font-size: 1.2rem; } }
     main p.--large + *, main .paragraph.--large + *, .footer p.--large + *, .footer .paragraph.--large + * {
       margin-top: 2rem; }
     main p.--large + p, main .paragraph.--large + p, .footer p.--large + p, .footer .paragraph.--large + p {
@@ -253,7 +257,8 @@ main .avatar, .footer .avatar {
   transform: translate(0, 3px);
   border: 1px solid var(--color-border);
   margin-right: 0.375rem;
-  background: #f7f7f7; }
+  background: var(--color-white);
+  -webkit-mask-image: -webkit-radial-gradient(white, black); }
   main .avatar img, .footer .avatar img {
     position: absolute;
     top: 0;
@@ -261,6 +266,8 @@ main .avatar, .footer .avatar {
     width: 100%;
     height: 100%;
     border-radius: 0; }
+  main .avatar.--black, .footer .avatar.--black {
+    background: var(--color-black); }
 
 main date, .footer date {
   font-size: 1rem;
@@ -290,30 +297,30 @@ main ul, main ol, .footer ul, .footer ol {
   flex-direction: column;
   list-style: none; }
   @media screen and (min-width: 835px) {
-    main ul.--Cols-1, main ol.--Cols-1, .footer ul.--Cols-1, .footer ol.--Cols-1 {
+    main ul.--cols-1, main ol.--cols-1, .footer ul.--cols-1, .footer ol.--cols-1 {
       display: block;
       column-count: 1; }
-      main ul.--Cols-1 li, main ol.--Cols-1 li, .footer ul.--Cols-1 li, .footer ol.--Cols-1 li {
+      main ul.--cols-1 li, main ol.--cols-1 li, .footer ul.--cols-1 li, .footer ol.--cols-1 li {
         break-inside: avoid; }
-    main ul.--Cols-2, main ol.--Cols-2, .footer ul.--Cols-2, .footer ol.--Cols-2 {
+    main ul.--cols-2, main ol.--cols-2, .footer ul.--cols-2, .footer ol.--cols-2 {
       display: block;
       column-count: 2; }
-      main ul.--Cols-2 li, main ol.--Cols-2 li, .footer ul.--Cols-2 li, .footer ol.--Cols-2 li {
+      main ul.--cols-2 li, main ol.--cols-2 li, .footer ul.--cols-2 li, .footer ol.--cols-2 li {
         break-inside: avoid; }
-    main ul.--Cols-3, main ol.--Cols-3, .footer ul.--Cols-3, .footer ol.--Cols-3 {
+    main ul.--cols-3, main ol.--cols-3, .footer ul.--cols-3, .footer ol.--cols-3 {
       display: block;
       column-count: 3; }
-      main ul.--Cols-3 li, main ol.--Cols-3 li, .footer ul.--Cols-3 li, .footer ol.--Cols-3 li {
+      main ul.--cols-3 li, main ol.--cols-3 li, .footer ul.--cols-3 li, .footer ol.--cols-3 li {
         break-inside: avoid; }
-    main ul.--Cols-4, main ol.--Cols-4, .footer ul.--Cols-4, .footer ol.--Cols-4 {
+    main ul.--cols-4, main ol.--cols-4, .footer ul.--cols-4, .footer ol.--cols-4 {
       display: block;
       column-count: 4; }
-      main ul.--Cols-4 li, main ol.--Cols-4 li, .footer ul.--Cols-4 li, .footer ol.--Cols-4 li {
+      main ul.--cols-4 li, main ol.--cols-4 li, .footer ul.--cols-4 li, .footer ol.--cols-4 li {
         break-inside: avoid; }
-    main ul.--Cols-5, main ol.--Cols-5, .footer ul.--Cols-5, .footer ol.--Cols-5 {
+    main ul.--cols-5, main ol.--cols-5, .footer ul.--cols-5, .footer ol.--cols-5 {
       display: block;
       column-count: 5; }
-      main ul.--Cols-5 li, main ol.--Cols-5 li, .footer ul.--Cols-5 li, .footer ol.--Cols-5 li {
+      main ul.--cols-5 li, main ol.--cols-5 li, .footer ul.--cols-5 li, .footer ol.--cols-5 li {
         break-inside: avoid; } }
   main ul li, main ol li, .footer ul li, .footer ol li {
     font-size: 1rem;
@@ -386,24 +393,27 @@ main ul, main ol, .footer ul, .footer ol {
     margin-top: 5rem; }
 
 main blockquote, .footer blockquote {
-  display: block; }
+  display: block;
+  padding-left: 1rem; }
+  main blockquote:has(cite, p > cite, p > em), .footer blockquote:has(cite, p > cite, p > em) {
+    border-left: 2px solid var(--color-border); }
   @media screen and (min-width: 835px) {
     main blockquote, .footer blockquote {
-      transform: translate(-80px, 0); } }
+      transform: translate(-18px, 0); } }
   main blockquote p, .footer blockquote p {
     font-size: 1.5rem;
     line-height: 1.5;
     letter-spacing: 0.4px;
     color: var(--color-foreground); }
+    @media screen and (max-width: 835px) {
+      main blockquote p, .footer blockquote p {
+        font-size: 1.2rem; } }
     main blockquote p + *, .footer blockquote p + * {
       margin-top: 2rem; }
     main blockquote p + p, .footer blockquote p + p {
       margin-top: 0.75rem; }
     main blockquote p + blockquote, .footer blockquote p + blockquote {
       margin-top: 5rem; }
-    @media screen and (min-width: 835px) {
-      main blockquote p, .footer blockquote p {
-        hanging-punctuation: first last; } }
     main blockquote p + cite,
     main blockquote p em, main blockquote p cite, .footer blockquote p + cite,
     .footer blockquote p em, .footer blockquote p cite {
@@ -414,6 +424,11 @@ main blockquote, .footer blockquote {
       line-height: 1.5;
       letter-spacing: 0.4px;
       color: var(--color-grey); }
+      @media screen and (max-width: 835px) {
+        main blockquote p + cite,
+        main blockquote p em, main blockquote p cite, .footer blockquote p + cite,
+        .footer blockquote p em, .footer blockquote p cite {
+          font-size: 1.2rem; } }
   main blockquote + p, .footer blockquote + p {
     margin-top: 5rem; }
   main blockquote + hr, .footer blockquote + hr {
@@ -624,7 +639,7 @@ main hr, .footer hr {
       background-position: center center;
       background-size: cover;
       position: absolute;
-      left: 0;
+      left: 2px;
       top: 9px; }
     @media screen and (prefers-color-scheme: dark) {
       .template--timeline .timeline__item__meta .relations li::before {
@@ -650,34 +665,9 @@ main hr, .footer hr {
   .template--timeline .timeline__item hr {
     height: 48px; }
   .template--timeline .timeline__item blockquote {
-    transform: translate(0);
-    margin: 0;
-    border-left: 2px solid var(--color-border);
-    padding-left: 1rem; }
+    margin: 0; }
     .template--timeline .timeline__item blockquote + p {
       margin-top: 2rem; }
-    .template--timeline .timeline__item blockquote p {
-      font-size: 1rem;
-      line-height: 1.5;
-      letter-spacing: 0.4px;
-      color: var(--color-foreground); }
-      .template--timeline .timeline__item blockquote p + * {
-        margin-top: 2rem; }
-      .template--timeline .timeline__item blockquote p + p {
-        margin-top: 0.75rem; }
-      .template--timeline .timeline__item blockquote p + blockquote {
-        margin-top: 5rem; }
-      .template--timeline .timeline__item blockquote p em {
-        font-size: 1rem;
-        line-height: 1.5;
-        letter-spacing: 0.4px;
-        color: var(--color-grey); }
-        .template--timeline .timeline__item blockquote p em + * {
-          margin-top: 2rem; }
-        .template--timeline .timeline__item blockquote p em + p {
-          margin-top: 0.75rem; }
-        .template--timeline .timeline__item blockquote p em + blockquote {
-          margin-top: 5rem; }
 
 .template--entry .entry__description {
   margin-bottom: 2rem; }

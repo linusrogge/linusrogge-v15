@@ -8,7 +8,7 @@ The persistent connectivity with the rest of the world currently available stand
 
 People used to live without phones, without instant messaging, and still led a purposeful and rewarding life. It is, to an extent, imaginable that their lives were actually much more fruitful than a lot of the current ones appear to be.
 
-> »Simply put, humans are not wired to be constantly wired.«
+> “Simply put, humans are not wired to be constantly wired.”
 *Cal Newport · Digital Minimalism*
 
 Given a larger availability of disconnectedness, writing and receiving letters was the only reasonable form of (long-distance) communication. The first occurrence of this type of communication is tracked back to 500 BC, which is an incredible span.

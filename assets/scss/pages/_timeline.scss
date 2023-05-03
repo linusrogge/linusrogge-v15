@@ -86,7 +86,7 @@
                             background-position: center center;
                             background-size: cover;
                             position: absolute;
-                            left: 0;
+                            left: 2px;
                             top: 9px;
                         }
                         @include dark {
@@ -127,21 +127,10 @@
             }
 
             blockquote {
-                transform: translate(0);
                 margin: 0;
-                border-left: 2px solid var(--color-border);
-                padding-left: $spacing-16;
 
                 & + p {
                     margin-top: $spacing-32;
-                }
-
-                p { 
-                    @include Paragraph;
-                    
-                    em {
-                        @include Paragraph($muted: true);
-                    }
                 }
             }
         }

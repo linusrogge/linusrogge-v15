@@ -14,4 +14,5 @@ In most cases, it hasn't been an issue to step back and give things some thought
 
 In any way, reading this article gave me a sense of comfort, and made me feel understood. It's always great to know you're not alone.
 
-> How slowly or quickly you think is not an accurate measurement of your intelligence. Slow thinking is more deliberate and less emotional.
+> “How slowly or quickly you think is not an accurate measurement of your intelligence. Slow thinking is more deliberate and less emotional.”
+*Derek Sivers / Carl Barenbrug*

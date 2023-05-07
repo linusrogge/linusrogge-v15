@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--type-sans);
-    letter-spacing: 0.4px;
     color: var(--color-foreground);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -33,7 +32,7 @@ html.is-animating .transition-fade {
 r-grid {
     position: relative;
     padding: $spacing-32;
-    gap: $spacing-128 $spacing-16;
+    gap: $spacing-160 $spacing-16;
     max-width: 1440px;
     margin: 0 auto;
 

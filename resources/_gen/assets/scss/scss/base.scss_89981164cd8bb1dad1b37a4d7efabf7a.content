@@ -33,7 +33,6 @@
   margin: 0;
   padding: 0;
   font-family: var(--type-sans);
-  letter-spacing: 0.4px;
   color: var(--color-foreground);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +56,7 @@ html.is-animating .transition-fade {
 r-grid {
   position: relative;
   padding: 2rem;
-  gap: 8rem 1rem;
+  gap: 10rem 1rem;
   max-width: 1440px;
   margin: 0 auto; }
   @media screen and (max-width: 835px) {
@@ -233,6 +232,8 @@ main p, main .paragraph, .footer p, .footer .paragraph {
   color: var(--color-foreground); }
   main p + *, main .paragraph + *, .footer p + *, .footer .paragraph + * {
     margin-top: 2rem; }
+  main p + h3, main .paragraph + h3, .footer p + h3, .footer .paragraph + h3 {
+    margin-top: 2.5rem; }
   main p + p, main .paragraph + p, .footer p + p, .footer .paragraph + p {
     margin-top: 0.75rem; }
   main p + blockquote, main .paragraph + blockquote, .footer p + blockquote, .footer .paragraph + blockquote {
@@ -246,6 +247,8 @@ main p, main .paragraph, .footer p, .footer .paragraph {
         font-size: 1.2rem; } }
     main p.--large + *, main .paragraph.--large + *, .footer p.--large + *, .footer .paragraph.--large + * {
       margin-top: 2rem; }
+    main p.--large + h3, main .paragraph.--large + h3, .footer p.--large + h3, .footer .paragraph.--large + h3 {
+      margin-top: 2.5rem; }
     main p.--large + p, main .paragraph.--large + p, .footer p.--large + p, .footer .paragraph.--large + p {
       margin-top: 0.75rem; }
     main p.--large + blockquote, main .paragraph.--large + blockquote, .footer p.--large + blockquote, .footer .paragraph.--large + blockquote {
@@ -277,6 +280,12 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     .footer p small + *, .footer .paragraph.--muted + *,
     .footer .paragraph small + * {
       margin-top: 2rem; }
+    main p.--muted + h3,
+    main p small + h3, main .paragraph.--muted + h3,
+    main .paragraph small + h3, .footer p.--muted + h3,
+    .footer p small + h3, .footer .paragraph.--muted + h3,
+    .footer .paragraph small + h3 {
+      margin-top: 2.5rem; }
     main p.--muted + p,
     main p small + p, main .paragraph.--muted + p,
     main .paragraph small + p, .footer p.--muted + p,
@@ -305,8 +314,9 @@ main .avatar, .footer .avatar {
   -webkit-mask-image: -webkit-radial-gradient(white, black); }
   main .avatar img, .footer .avatar img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     border-radius: 0; }
@@ -324,6 +334,8 @@ main date, .footer date {
         background: rgba(247, 247, 247, 0.2); } }
   main date + *, .footer date + * {
     margin-top: 2rem; }
+  main date + h3, .footer date + h3 {
+    margin-top: 2.5rem; }
   main date + p, .footer date + p {
     margin-top: 0.75rem; }
   main date + blockquote, .footer date + blockquote {
@@ -441,7 +453,7 @@ main ul, main ol, .footer ul, .footer ol {
   main ul + h2, main ol + h2, .footer ul + h2, .footer ol + h2 {
     margin-top: 4rem; }
   main ul + h3, main ol + h3, .footer ul + h3, .footer ol + h3 {
-    margin-top: 2rem; }
+    margin-top: 2.5rem; }
 
 main blockquote, .footer blockquote {
   display: block; }
@@ -460,6 +472,8 @@ main blockquote, .footer blockquote {
         font-size: 1.2rem; } }
     main blockquote p + *, .footer blockquote p + * {
       margin-top: 2rem; }
+    main blockquote p + h3, .footer blockquote p + h3 {
+      margin-top: 2.5rem; }
     main blockquote p + p, .footer blockquote p + p {
       margin-top: 0.75rem; }
     main blockquote p + blockquote, .footer blockquote p + blockquote {
@@ -605,6 +619,8 @@ main hr, .footer hr {
           color: var(--color-foreground); }
           .navigation .name .avatar__tooltip p + * {
             margin-top: 2rem; }
+          .navigation .name .avatar__tooltip p + h3 {
+            margin-top: 2.5rem; }
           .navigation .name .avatar__tooltip p + p {
             margin-top: 0.75rem; }
           .navigation .name .avatar__tooltip p + blockquote {
@@ -792,6 +808,8 @@ main hr, .footer hr {
             background: rgba(247, 247, 247, 0.2); } }
       .footer .footer__quote blockquote cite + * {
         margin-top: 2rem; }
+      .footer .footer__quote blockquote cite + h3 {
+        margin-top: 2.5rem; }
       .footer .footer__quote blockquote cite + p {
         margin-top: 0.75rem; }
       .footer .footer__quote blockquote cite + blockquote {
@@ -1061,3 +1079,6 @@ main hr, .footer hr {
 
 .template--work .project + .button {
   margin-top: 2.5rem; }
+
+.template--colophon r-grid {
+  row-gap: 5rem; }

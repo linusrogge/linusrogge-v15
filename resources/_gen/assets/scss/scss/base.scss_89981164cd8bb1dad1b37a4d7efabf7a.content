@@ -36,7 +36,8 @@
   color: var(--color-foreground);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: 'case'; }
 
 body, html {
   min-height: 100%;
@@ -484,14 +485,9 @@ main blockquote, .footer blockquote {
       display: block;
       margin-top: 0.5rem;
       font-style: normal;
-      font-size: 1.5rem;
+      font-size: 1rem;
       line-height: 1.5;
       color: var(--color-grey); }
-      @media screen and (max-width: 835px) {
-        main blockquote p + cite,
-        main blockquote p em, main blockquote p cite, .footer blockquote p + cite,
-        .footer blockquote p em, .footer blockquote p cite {
-          font-size: 1.2rem; } }
       main blockquote p + cite::selection,
       main blockquote p em::selection, main blockquote p cite::selection, .footer blockquote p + cite::selection,
       .footer blockquote p em::selection, .footer blockquote p cite::selection {

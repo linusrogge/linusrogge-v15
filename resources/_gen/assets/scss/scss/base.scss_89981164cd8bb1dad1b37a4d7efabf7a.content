@@ -41,11 +41,18 @@
 
 body, html {
   min-height: 100%;
-  width: 100%;
-  scroll-behavior: smooth; }
+  width: 100%; }
 
 body {
   background: var(--color-background); }
+
+.transition-fade {
+  transition: 400ms 200ms ease-in-out;
+  opacity: 1; }
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  transition-delay: 0s; }
 
 r-grid {
   position: relative;
@@ -402,13 +409,13 @@ main ul, main ol, .footer ul, .footer ol {
     margin-top: 2rem; }
 
 main blockquote, .footer blockquote {
-  display: block;
-  padding-left: 1rem; }
+  display: block; }
   main blockquote:has(cite, p > cite, p > em), .footer blockquote:has(cite, p > cite, p > em) {
+    padding-left: 1rem;
     border-left: 2px solid var(--color-border); }
-  @media screen and (min-width: 835px) {
-    main blockquote, .footer blockquote {
-      transform: translate(-18px, 0); } }
+    @media screen and (min-width: 835px) {
+      main blockquote:has(cite, p > cite, p > em), .footer blockquote:has(cite, p > cite, p > em) {
+        transform: translate(-18px, 0); } }
   main blockquote p, .footer blockquote p {
     font-size: 1.5rem;
     line-height: 1.5;

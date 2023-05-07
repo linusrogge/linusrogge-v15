@@ -16,9 +16,34 @@ window.onscroll = () => {
     }
 }
 
-bars.onclick = () => {
-    navigation.classList.toggle('--open')
+function toggleNavigation() { navigation.classList.toggle('--open') }
+function closeNavigation() { navigation.classList.remove('--open') }
+
+bars.onclick = () => { toggleNavigation() }
+
+const swup = new Swup({
+    containers: ['#main'],
+    plugins: [
+        new SwupPreloadPlugin(),
+        new SwupScrollPlugin({
+            doScrollingRightAway: false,
+            animateScroll: {
+                betweenPages: false,
+                samePageWithHash: true,
+                samePage: true
+            }            
+        })
+    ]
+});
+
+function scrollTop() { 
+    window.scroll(0, 0) 
+    // swup.scrollTo(0, false)
 }
+
+swup.on('animationOutStart', closeNavigation);
+swup.on('contentReplaced', init);
+swup.on('animationOutDone', scrollTop);
 
 (function() {
     var quotes = [
@@ -52,13 +77,17 @@ bars.onclick = () => {
     document.querySelector('.footer blockquote cite').innerHTML = quote.author ? quote.author : '';
 })();
 
-var timeWrapper = document.querySelector('.time')
 
-function getCurrentTime() {
-    const options = { timeZone: 'Europe/Berlin', hour: "numeric",
-    minute: "numeric" };
-    const today = new Date();
+function init() {
+    var timeWrapper = document.querySelector('.time')
+    
+    function getCurrentTime() {
+        const options = { timeZone: 'Europe/Berlin', hour: "numeric",
+        minute: "numeric" };
+        const today = new Date();
+    
+        timeWrapper.innerHTML = Intl.DateTimeFormat("de-DE", options).format(today).replace(/:/g, '.') + " local time";
+    }
 
-    timeWrapper.innerHTML = Intl.DateTimeFormat("de-DE", options).format(today).replace(/:/g, '.') + " local time";
-}
-if (timeWrapper) { setInterval(getCurrentTime, 100); }
+    if (timeWrapper) { setInterval(getCurrentTime, 100); }
+}init()

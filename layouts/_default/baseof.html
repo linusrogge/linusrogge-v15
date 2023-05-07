@@ -13,11 +13,15 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}raster/raster.grid.css">
     {{ $stylesheet := resources.Get "scss/base.scss" | resources.ToCSS "base.css" }}
     <link rel="stylesheet" href="{{ $stylesheet.Permalink }}">
+
+    <script src="{{ .Site.BaseURL }}js/SwupScrollPlugin.min.js"></script> 
+    <script src="{{ .Site.BaseURL }}js/SwupPreloadPlugin.min.js"></script> 
+    <script src="https://unpkg.com/swup@3"></script>
 </head>
 <body>
     {{ partial "navigation" . }}
 
-    <main class="main {{ block "customclasses" . }}{{ end }}" id="main">
+    <main class="main transition-fade {{ block "customclasses" . }}{{ end }}" id="main">
         {{ block "main" . }}{{ end }}
     </main>
 

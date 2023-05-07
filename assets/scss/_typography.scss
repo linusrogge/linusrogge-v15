@@ -298,14 +298,14 @@ main, .footer {
 
     blockquote {
         display: block;
-        padding-left: $spacing-16;
-
+        
         &:has(cite, p > cite, p > em) {
+            padding-left: $spacing-16;
             border-left: 2px solid var(--color-border);
-        }
 
-        @include mobile(min) {
-            transform: translate(-18px, 0);
+            @include mobile(min) {
+                transform: translate(-18px, 0);
+            }
         }
 
         p { 

@@ -208,7 +208,7 @@ main, .footer {
 
         li {
             @include Paragraph($spacing: false);
-            padding: $spacing-8 0 $spacing-10;
+            padding: $spacing-10 0 $spacing-8;
             border-bottom: 1px solid var(--color-border);
         }
 
@@ -239,7 +239,7 @@ main, .footer {
                     align-items: center;
                     justify-content: center;
                     position: absolute;
-                    top: 11px;
+                    top: 13px;
                     transform: translate(-#{$spacing-24}, 0);
                 }
     

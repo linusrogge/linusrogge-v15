@@ -372,7 +372,7 @@ main ul, main ol, .footer ul, .footer ol {
     font-size: 1rem;
     line-height: 1.5;
     color: var(--color-foreground);
-    padding: 0.5rem 0 0.625rem;
+    padding: 0.625rem 0 0.5rem;
     border-bottom: 1px solid var(--color-border); }
   main ul.--ghost, main ol.--ghost, .footer ul.--ghost, .footer ol.--ghost {
     gap: 0.125rem 0; }
@@ -396,7 +396,7 @@ main ul, main ol, .footer ul, .footer ol {
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 11px;
+        top: 13px;
         transform: translate(-1.5rem, 0); }
       main ul.--task li.--soon::before, main ul.--task li.--now::before, main ol.--task li.--soon::before, main ol.--task li.--now::before, .footer ul.--task li.--soon::before, .footer ul.--task li.--now::before, .footer ol.--task li.--soon::before, .footer ol.--task li.--now::before {
         background: var(--color-grey);

@@ -8,7 +8,7 @@
     @else { font-size: 1rem; }
 
     line-height: 1.5;
-    letter-spacing: 0.4px;
+    // letter-spacing: 0.4px;
 
     @if $muted { 
         color: var(--color-grey);
@@ -47,12 +47,12 @@
 
         &::before {
             content: '';
-            width: calc(100% + 10px);
+            width: calc(100% + #{$spacing-10});
             height: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+            transform: translate(-50%, calc(-50% - 2px)) scale(0.95);
             border-radius: 4px;
             background: var(--color-border);
             opacity: 0;
@@ -66,7 +66,7 @@
 
             &::before { 
                 opacity: 1;
-                transform: translate(-50%, calc(-50% + 1px)) scale(1);
+                transform: translate(-50%, calc(-50% - 2px)) scale(1);
             }
         }
     }
@@ -81,9 +81,9 @@
     font-family: inherit;
     font-size: inherit;
     line-height: 1;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    padding: $spacing-6 $spacing-10 $spacing-8;
+    font-weight: 700;
+    // letter-spacing: 0.4px;
+    padding: $spacing-8 $spacing-10 $spacing-6;
     transition: 150ms ease;
     @include noselect;
 
@@ -119,7 +119,8 @@
 main, .footer {
     h1, h2, h3, h4 {
         font-size: inherit;
-        letter-spacing: 0.4px;
+        font-weight: 700;
+        // letter-spacing: 0.4px;
         margin-bottom: $spacing-8;
 
         & + figure { margin-top: $spacing-32; }

@@ -15,7 +15,10 @@
                 gap: $spacing-4;
                 
                 li {
-                    a { text-decoration: none; }
+                    a { 
+                        text-decoration: none; 
+                        margin-left: 0; 
+                    }
                 }
             }
         }

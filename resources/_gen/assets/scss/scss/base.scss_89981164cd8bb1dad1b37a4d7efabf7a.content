@@ -1,18 +1,18 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'FH Oscar';
-  src: url("/typefaces/fh-oscar/FHOscar-Regular.otf");
+  font-family: 'Favorit';
+  src: url("/typefaces/favorit/Favorit-Regular.woff2");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: 'FH Oscar';
-  src: url("/typefaces/fh-oscar/FHOscar-Bold.otf");
-  font-weight: 600;
+  font-family: 'Favorit';
+  src: url("/typefaces/favorit/Favorit-Bold.woff2");
+  font-weight: 700;
   font-style: normal; }
 
 :root {
-  --type-sans: FH Oscar, sans-serif;
+  --type-sans: Favorit, sans-serif;
   --color-foreground: #010005;
   --color-grey: #696969;
   --color-red: #F30B0B;
@@ -105,6 +105,7 @@ r-grid {
       display: inline-block;
       margin-top: 0.5rem;
       font-style: normal;
+      line-height: 1.5;
       color: var(--color-grey); }
       .main img + figcaption::before, .main img + em::before {
         content: '›';
@@ -120,9 +121,8 @@ r-grid {
   font-family: inherit;
   font-size: inherit;
   line-height: 1;
-  font-weight: bold;
-  letter-spacing: 0.4px;
-  padding: 0.375rem 0.625rem 0.5rem;
+  font-weight: 700;
+  padding: 0.5rem 0.625rem 0.375rem;
   transition: 150ms ease;
   user-select: none;
   -webkit-user-select: none;
@@ -144,9 +144,8 @@ r-grid {
     font-family: inherit;
     font-size: inherit;
     line-height: 1;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    padding: 0.375rem 0.625rem 0.5rem;
+    font-weight: 700;
+    padding: 0.5rem 0.625rem 0.375rem;
     transition: 150ms ease;
     user-select: none;
     -webkit-user-select: none;
@@ -168,9 +167,8 @@ r-grid {
     font-family: inherit;
     font-size: inherit;
     line-height: 1;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    padding: 0.375rem 0.625rem 0.5rem;
+    font-weight: 700;
+    padding: 0.5rem 0.625rem 0.375rem;
     transition: 150ms ease;
     user-select: none;
     -webkit-user-select: none;
@@ -187,7 +185,7 @@ r-grid {
 
 main h1, main h2, main h3, main h4, .footer h1, .footer h2, .footer h3, .footer h4 {
   font-size: inherit;
-  letter-spacing: 0.4px;
+  font-weight: 700;
   margin-bottom: 0.5rem; }
   main h1 + figure, main h2 + figure, main h3 + figure, main h4 + figure, .footer h1 + figure, .footer h2 + figure, .footer h3 + figure, .footer h4 + figure {
     margin-top: 2rem; }
@@ -205,12 +203,12 @@ main a:not(.button), main .link, .footer a:not(.button), .footer .link {
   margin-left: 0.125rem; }
   main a:not(.button)::before, main .link::before, .footer a:not(.button)::before, .footer .link::before {
     content: '';
-    width: calc(100% + 10px);
+    width: calc(100% + 0.625rem);
     height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+    transform: translate(-50%, calc(-50% - 2px)) scale(0.95);
     border-radius: 4px;
     background: var(--color-border);
     opacity: 0;
@@ -221,7 +219,7 @@ main a:not(.button), main .link, .footer a:not(.button), .footer .link {
     text-decoration: none; }
     main a:not(.button):hover::before, main .link:hover::before, .footer a:not(.button):hover::before, .footer .link:hover::before {
       opacity: 1;
-      transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+      transform: translate(-50%, calc(-50% - 2px)) scale(1); }
   main a:not(.button).--nowrap, main .link.--nowrap, .footer a:not(.button).--nowrap, .footer .link.--nowrap {
     white-space: nowrap; }
   main a:not(.button).--ghost, main .link.--ghost, .footer a:not(.button).--ghost, .footer .link.--ghost {
@@ -230,7 +228,6 @@ main a:not(.button), main .link, .footer a:not(.button), .footer .link {
 main p, main .paragraph, .footer p, .footer .paragraph {
   font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0.4px;
   color: var(--color-foreground); }
   main p + *, main .paragraph + *, .footer p + *, .footer .paragraph + * {
     margin-top: 2rem; }
@@ -241,7 +238,6 @@ main p, main .paragraph, .footer p, .footer .paragraph {
   main p.--large, main .paragraph.--large, .footer p.--large, .footer .paragraph.--large {
     font-size: 1.5rem;
     line-height: 1.5;
-    letter-spacing: 0.4px;
     color: var(--color-foreground); }
     @media screen and (max-width: 835px) {
       main p.--large, main .paragraph.--large, .footer p.--large, .footer .paragraph.--large {
@@ -259,7 +255,6 @@ main p, main .paragraph, .footer p, .footer .paragraph {
   .footer .paragraph small {
     font-size: 1rem;
     line-height: 1.5;
-    letter-spacing: 0.4px;
     color: var(--color-grey); }
     main p.--muted::selection,
     main p small::selection, main .paragraph.--muted::selection,
@@ -319,7 +314,6 @@ main .avatar, .footer .avatar {
 main date, .footer date {
   font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0.4px;
   color: var(--color-grey); }
   main date::selection, .footer date::selection {
     background: rgba(247, 247, 247, 0.1); }
@@ -377,7 +371,6 @@ main ul, main ol, .footer ul, .footer ol {
   main ul li, main ol li, .footer ul li, .footer ol li {
     font-size: 1rem;
     line-height: 1.5;
-    letter-spacing: 0.4px;
     color: var(--color-foreground);
     padding: 0.5rem 0 0.625rem;
     border-bottom: 1px solid var(--color-border); }
@@ -459,7 +452,6 @@ main blockquote, .footer blockquote {
   main blockquote p, .footer blockquote p {
     font-size: 1.5rem;
     line-height: 1.5;
-    letter-spacing: 0.4px;
     color: var(--color-foreground); }
     @media screen and (max-width: 835px) {
       main blockquote p, .footer blockquote p {
@@ -478,7 +470,6 @@ main blockquote, .footer blockquote {
       font-style: normal;
       font-size: 1.5rem;
       line-height: 1.5;
-      letter-spacing: 0.4px;
       color: var(--color-grey); }
       @media screen and (max-width: 835px) {
         main blockquote p + cite,
@@ -548,12 +539,12 @@ main hr, .footer hr {
     gap: 0.125rem; }
     .navigation__link::before {
       content: '';
-      width: calc(100% + 10px);
+      width: calc(100% + 0.625rem);
       height: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+      transform: translate(-50%, calc(-50% - 2px)) scale(0.95);
       border-radius: 4px;
       background: var(--color-border);
       opacity: 0;
@@ -564,7 +555,7 @@ main hr, .footer hr {
       text-decoration: none; }
       .navigation__link:hover::before {
         opacity: 1;
-        transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+        transform: translate(-50%, calc(-50% - 2px)) scale(1); }
     .navigation__link::before {
       height: calc(100% + 4px); }
     .navigation__link .description {
@@ -608,7 +599,6 @@ main hr, .footer hr {
         .navigation .name .avatar__tooltip p {
           font-size: 1rem;
           line-height: 1.5;
-          letter-spacing: 0.4px;
           color: var(--color-foreground); }
           .navigation .name .avatar__tooltip p + * {
             margin-top: 2rem; }
@@ -627,12 +617,12 @@ main hr, .footer hr {
             margin-left: 0.125rem; }
             .navigation .name .avatar__tooltip p a::before {
               content: '';
-              width: calc(100% + 10px);
+              width: calc(100% + 0.625rem);
               height: 100%;
               position: absolute;
               top: 50%;
               left: 50%;
-              transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+              transform: translate(-50%, calc(-50% - 2px)) scale(0.95);
               border-radius: 4px;
               background: var(--color-border);
               opacity: 0;
@@ -643,7 +633,7 @@ main hr, .footer hr {
               text-decoration: none; }
               .navigation .name .avatar__tooltip p a:hover::before {
                 opacity: 1;
-                transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+                transform: translate(-50%, calc(-50% - 2px)) scale(1); }
         .navigation .name .avatar__tooltip::before {
           content: '';
           width: 12px;
@@ -774,7 +764,8 @@ main hr, .footer hr {
     .footer .footer__pages ul, .footer .footer__connect ul {
       gap: 0.25rem; }
       .footer .footer__pages ul li a, .footer .footer__connect ul li a {
-        text-decoration: none; }
+        text-decoration: none;
+        margin-left: 0; }
   .footer .footer__quote blockquote {
     margin-top: 2rem;
     transform: translate(0);
@@ -783,7 +774,6 @@ main hr, .footer hr {
     .footer .footer__quote blockquote p {
       font-size: 1rem;
       line-height: 1.5;
-      letter-spacing: 0.4px;
       color: var(--color-foreground); }
       @media screen and (min-width: 835px) {
         .footer .footer__quote blockquote p {
@@ -791,7 +781,6 @@ main hr, .footer hr {
     .footer .footer__quote blockquote cite {
       font-size: 1rem;
       line-height: 1.5;
-      letter-spacing: 0.4px;
       color: var(--color-grey); }
       .footer .footer__quote blockquote cite::selection {
         background: rgba(247, 247, 247, 0.1); }
@@ -1022,12 +1011,12 @@ main hr, .footer hr {
   white-space: unset; }
   .template--work .project a::before {
     content: '';
-    width: calc(100% + 10px);
+    width: calc(100% + 0.625rem);
     height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+    transform: translate(-50%, calc(-50% - 2px)) scale(0.95);
     border-radius: 4px;
     background: var(--color-border);
     opacity: 0;
@@ -1038,7 +1027,7 @@ main hr, .footer hr {
     text-decoration: none; }
     .template--work .project a:hover::before {
       opacity: 1;
-      transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+      transform: translate(-50%, calc(-50% - 2px)) scale(1); }
   .template--work .project a::before {
     height: calc(100% + 1.5rem);
     width: calc(100% + 1.5rem);

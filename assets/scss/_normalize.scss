@@ -108,6 +108,7 @@ r-grid {
             display: inline-block;
             margin-top: $spacing-8;
             font-style: normal;
+            line-height: 1.5;
             color: var(--color-grey);
 
             &::before {

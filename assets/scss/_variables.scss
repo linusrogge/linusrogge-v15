@@ -1,17 +1,30 @@
+// @font-face {
+//     font-family: 'FH Oscar';
+//     src: url('/typefaces/fh-oscar/FHOscar-Regular.otf');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'FH Oscar';
+//     src: url('/typefaces/fh-oscar/FHOscar-Bold.otf');
+//     font-weight: 600;
+//     font-style: normal;
+// }
 @font-face {
-    font-family: 'FH Oscar';
-    src: url('/typefaces/fh-oscar/FHOscar-Regular.otf');
+    font-family: 'Favorit';
+    src: url('/typefaces/favorit/Favorit-Regular.woff2');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'FH Oscar';
-    src: url('/typefaces/fh-oscar/FHOscar-Bold.otf');
-    font-weight: 600;
+    font-family: 'Favorit';
+    src: url('/typefaces/favorit/Favorit-Bold.woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
-$type-sans: 'FH Oscar', sans-serif;
+// $type-sans: 'FH Oscar', sans-serif;
+$type-sans: 'Favorit', sans-serif;
 
 $spacing-2: 0.125rem;
 $spacing-4: 0.25rem;

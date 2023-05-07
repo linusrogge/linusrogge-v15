@@ -57,6 +57,10 @@ r-grid {
             
             @include mobile { margin-top: -$spacing-64; }
         }
+        
+        &.--inline-mobile {
+            @include mobile { margin-top: -$spacing-64; }
+        }
 
         &[id] {
             padding-top: calc(var(--navigation-height) + #{$spacing-32});

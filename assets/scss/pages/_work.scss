@@ -98,6 +98,10 @@
         &__description {
             color: var(--color-grey);
             max-width: 80%;
+
+            @include mobile {
+                max-width: 95%;
+            }
         }
     
         &__image {

@@ -1,3 +1,5 @@
+{{ define "customclasses" }}template--work{{ end }}
+
 {{ define "main" }}
 <r-grid columns-s="4" columns="12">
     <r-cell span-s="row" span="4+5">
@@ -10,5 +12,26 @@
         </p>
         <a href="/about" class="button --primary">Learn more</a>
     </r-cell>
+
+    <r-cell span-s="row" span="1+3">
+        <h2>Recent work</h2>
+    </r-cell>
+    {{ range first 1 (where .Site.RegularPages "Section" "work") }}
+    <r-cell span-s="row" span="4+6">
+        <div class="project">
+            <a href="{{ .RelPermalink }}">
+                <div class="project__information">
+                    <h2 class="project__title">{{ .Title}}</h2>
+                    {{ with .Params.Intro }}<p class="project__description">{{ . }}</p>{{ end }}
+                </div>
+                <figure class="project__image">
+                    <img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png">
+                </figure>
+            </a>
+        </div>
+
+        <a href="{{ .Site.BaseURL }}work" class="button">See all projects</a>
+    </r-cell>
+    {{ end }}
 </r-grid>
 {{ end }}

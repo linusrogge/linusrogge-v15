@@ -4,6 +4,15 @@
             <div class="avatar">
                 <img src="https://unavatar.io/linusrogge">
             </div>
+            {{ $baseurl := .Site.BaseURL}}
+            {{ with .Site.Params.Status }}
+                <div class="avatar__tooltip">
+                    <p>
+                        {{ . | safeHTML }}
+                    </p>
+                    <p><a href="{{ $baseurl }}timeline">See all updates</a></p>
+                </div>
+            {{ end }}
             <a href="{{ .Site.BaseURL }}" class="navigation__link">
                 <span class="title">{{ .Site.Title }}</span>
                 <span class="description">{{ .Site.Params.Description }}</span>

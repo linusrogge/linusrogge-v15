@@ -47,6 +47,7 @@
     }
 
     .name {
+        position: relative;
         display: flex;
         gap: $spacing-12;
         align-items: center;
@@ -65,6 +66,65 @@
                 object-fit: cover;
                 position: relative;
                 z-index: -1;
+            }
+
+            &__tooltip {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: $spacing-16;
+                border-radius: var(--radius-inner);
+                border: 1px solid var(--color-border);
+                padding: $spacing-8 $spacing-12;
+                background: var(--color-background);
+                transform: translate(0, $spacing-4);
+                opacity: 0;
+                visibility: hidden;
+                transition: 200ms ease;
+
+                p {
+                    @include Paragraph;
+
+                    a { @include Link(box); }
+                }
+
+                &::before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    transform: rotate(-45deg) translate(-50%, 0);
+                    transform-origin: 0 50%;
+                    border-radius: 0 4px 0 0;
+                    border-top: 1px solid var(--color-border);
+                    border-right: 1px solid var(--color-border);
+                    position: absolute;
+                    top: -7px;
+                    left: 20px;
+                    background: var(--color-background);
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 100%;
+                    left: 0;
+                    width: $spacing-40;
+                    height: $spacing-32;
+                }
+
+                &:hover {
+                    transform: translate(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &:hover { 
+                & + .avatar__tooltip {
+                    transform: translate(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
 

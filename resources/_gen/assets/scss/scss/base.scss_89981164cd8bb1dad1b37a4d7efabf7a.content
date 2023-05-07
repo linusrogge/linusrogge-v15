@@ -535,7 +535,8 @@ main hr, .footer hr {
     margin-left: 0.125rem;
     text-decoration: none;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    line-height: 1.2; }
     .navigation__link::before {
       content: '';
       width: calc(100% + 0.625rem);
@@ -571,7 +572,8 @@ main hr, .footer hr {
       overflow: hidden;
       border-radius: 50%;
       box-shadow: inset 0 0 0 1px rgba(105, 105, 105, 0.1);
-      flex-shrink: 0; }
+      flex-shrink: 0;
+      margin-top: -0.25rem; }
       .navigation .name .avatar img {
         width: 100%;
         height: 100%;

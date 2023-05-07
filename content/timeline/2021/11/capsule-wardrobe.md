@@ -42,7 +42,7 @@ There is still much work required, but sorting out clothes that don't serve me a
 
 Before I conclude this article, I'd like to mention a few sustainable and human-friendly places to shop at. This is a collection of brands that I trust and confidently support in the way they do business and manufacture their products:
 
-[Nomen Nescio](https://nomennescio.fi), [Asket](https://asket.com), [Armedangels](https://armedangels.com), [Rotholz](https://rotholz-store.com), [Organic Basics](https://lowimpact.organicbasics.com), [FRNKOW](https://frnkow.com), [L’ESTRANGE](https://eu.lestrangelondon.com), [SENSE Studios](https://sensestudiosofficial.com), [SAMSØE](https://samsoe.com), [oftt](https://oftt.world), [Salzwasser](https://salzwasser.eu), [RÓHE](https://roheframes.com)
+[Nomen Nescio](https://nomennescio.fi), [Asket](https://asket.com), [Armedangels](https://armedangels.com), [Rotholz](https://rotholz-store.com), [Organic Basics](https://lowimpact.organicbasics.com), [FRNKOW](https://frnkow.com), [L’ESTRANGE](https://eu.lestrangelondon.com), [SENSE Studios](https://sensestudiosofficial.com), [SAMSØE](https://samsoe.com), [oftt](https://oftt.world), [Salzwasser](https://salzwasser.eu), [RÓHE](https://roheframes.com), [LAUGÉ](https://lauge.shop)
 
 Find more on <a href="https://goodgarms.com/" target="_blank">Good Garms</a>.
 

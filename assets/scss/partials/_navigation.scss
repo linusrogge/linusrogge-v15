@@ -43,7 +43,6 @@
         text-decoration: none;
         display: flex;
         flex-direction: column;
-        gap: $spacing-2;
 
         &::before {
             height: calc(100% + 4px);

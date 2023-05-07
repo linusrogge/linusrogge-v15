@@ -1,0 +1,14 @@
+{{ define "main" }}
+<r-grid columns-s="4" columns="12">
+    <r-cell span-s="row" span="4+6" span-l="4+5" class="entry__content">
+        <h1 class="entry__title">404 Error</h1>
+        <p>
+            A Web Designer decided to use right aligned text.
+            <small>His boss yelled at him for it because it wasn't justified.</small>
+        </p>
+        <p>
+            Now that we all had a good laugh, it's time to <a href="{{ .Site.BaseURL }}">go back to business</a>.
+        </p>
+    </r-cell>
+</r-grid>
+{{ end }}

@@ -19,7 +19,7 @@
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} · {{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="Hamburg based Software Designer">
     <meta name="twitter:image" content="https://linusrogge.com/images/og.png">
-    <meta name="twitter:card" content="{{ with .Page.Params.twitterCard }}{{ . }}{{ else }}summary{{ end }}">
+    <meta name="twitter:card" content="{{ with .Page.Params.twitterCard }}{{ . }}{{ else }}summary_large_image{{ end }}">
 
     <script src="{{ .Site.BaseURL }}js/SwupScrollPlugin.min.js"></script> 
     <script src="{{ .Site.BaseURL }}js/SwupPreloadPlugin.min.js"></script> 

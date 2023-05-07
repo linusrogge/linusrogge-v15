@@ -1,20 +1,6 @@
 var navigation = document.querySelector('.navigation'),
-    bars = document.querySelector('.bars'),
-    main = document.querySelector('.main')
-
-function setNavigationHeight() {
-    document.querySelector(':root').style.setProperty('--navigation-height', `${navigation.clientHeight}px`)
-}setNavigationHeight()
-
-document.body.onresize = () => { setNavigationHeight() }
-
-window.onscroll = () => {
-    if (window.scrollY > (main.getBoundingClientRect().top - navigation.clientHeight)) {
-        navigation.classList.add('--muted')
-    } else {
-        navigation.classList.remove('--muted')
-    }
-}
+    main = document.querySelector('.main'),
+    bars = document.querySelector('.bars')
 
 function toggleNavigation() { navigation.classList.toggle('--open') }
 function closeNavigation() { navigation.classList.remove('--open') }
@@ -73,7 +59,7 @@ swup.on('animationOutDone', scrollTop);
         }
     ]
     var quote = quotes[Math.floor(Math.random() * quotes.length)];
-    document.querySelector('.footer blockquote p').innerHTML = quote.text;
+    document.querySelector('.footer blockquote p').innerHTML = `“${quote.text}”`;
     document.querySelector('.footer blockquote cite').innerHTML = quote.author ? quote.author : '';
 })();
 
@@ -90,4 +76,20 @@ function init() {
     }
 
     if (timeWrapper) { setInterval(getCurrentTime, 100); }
+
+    var navigation = document.querySelector('.navigation'),
+        main = document.querySelector('.main')
+
+    function setNavigationHeight() {
+        document.querySelector(':root').style.setProperty('--navigation-height', `${navigation.clientHeight}px`)
+    }setNavigationHeight()
+
+    document.body.onresize = () => { setNavigationHeight() }
+    window.onscroll = () => {
+        if (window.scrollY > (main.getBoundingClientRect().top - navigation.clientHeight)) {
+            navigation.classList.add('--muted')
+        } else {
+            navigation.classList.remove('--muted')
+        }
+    }
 }init()

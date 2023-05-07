@@ -155,7 +155,7 @@
             position: absolute;
             display: block;
             top: 0;
-            right: 0;
+            right: $spacing-8;
             height: var(--navigation-height);
             width: calc(#{$spacing-24} + 2 * #{$spacing-16});
             border: none;

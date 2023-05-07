@@ -626,7 +626,7 @@ main hr, .footer hr {
         position: absolute;
         display: block;
         top: 0;
-        right: 0;
+        right: 0.5rem;
         height: var(--navigation-height);
         width: calc(1.5rem + 2 * 1rem);
         border: none;

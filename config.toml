@@ -20,10 +20,10 @@ title = 'Linus Rogge'
     name = "About"
     url = "/about"
     weight = 3
-# [[menu.footer]]
-#     name = "Now"
-#     url = "/now"
-#     weight = 4
+[[menu.footer]]
+    name = "House"
+    url = "/house"
+    weight = 4
 [[menu.footer]]
     name = "Uses"
     url = "/uses"

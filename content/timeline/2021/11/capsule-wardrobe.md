@@ -42,10 +42,10 @@ There is still much work required, but sorting out clothes that don't serve me a
 
 Before I conclude this article, I'd like to mention a few sustainable and human-friendly places to shop at. This is a collection of brands that I trust and confidently support in the way they do business and manufacture their products:
 
-<a href="https://asket.com/" target="_blank">ASKET</a>, <a href="https://rotholz-store.com/" target="_blank">ROTHOLZ</a>, <a href="https://lowimpact.organicbasics.com/" target="_blank">Organic Basics</a>, <a href="https://www.veja-store.com/" target="_blank">VEJA</a>, <a href="https://nomennescio.fi" target="_blank">Nomen Nescio</a>, <a href="https://frnkow.com" target="_blank">FRNKOW</a>, <a href="https://eu.lestrangelondon.com" target="_blank">L’ESTRANGE</a>, <a href="https://sensestudiosofficial.com" target="_blank">SENSE Studios</a>, <a href="https://samsoe.com" target="_blank">SAMSØE</a>, <a href="https://pand.co" target="_blank">P&CO</a>, <a href="https://oftt.world" target="_blank">oftt</a>, <a href="https://salzwasser.eu" target="_blank">SALZWASSER</a>, <a href="https://www.armedangels.com/" target="_blank">ARMEDANGELS</a>, <a href="https://roheframes.com" target="_blank">RÓHE</a>
+[Nomen Nescio](https://nomennescio.fi), [Asket](https://asket.com), [Armedangels](https://armedangels.com), [Rotholz](https://rotholz-store.com), [Organic Basics](https://lowimpact.organicbasics.com), [FRNKOW](https://frnkow.com), [L’ESTRANGE](https://eu.lestrangelondon.com), [SENSE Studios](https://sensestudiosofficial.com), [SAMSØE](https://samsoe.com), [oftt](https://oftt.world), [Salzwasser](https://salzwasser.eu), [RÓHE](https://roheframes.com)
 
 Find more on <a href="https://goodgarms.com/" target="_blank">Good Garms</a>.
 
 ---
 
-If you have any other brands or resources that you’d like to share, feel free to text me on <a href="https://twitter.com/linusrogge" target="_blank">Twitter</a>, where I will also share my progress on reducing my trousseau. I am excited to hear about your wardrobe.
+If you have any other brands or resources that you’d like to share, feel free to text me on [Twitter](https://twitter.com/linusrogge), where I will also share my progress on reducing my trousseau. I am excited to hear about your wardrobe.

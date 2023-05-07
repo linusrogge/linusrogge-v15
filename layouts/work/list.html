@@ -28,7 +28,7 @@
                 {{ with .Params.Intro }}<p class="project__description">{{ . }}</p>{{ end }}
             </div>
             <figure class="project__image">
-                <img src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png">
+                <img data-src="{{ .Site.BaseURL }}images/{{ .Section }}/{{ .File.TranslationBaseName }}/og.png" class="--lazy">
             </figure>
         </a>
     </r-cell>

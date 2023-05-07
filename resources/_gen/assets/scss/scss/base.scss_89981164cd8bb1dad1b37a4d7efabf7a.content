@@ -72,13 +72,9 @@ r-grid {
         margin-bottom: 5rem; } }
   r-grid r-cell.--inline {
     margin-top: -7rem; }
-    r-grid r-cell.--inline + r-cell {
-      margin-top: -7rem; }
     @media screen and (max-width: 835px) {
       r-grid r-cell.--inline {
-        margin-top: -4rem; }
-        r-grid r-cell.--inline + r-cell {
-          margin-top: -4rem; } }
+        margin-top: -4rem; } }
   r-grid r-cell[id] {
     padding-top: calc(var(--navigation-height) + 2rem);
     margin-top: calc((var(--navigation-height) * -1) - 2rem); }

@@ -31,6 +31,10 @@ swup.on('animationOutStart', closeNavigation);
 swup.on('contentReplaced', init);
 swup.on('animationOutDone', scrollTop);
 
+const lazyLoadInstance = new LazyLoad({
+    elements_selector: '.--lazy'
+});
+
 (function() {
     var quotes = [
         {
@@ -92,4 +96,6 @@ function init() {
             navigation.classList.remove('--muted')
         }
     }
+
+    lazyLoadInstance.update();
 }init()

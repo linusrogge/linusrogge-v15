@@ -89,8 +89,9 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: 200ms ease;
+                z-index: 99;
 
-                @include mobile { display: none; }
+                @include mobile { width: 200%; }
 
                 p {
                     @include Paragraph;
@@ -126,14 +127,18 @@
                     transform: translate(0);
                     opacity: 1;
                     visibility: visible;
+
+                    @include mobile { transform: translate(0, -$spacing-2); }
                 }
             }
-
+            
             &:hover { 
                 & + .avatar__tooltip {
                     transform: translate(0);
                     opacity: 1;
                     visibility: visible;
+
+                    @include mobile { transform: translate(0, -$spacing-2); }
                 }
             }
         }

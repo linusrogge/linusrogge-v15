@@ -541,10 +541,11 @@ main hr, .footer hr {
         transform: translate(0, 0.25rem);
         opacity: 0;
         visibility: hidden;
-        transition: 200ms ease; }
+        transition: 200ms ease;
+        z-index: 99; }
         @media screen and (max-width: 835px) {
           .navigation .name .avatar__tooltip {
-            display: none; } }
+            width: 200%; } }
         .navigation .name .avatar__tooltip p {
           font-size: 1rem;
           line-height: 1.5;
@@ -608,10 +609,16 @@ main hr, .footer hr {
           transform: translate(0);
           opacity: 1;
           visibility: visible; }
+          @media screen and (max-width: 835px) {
+            .navigation .name .avatar__tooltip:hover {
+              transform: translate(0, -0.125rem); } }
       .navigation .name .avatar:hover + .avatar__tooltip {
         transform: translate(0);
         opacity: 1;
         visibility: visible; }
+        @media screen and (max-width: 835px) {
+          .navigation .name .avatar:hover + .avatar__tooltip {
+            transform: translate(0, -0.125rem); } }
   .navigation .bars {
     display: none; }
   @media screen and (max-width: 835px) {

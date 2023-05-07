@@ -396,7 +396,7 @@ main ul, main ol, .footer ul, .footer ol {
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 13px;
+        top: 11px;
         transform: translate(-1.5rem, 0); }
       main ul.--task li.--soon::before, main ul.--task li.--now::before, main ol.--task li.--soon::before, main ol.--task li.--now::before, .footer ul.--task li.--soon::before, .footer ul.--task li.--now::before, .footer ol.--task li.--soon::before, .footer ol.--task li.--now::before {
         background: var(--color-grey);

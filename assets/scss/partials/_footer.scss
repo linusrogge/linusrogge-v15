@@ -9,6 +9,8 @@
 
         &__pages,
         &__connect {
+            @include noselect;
+
             ul {
                 gap: $spacing-4;
                 
@@ -35,6 +37,8 @@
         }
 
         &__copyright {
+            @include noselect;
+
             p {
                 margin-top: 0;
             }
@@ -42,6 +46,7 @@
 
         &__legals {
             display: flex;
+            @include noselect;
 
             @include mobile(min) {
                 justify-content: flex-end;

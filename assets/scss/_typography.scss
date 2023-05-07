@@ -10,7 +10,16 @@
     line-height: 1.5;
     letter-spacing: 0.4px;
 
-    @if $muted { color: var(--color-grey); } 
+    @if $muted { 
+        color: var(--color-grey);
+
+        &::selection {
+            background: rgba($color-background, 0.1);
+
+            @include dark { background: rgba($color-background, 0.2); }
+        }
+    
+    } 
     @else { color: var(--color-foreground); }
 
     @if $spacing {
@@ -76,6 +85,7 @@
     letter-spacing: 0.4px;
     padding: $spacing-6 $spacing-10 $spacing-8;
     transition: transform 150ms ease;
+    @include noselect;
 
     @if $type == primary {
         background: var(--color-red);

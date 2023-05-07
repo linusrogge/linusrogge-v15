@@ -124,6 +124,9 @@ r-grid {
   letter-spacing: 0.4px;
   padding: 0.375rem 0.625rem 0.5rem;
   transition: transform 150ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   background: var(--color-grey);
   color: var(--color-white); }
   .button:hover, button:hover {
@@ -142,6 +145,9 @@ r-grid {
     letter-spacing: 0.4px;
     padding: 0.375rem 0.625rem 0.5rem;
     transition: transform 150ms ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     background: var(--color-red);
     color: var(--color-white); }
     .button.--primary:hover, button.--primary:hover {
@@ -160,6 +166,9 @@ r-grid {
     letter-spacing: 0.4px;
     padding: 0.375rem 0.625rem 0.5rem;
     transition: transform 150ms ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     background: var(--color-grey);
     color: var(--color-white); }
     .button.--secondary:hover, button.--secondary:hover {
@@ -239,6 +248,19 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     line-height: 1.5;
     letter-spacing: 0.4px;
     color: var(--color-grey); }
+    main p.--muted::selection,
+    main p small::selection, main .paragraph.--muted::selection,
+    main .paragraph small::selection, .footer p.--muted::selection,
+    .footer p small::selection, .footer .paragraph.--muted::selection,
+    .footer .paragraph small::selection {
+      background: rgba(247, 247, 247, 0.1); }
+      @media screen and (prefers-color-scheme: dark) {
+        main p.--muted::selection,
+        main p small::selection, main .paragraph.--muted::selection,
+        main .paragraph small::selection, .footer p.--muted::selection,
+        .footer p small::selection, .footer .paragraph.--muted::selection,
+        .footer .paragraph small::selection {
+          background: rgba(247, 247, 247, 0.2); } }
     main p.--muted + *,
     main p small + *, main .paragraph.--muted + *,
     main .paragraph small + *, .footer p.--muted + *,
@@ -286,6 +308,11 @@ main date, .footer date {
   line-height: 1.5;
   letter-spacing: 0.4px;
   color: var(--color-grey); }
+  main date::selection, .footer date::selection {
+    background: rgba(247, 247, 247, 0.1); }
+    @media screen and (prefers-color-scheme: dark) {
+      main date::selection, .footer date::selection {
+        background: rgba(247, 247, 247, 0.2); } }
   main date + *, .footer date + * {
     margin-top: 2rem; }
   main date + p, .footer date + p {
@@ -445,6 +472,15 @@ main blockquote, .footer blockquote {
         main blockquote p em, main blockquote p cite, .footer blockquote p + cite,
         .footer blockquote p em, .footer blockquote p cite {
           font-size: 1.2rem; } }
+      main blockquote p + cite::selection,
+      main blockquote p em::selection, main blockquote p cite::selection, .footer blockquote p + cite::selection,
+      .footer blockquote p em::selection, .footer blockquote p cite::selection {
+        background: rgba(247, 247, 247, 0.1); }
+        @media screen and (prefers-color-scheme: dark) {
+          main blockquote p + cite::selection,
+          main blockquote p em::selection, main blockquote p cite::selection, .footer blockquote p + cite::selection,
+          .footer blockquote p em::selection, .footer blockquote p cite::selection {
+            background: rgba(247, 247, 247, 0.2); } }
   main blockquote + p, .footer blockquote + p {
     margin-top: 5rem; }
   main blockquote + hr, .footer blockquote + hr {
@@ -464,7 +500,10 @@ main hr, .footer hr {
   background: var(--color-background);
   z-index: 999;
   border-bottom: 1px solid transparent;
-  transition: border-color 400ms ease; }
+  transition: border-color 400ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none; }
   .navigation__grid {
     transition: opacity 400ms ease;
     gap: 0.125rem 1rem; }
@@ -678,7 +717,7 @@ main hr, .footer hr {
           .navigation .pages__grid r-cell {
             transform: translate(-0.5rem, 0);
             opacity: 0;
-            transition: 200ms ease; }
+            transition: 250ms ease; }
             .navigation .pages__grid r-cell:nth-child(1) {
               transition-delay: 50ms; }
             .navigation .pages__grid r-cell:nth-child(2) {
@@ -715,10 +754,14 @@ main hr, .footer hr {
   margin-top: 10rem; }
   .footer .footer__grid {
     gap: 2.5rem 1rem; }
-  .footer .footer__pages ul, .footer .footer__connect ul {
-    gap: 0.25rem; }
-    .footer .footer__pages ul li a, .footer .footer__connect ul li a {
-      text-decoration: none; }
+  .footer .footer__pages, .footer .footer__connect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; }
+    .footer .footer__pages ul, .footer .footer__connect ul {
+      gap: 0.25rem; }
+      .footer .footer__pages ul li a, .footer .footer__connect ul li a {
+        text-decoration: none; }
   .footer .footer__quote blockquote {
     margin-top: 2rem;
     transform: translate(0);
@@ -737,16 +780,28 @@ main hr, .footer hr {
       line-height: 1.5;
       letter-spacing: 0.4px;
       color: var(--color-grey); }
+      .footer .footer__quote blockquote cite::selection {
+        background: rgba(247, 247, 247, 0.1); }
+        @media screen and (prefers-color-scheme: dark) {
+          .footer .footer__quote blockquote cite::selection {
+            background: rgba(247, 247, 247, 0.2); } }
       .footer .footer__quote blockquote cite + * {
         margin-top: 2rem; }
       .footer .footer__quote blockquote cite + p {
         margin-top: 0.75rem; }
       .footer .footer__quote blockquote cite + blockquote {
         margin-top: 5rem; }
-  .footer .footer__copyright p {
-    margin-top: 0; }
+  .footer .footer__copyright {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; }
+    .footer .footer__copyright p {
+      margin-top: 0; }
   .footer .footer__legals {
-    display: flex; }
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; }
     @media screen and (min-width: 835px) {
       .footer .footer__legals {
         justify-content: flex-end; } }
@@ -771,6 +826,11 @@ main hr, .footer hr {
       gap: 2rem; } }
   .template--timeline .timeline__item.--important p {
     color: var(--color-red); }
+    .template--timeline .timeline__item.--important p::selection {
+      background-color: rgba(243, 11, 11, 0.1); }
+      @media screen and (prefers-color-scheme: dark) {
+        .template--timeline .timeline__item.--important p::selection {
+          background-color: rgba(243, 11, 11, 0.3); } }
   .template--timeline .timeline__item.--important blockquote {
     border-left-color: rgba(243, 11, 11, 0.2); }
     .template--timeline .timeline__item.--important blockquote cite, .template--timeline .timeline__item.--important blockquote em {

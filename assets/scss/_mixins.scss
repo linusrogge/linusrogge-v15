@@ -5,3 +5,9 @@
 @mixin dark {
     @media screen and (prefers-color-scheme: dark) { @content; }
 }
+
+@mixin noselect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}

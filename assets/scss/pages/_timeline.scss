@@ -14,6 +14,14 @@
             &.--important {
                 p {
                     color: var(--color-red);
+
+                    &::selection {
+                        background-color: rgba($color-red, 0.1);
+
+                        @include dark {
+                            background-color: rgba($color-red, 0.3);
+                        }
+                    }
                 }
 
                 blockquote {

@@ -54,18 +54,8 @@ r-grid {
     r-cell {
         &.--inline {
             margin-top: -$spacing-128 + $spacing-16;
-
-            & + r-cell {
-                margin-top: -$spacing-128 + $spacing-16;
-            }
             
-            @include mobile {
-                margin-top: -$spacing-64;
-    
-                & + r-cell {
-                    margin-top: -$spacing-64;
-                }
-            }
+            @include mobile { margin-top: -$spacing-64; }
         }
 
         &[id] {

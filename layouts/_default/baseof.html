@@ -21,7 +21,7 @@
 <body>
     {{ partial "navigation" . }}
 
-    <main class="main transition-fade {{ block "customclasses" . }}{{ end }}" id="main">
+    <main class="main transition-fade {{ block "customclasses" . }}{{ end }}{{ with .Params.Customclasses }} {{ . }}{{ end }}" id="main">
         {{ block "main" . }}{{ end }}
     </main>
 

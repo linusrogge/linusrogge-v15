@@ -1,5 +1,5 @@
 <nav class="navigation">
-    <r-grid columns-s="4" columns="12" class="navigation__grid">
+    <r-grid columns-s="6" columns="12" class="navigation__grid">
         <r-cell span-s="2" span="3" class="name">
             <div class="avatar">
                 <img src="https://unavatar.io/linusrogge">
@@ -18,29 +18,39 @@
                 <span class="description">{{ .Site.Params.Description }}</span>
             </a>
         </r-cell>
-        <r-cell span-s="2" span="3" class="work">
-            <a href="{{ .Site.BaseURL }}work" class="navigation__link">
-                <span class="title">Work</span>
-                <span class="description">
-                    {{ $projects := len (where .Site.RegularPages "Section" "work") }}
-                    {{ $projects }} {{ if eq $projects 1 }}project{{ else }}projects{{ end }}
-                </span>
-            </a>
-        </r-cell>
-        <r-cell span-s="2" span="3" class="timeline">
-            <a href="{{ .Site.BaseURL }}timeline" class="navigation__link">
-                <span class="title">Timeline</span>
-                <span class="description">
-                    {{ $projects := len (where .Site.RegularPages "Section" "timeline") }}
-                    {{ $projects }} {{ if eq $projects 1 }}entry{{ else }}entries{{ end }}
-                </span>
-            </a>
-        </r-cell>
-        <r-cell span="3" class="about">
-            <a href="{{ .Site.BaseURL }}about" class="navigation__link">
-                <span class="title">About</span>
-                <span class="description">Get to know me</span>
-            </a>
+
+        <r-cell span-s="row" span="4.." class="pages">
+            <r-grid columns="9" class="pages__grid">
+            <r-cell span-s="row" span="3" class="work">
+                <a href="{{ .Site.BaseURL }}work" class="navigation__link">
+                    <span class="title">Work</span>
+                    <span class="description">
+                        {{ $projects := len (where .Site.RegularPages "Section" "work") }}
+                        {{ $projects }} {{ if eq $projects 1 }}project{{ else }}projects{{ end }}
+                    </span>
+                </a>
+            </r-cell>
+            <r-cell span-s="row" span="3" class="timeline">
+                <a href="{{ .Site.BaseURL }}timeline" class="navigation__link">
+                    <span class="title">Timeline</span>
+                    <span class="description">
+                        {{ $projects := len (where .Site.RegularPages "Section" "timeline") }}
+                        {{ $projects }} {{ if eq $projects 1 }}entry{{ else }}entries{{ end }}
+                    </span>
+                </a>
+            </r-cell>
+            <r-cell span-s="row" span="3" class="about">
+                <a href="{{ .Site.BaseURL }}about" class="navigation__link">
+                    <span class="title">About</span>
+                    <span class="description">Get to know me</span>
+                </a>
+            </r-cell>
+            </r-grid>
         </r-cell>
     </r-grid>
+
+    <button class="bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
 </nav>

@@ -1,4 +1,5 @@
 var navigation = document.querySelector('.navigation'),
+    bars = document.querySelector('.bars'),
     main = document.querySelector('.main')
 
 function setNavigationHeight() {
@@ -13,6 +14,10 @@ window.onscroll = () => {
     } else {
         navigation.classList.remove('--muted')
     }
+}
+
+bars.onclick = () => {
+    navigation.classList.toggle('--open')
 }
 
 (function() {

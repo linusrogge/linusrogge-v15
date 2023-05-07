@@ -148,10 +148,13 @@ r-grid {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    background: var(--color-red);
-    color: var(--color-white); }
+    background: var(--color-foreground);
+    color: var(--color-background); }
     .button.--primary:hover, button.--primary:hover {
       color: rgba(247, 247, 247, 0.8); }
+      @media screen and (prefers-color-scheme: dark) {
+        .button.--primary:hover, button.--primary:hover {
+          color: rgba(1, 0, 5, 0.6); } }
     .button.--primary:hover, button.--primary:hover {
       padding-left: 0.75rem;
       padding-right: 0.5rem; }

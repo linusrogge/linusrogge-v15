@@ -89,10 +89,16 @@
     @include noselect;
 
     @if $type == primary {
-        background: var(--color-red);
-        color: var(--color-white);
+        background: var(--color-foreground);
+        color: var(--color-background);
 
-        &:hover { color: rgba($color-background, 0.8); }
+        &:hover { 
+            color: rgba($color-background, 0.8); 
+            
+            @include dark {
+                color: rgba($color-foreground, 0.6);
+            }
+        }
     } @else if $type == secondary {
         background: var(--color-grey);
         color: var(--color-white);

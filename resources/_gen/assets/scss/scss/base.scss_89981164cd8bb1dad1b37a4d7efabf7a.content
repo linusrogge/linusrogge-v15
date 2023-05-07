@@ -667,7 +667,7 @@ main hr, .footer hr {
           background: var(--color-background);
           row-gap: 1.5rem;
           z-index: 1;
-          padding: 1rem; }
+          padding: 1rem 1rem 1.5rem; }
           .navigation .pages__grid r-cell {
             transform: translate(-0.5rem, 0);
             opacity: 0;

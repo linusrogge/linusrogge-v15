@@ -344,7 +344,7 @@ main, .footer {
                 display: block;
                 margin-top: $spacing-8;
                 font-style: normal;
-                @include Paragraph(large, true, false);
+                @include Paragraph(regular, true, false);
             }
         }
 

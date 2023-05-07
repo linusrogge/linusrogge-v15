@@ -34,12 +34,38 @@
         {{ with .Description }}<p class="timeline__item__description">{{ . }}</p>{{ end }}
         {{ if and .Params.Cover (not .Params.HideCover) }}<img data-src="{{ .Site.BaseURL }}{{ .Params.Cover }}" class="timeline__item__cover --lazy">{{ end }}
 
-        {{ if eq .Params.Crop false }}
-            {{ .Content | safeHTML }}
+        {{ if .Params.songs }}
+            {{ range $song := .Params.songs }}
+                <div class="song">
+                    <div class="song__cover">
+                        <img src="{{ $song.cover }}">
+                    </div>
+                    
+                    <div class="song__information">
+                        <span class="song__title">{{ $song.title }}</span>
+                        <span class="song__artist">{{ $song.artist }}</span>
+                    </div>
+
+                    {{ if or $song.applemusic $song.spotify }}
+                    <div class="song__links">
+                        {{ with $song.applemusic }}
+                        <a href="{{ . }}" class="button --secondary" target="_blank">Apple Music</a>
+                        {{ end }}
+                        {{ with $song.spotify }}
+                        <a href="{{ . }}" class="button --secondary" target="_blank">Spotify</a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            {{ end }}
         {{ else }}
-            {{ .Content | safeHTML | truncate 400 }}
-            {{ if .Truncated }}
-            <a href="{{ .RelPermalink }}" class="button">Read more</a>
+            {{ if eq .Params.Crop false }}
+                {{ .Content | safeHTML }}
+            {{ else }}
+                {{ .Content | safeHTML | truncate 400 }}
+                {{ if .Truncated }}
+                <a href="{{ .RelPermalink }}" class="button">Read more</a>
+                {{ end }}
             {{ end }}
         {{ end }}
     </r-cell>

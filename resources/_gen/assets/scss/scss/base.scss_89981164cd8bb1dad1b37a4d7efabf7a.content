@@ -923,6 +923,59 @@ main hr, .footer hr {
     margin: 0; }
     .template--timeline .timeline__item blockquote + p {
       margin-top: 2rem; }
+  .template--timeline .timeline__item .song {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: var(--radius-outer);
+    padding: 0.75rem;
+    border: 1px solid var(--color-border); }
+    @media screen and (max-width: 835px) {
+      .template--timeline .timeline__item .song {
+        grid-template-columns: 80px minmax(0, 1fr); } }
+    .template--timeline .timeline__item .song__cover {
+      position: relative;
+      border-radius: var(--radius-inner);
+      overflow: hidden;
+      box-shadow: 0 8px 8px rgba(1, 0, 5, 0.08);
+      flex-shrink: 0;
+      grid-row: span 2; }
+      .template--timeline .timeline__item .song__cover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border: 1px solid rgba(1, 0, 5, 0.1);
+        border-radius: var(--radius-inner); }
+    .template--timeline .timeline__item .song__information {
+      padding: 0.5rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem; }
+    .template--timeline .timeline__item .song__title {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--color-foreground); }
+    .template--timeline .timeline__item .song__artist {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--color-grey); }
+      .template--timeline .timeline__item .song__artist::selection {
+        background: rgba(247, 247, 247, 0.1); }
+        @media screen and (prefers-color-scheme: dark) {
+          .template--timeline .timeline__item .song__artist::selection {
+            background: rgba(247, 247, 247, 0.2); } }
+    .template--timeline .timeline__item .song__links {
+      align-self: flex-end;
+      grid-column: 2; }
+      @media screen and (max-width: 835px) {
+        .template--timeline .timeline__item .song__links {
+          grid-column: span 2; } }
+    .template--timeline .timeline__item .song + .song {
+      margin-top: 0.5rem; }
 
 .template--entry .entry__description {
   margin-bottom: 2rem; }

@@ -45,8 +45,10 @@
                 display: inline-block;
                 background: var(--color-border);
                 border-radius: var(--radius-inner);
-                padding: $spacing-2 $spacing-8;
+                padding: $spacing-4 $spacing-8 $spacing-2;
                 top: calc(var(--navigation-height) + #{$spacing-16});
+
+                date { line-height: 1; }
             }
 
             @include mobile {

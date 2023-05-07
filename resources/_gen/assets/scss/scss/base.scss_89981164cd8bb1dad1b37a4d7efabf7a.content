@@ -1054,8 +1054,10 @@ main hr, .footer hr {
         display: inline-block;
         background: var(--color-border);
         border-radius: var(--radius-inner);
-        padding: 0.125rem 0.5rem;
-        top: calc(var(--navigation-height) + 1rem); } }
+        padding: 0.25rem 0.5rem 0.125rem;
+        top: calc(var(--navigation-height) + 1rem); }
+        .template--work .group__year date {
+          line-height: 1; } }
     @media screen and (max-width: 835px) {
       .template--work .group__year + .project {
         margin-top: 2.5rem; } }

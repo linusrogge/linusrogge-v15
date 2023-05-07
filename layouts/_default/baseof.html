@@ -14,14 +14,14 @@
     {{ $stylesheet := resources.Get "scss/base.scss" | resources.ToCSS "base.css" }}
     <link rel="stylesheet" href="{{ $stylesheet.Permalink }}">
 
-    <meta property="og:image" content="{{ .Site.BaseURL }}images/og.png">
+    <meta property="og:image" content="https://linusrogge.com/images/og.png">
     <meta property="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="og:description" content="Hamburg based Software Designer">
     <meta name="description" content="Hamburg based Software Designer">
 
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Page.Title }}{{ else }}{{ .Page.Title }}, {{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="Hamburg based Software Designer">
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og.png">
+    <meta name="twitter:image" content="https://linusrogge.com/images/og.png">
     <meta name="twitter:card" content="{{ with .Page.Params.twitterCard }}{{ . }}{{ else }}summary{{ end }}">
 
     <script src="{{ .Site.BaseURL }}js/SwupScrollPlugin.min.js"></script> 

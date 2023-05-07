@@ -109,10 +109,24 @@ r-grid {
     }
 
     figure {
-        & + figure { 
-            margin-top: $spacing-24; 
+        position: relative;
 
-            @include mobile { margin-top: $spacing-16; }
+        & + figure { 
+            margin-top: $spacing-16;
+        }
+
+        figcaption {
+            &.--floating {
+                position: absolute;
+                margin-top: 0;
+                bottom: $spacing-4;
+                left: $spacing-4;
+                background: var(--color-border);
+                border-radius: calc(var(--radius-inner) / 2);
+                padding: $spacing-4 $spacing-8 $spacing-2;
+
+                &::before { display: none; }
+            }
         }
     }
 }

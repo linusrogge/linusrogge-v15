@@ -106,11 +106,21 @@ r-grid {
       .main img + figcaption::before, .main img + em::before {
         content: '›';
         margin-right: 0.5rem; }
-  .main figure + figure {
-    margin-top: 1.5rem; }
-    @media screen and (max-width: 835px) {
-      .main figure + figure {
-        margin-top: 1rem; } }
+  .main figure {
+    position: relative; }
+    .main figure + figure {
+      margin-top: 1rem; }
+    .main figure figcaption.--floating {
+      position: absolute;
+      margin-top: 0;
+      bottom: 0.25rem;
+      left: 0.25rem;
+      background: var(--color-border);
+      border-radius: calc(var(--radius-inner) / 2);
+      padding: 0.25rem 0.5rem 0.125rem; }
+      .main figure figcaption.--floating::before {
+        display: none; }
+
 .button, button {
   display: inline-block;
   appearance: none;

@@ -84,7 +84,7 @@
     font-weight: bold;
     letter-spacing: 0.4px;
     padding: $spacing-6 $spacing-10 $spacing-8;
-    transition: transform 150ms ease;
+    transition: 150ms ease;
     @include noselect;
 
     @if $type == primary {
@@ -97,6 +97,11 @@
         color: var(--color-white);
 
         &:hover { color: rgba($color-background, 0.8); }
+    }
+
+    &:hover { 
+        padding-left: $spacing-12;
+        padding-right: $spacing-8;
     }
 
     &:active {
@@ -118,6 +123,7 @@ main, .footer {
         margin-bottom: $spacing-8;
 
         & + figure { margin-top: $spacing-32; }
+        & + .project { margin-top: $spacing-24; }
     }
 
     a:not(.button), .link {

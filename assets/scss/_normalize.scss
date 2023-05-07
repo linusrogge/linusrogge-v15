@@ -58,6 +58,11 @@ r-grid {
             }
         }
 
+        &[id] {
+            padding-top: calc(var(--navigation-height) + #{$spacing-32});
+            margin-top: calc((var(--navigation-height) * -1) - #{$spacing-32});
+        }
+
         &.--divider {
             height: 1px;
             background: var(--color-border);
@@ -100,5 +105,9 @@ r-grid {
                 margin-right: $spacing-8;
             }
         }
+    }
+
+    figure {
+        & + figure { margin-top: $spacing-24; }
     }
 }

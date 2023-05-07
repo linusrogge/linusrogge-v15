@@ -63,13 +63,13 @@
 
     .project {
         & + .project { margin-top: $spacing-80; }
-
+    
         a { 
             @include Link(box);
             text-decoration: none;
             display: block;
             white-space: unset;
-
+    
             &::before {
                 height: calc(100% + #{$spacing-24});
                 width: calc(100% + #{$spacing-24});
@@ -77,7 +77,7 @@
                 transform: translate(-50%, calc(-50% + 1px)) scale(0.98);
                 z-index: -1;
             }
-
+    
             &:hover {
                 .project {
                     &__image {
@@ -86,20 +86,20 @@
                 }
             }
         }
-
+    
         &__information {
             margin-bottom: $spacing-16;
         }
-
+    
         &__title {
             margin-bottom: $spacing-8;
         }
-
+    
         &__description {
             color: var(--color-grey);
             max-width: 80%;
         }
-
+    
         &__image {
             display: flex;
             border: 1px solid var(--color-border);

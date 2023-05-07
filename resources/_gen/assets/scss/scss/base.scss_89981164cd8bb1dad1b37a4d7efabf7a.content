@@ -72,6 +72,9 @@ r-grid {
         margin-top: -4rem; }
         r-grid r-cell.--inline + r-cell {
           margin-top: -4rem; } }
+  r-grid r-cell[id] {
+    padding-top: calc(var(--navigation-height) + 2rem);
+    margin-top: calc((var(--navigation-height) * -1) - 2rem); }
   r-grid r-cell.--divider {
     height: 1px;
     background: var(--color-border); }
@@ -99,6 +102,8 @@ r-grid {
       .main img + figcaption::before, .main img + em::before {
         content: '›';
         margin-right: 0.5rem; }
+  .main figure + figure {
+    margin-top: 1.5rem; }
 
 .button, button {
   display: inline-block;
@@ -391,6 +396,10 @@ main ul, main ol, .footer ul, .footer ol {
           position: absolute; }
   main ul + p, main ol + p, .footer ul + p, .footer ol + p {
     margin-top: 5rem; }
+  main ul + h2, main ol + h2, .footer ul + h2, .footer ol + h2 {
+    margin-top: 4rem; }
+  main ul + h3, main ol + h3, .footer ul + h3, .footer ol + h3 {
+    margin-top: 2rem; }
 
 main blockquote, .footer blockquote {
   display: block;
@@ -499,6 +508,7 @@ main hr, .footer hr {
     .navigation__link .description {
       color: var(--color-grey); }
   .navigation .name {
+    position: relative;
     display: flex;
     gap: 0.75rem;
     align-items: center; }
@@ -515,6 +525,86 @@ main hr, .footer hr {
         object-fit: cover;
         position: relative;
         z-index: -1; }
+      .navigation .name .avatar__tooltip {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 1rem;
+        border-radius: var(--radius-inner);
+        border: 1px solid var(--color-border);
+        padding: 0.5rem 0.75rem;
+        background: var(--color-background);
+        transform: translate(0, 0.25rem);
+        opacity: 0;
+        visibility: hidden;
+        transition: 200ms ease; }
+        .navigation .name .avatar__tooltip p {
+          font-size: 1rem;
+          line-height: 1.5;
+          letter-spacing: 0.4px;
+          color: var(--color-foreground); }
+          .navigation .name .avatar__tooltip p + * {
+            margin-top: 2rem; }
+          .navigation .name .avatar__tooltip p + p {
+            margin-top: 0.75rem; }
+          .navigation .name .avatar__tooltip p + blockquote {
+            margin-top: 5rem; }
+          .navigation .name .avatar__tooltip p a {
+            font-size: inherit;
+            color: inherit;
+            text-underline-offset: 2px;
+            text-decoration: underline;
+            white-space: nowrap;
+            display: inline-block;
+            position: relative;
+            margin-left: 0.125rem; }
+            .navigation .name .avatar__tooltip p a::before {
+              content: '';
+              width: calc(100% + 10px);
+              height: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, calc(-50% + 1px)) scale(0.95);
+              border-radius: 4px;
+              background: var(--color-border);
+              opacity: 0;
+              transition: transform 150ms 0s ease, opacity 150ms 10ms ease;
+              z-index: -1; }
+            .navigation .name .avatar__tooltip p a:hover {
+              transition: transform 150ms 100ms ease, opacity 150ms 0s ease;
+              text-decoration: none; }
+              .navigation .name .avatar__tooltip p a:hover::before {
+                opacity: 1;
+                transform: translate(-50%, calc(-50% + 1px)) scale(1); }
+        .navigation .name .avatar__tooltip::before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          transform: rotate(-45deg) translate(-50%, 0);
+          transform-origin: 0 50%;
+          border-radius: 0 4px 0 0;
+          border-top: 1px solid var(--color-border);
+          border-right: 1px solid var(--color-border);
+          position: absolute;
+          top: -7px;
+          left: 20px;
+          background: var(--color-background); }
+        .navigation .name .avatar__tooltip::after {
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          width: 2.5rem;
+          height: 2rem; }
+        .navigation .name .avatar__tooltip:hover {
+          transform: translate(0);
+          opacity: 1;
+          visibility: visible; }
+      .navigation .name .avatar:hover + .avatar__tooltip {
+        transform: translate(0);
+        opacity: 1;
+        visibility: visible; }
     @media screen and (max-width: 835px) {
       .navigation .name .avatar {
         display: none; } }

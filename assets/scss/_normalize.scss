@@ -119,6 +119,10 @@ r-grid {
     }
 
     figure {
-        & + figure { margin-top: $spacing-24; }
+        & + figure { 
+            margin-top: $spacing-24; 
+
+            @include mobile { margin-top: $spacing-16; }
+        }
     }
 }

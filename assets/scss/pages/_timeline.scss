@@ -179,7 +179,6 @@
                     padding: $spacing-8 0 0;
                     display: flex;
                     flex-direction: column;
-                    gap: $spacing-2;
                 }
 
                 &__title { @include Paragraph($spacing: false); }

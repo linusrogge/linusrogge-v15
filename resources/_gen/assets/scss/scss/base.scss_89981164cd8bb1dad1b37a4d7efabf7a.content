@@ -180,6 +180,8 @@ main h1, main h2, main h3, main h4, .footer h1, .footer h2, .footer h3, .footer 
   font-size: inherit;
   letter-spacing: 0.4px;
   margin-bottom: 0.5rem; }
+  main h1 + figure, main h2 + figure, main h3 + figure, main h4 + figure, .footer h1 + figure, .footer h2 + figure, .footer h3 + figure, .footer h4 + figure {
+    margin-top: 2rem; }
 
 main a:not(.button), main .link, .footer a:not(.button), .footer .link {
   font-size: inherit;

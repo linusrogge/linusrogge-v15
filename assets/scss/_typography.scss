@@ -116,6 +116,8 @@ main, .footer {
         font-size: inherit;
         letter-spacing: 0.4px;
         margin-bottom: $spacing-8;
+
+        & + figure { margin-top: $spacing-32; }
     }
 
     a:not(.button), .link {

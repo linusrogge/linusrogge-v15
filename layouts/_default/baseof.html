@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} · {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}</title>
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}raster/raster.grid.css">
     {{ $stylesheet := resources.Get "scss/base.scss" | resources.ToCSS "base.css" }}
     <link rel="stylesheet" href="{{ $stylesheet.Permalink }}?v=15">
 
-    <meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} · {{ .Site.Title }}{{ end }}">
+    <meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}">
     <meta property="og:image" content="https://linusrogge.com/images/og.png">
     <meta property="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="og:description" content="Hamburg based Software Designer">
     <meta name="description" content="Hamburg based Software Designer">
 
-    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} · {{ .Site.Title }}{{ end }}">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="Hamburg based Software Designer">
     <meta name="twitter:image" content="https://linusrogge.com/images/og.png">
     <meta name="twitter:card" content="{{ with .Page.Params.twitterCard }}{{ . }}{{ else }}summary_large_image{{ end }}">

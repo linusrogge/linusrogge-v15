@@ -11,7 +11,7 @@
         }
     }
 
-    blockquote {
+    * + blockquote {
         margin-top: $spacing-80;
     }
 }

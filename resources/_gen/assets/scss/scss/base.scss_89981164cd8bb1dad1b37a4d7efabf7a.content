@@ -1001,7 +1001,7 @@ main hr, .footer hr {
 .template--entry .entry img + em {
   margin-bottom: 2rem; }
 
-.template--entry blockquote {
+.template--entry * + blockquote {
   margin-top: 5rem; }
 
 .template--work .header__years {

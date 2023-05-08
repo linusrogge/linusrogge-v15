@@ -6,7 +6,7 @@
     </r-cell>
 
     <r-cell span-s="row" span="6" span-l="5" class="entry__content">
-        <h1 class="entry__title">{{ .Title }}</h1>
+        {{ with .Title }}<h1 class="entry__title">{{ . }}</h1>{{ end }}
         {{ with .Description }}<p class="entry__description">{{ . }}</p>{{ end }}
         {{ if and .Params.Cover (not .Params.HideCover) }}<img src="{{ .Site.BaseURL}}{{ .Params.Cover }}">{{ end }}
         

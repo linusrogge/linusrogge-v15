@@ -118,11 +118,14 @@ r-grid {
       margin-top: 0;
       bottom: 0.25rem;
       left: 0.25rem;
+      max-width: calc(100% - 8px);
       background: var(--color-border);
       border-radius: calc(var(--radius-inner) / 2);
       padding: 0.25rem 0.5rem 0.125rem; }
       .main figure figcaption.--floating::before {
         display: none; }
+      .main figure figcaption.--floating a {
+        white-space: unset; }
 
 .button, button {
   display: inline-block;

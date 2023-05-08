@@ -125,11 +125,16 @@ r-grid {
                 margin-top: 0;
                 bottom: $spacing-4;
                 left: $spacing-4;
+                max-width: calc(100% - 8px);
                 background: var(--color-border);
                 border-radius: calc(var(--radius-inner) / 2);
                 padding: $spacing-4 $spacing-8 $spacing-2;
 
                 &::before { display: none; }
+
+                a {
+                    white-space: unset;
+                }
             }
         }
     }

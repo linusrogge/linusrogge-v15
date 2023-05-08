@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}raster/raster.grid.css">
     {{ $stylesheet := resources.Get "scss/base.scss" | resources.ToCSS "base.css" }}
-    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}">
+    <link rel="stylesheet" href="{{ $stylesheet.Permalink }}?v=15">
 
     <meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} · {{ .Site.Title }}{{ end }}">
     <meta property="og:image" content="https://linusrogge.com/images/og.png">
@@ -35,6 +35,6 @@
 
     {{ partial "footer" . }}
 
-    <script src="{{ .Site.BaseURL }}js/base.js"></script>
+    <script src="{{ .Site.BaseURL }}js/base.js?v=15"></script>
 </body>
 </html>

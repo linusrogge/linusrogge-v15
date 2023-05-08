@@ -995,6 +995,44 @@ main hr, .footer hr {
     .template--timeline .timeline__item .song + .song {
       margin-top: 0.5rem; }
 
+.template--entry .entry__meta .relations li {
+  padding-left: 1.5rem;
+  position: relative; }
+  .template--entry .entry__meta .relations li a {
+    display: inline-flex;
+    flex-direction: column;
+    white-space: pre-line;
+    text-decoration: none; }
+    .template--entry .entry__meta .relations li a .title {
+      text-decoration: underline;
+      text-underline-offset: 2px; }
+    .template--entry .entry__meta .relations li a:hover .title {
+      text-decoration: none; }
+    .template--entry .entry__meta .relations li a .description {
+      color: var(--color-grey); }
+  .template--entry .entry__meta .relations li::before {
+    content: '';
+    width: 10px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 0V3V3.5H1H5.79289L4.64645 4.64645L5.35355 5.35355L7.35355 3.35355L7.70711 3L7.35355 2.64645L5.35355 0.646447L4.64645 1.35355L5.79289 2.5H1.5V0H0.5Z' fill='%23010005'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    left: 2px;
+    top: 9px; }
+  @media screen and (prefers-color-scheme: dark) {
+    .template--entry .entry__meta .relations li::before {
+      content: '';
+      width: 10px;
+      height: 8px;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 0V3V3.5H1H5.79289L4.64645 4.64645L5.35355 5.35355L7.35355 3.35355L7.70711 3L7.35355 2.64645L5.35355 0.646447L4.64645 1.35355L5.79289 2.5H1.5V0H0.5Z' fill='%23f7f7f7'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 9px; } }
 .template--entry .entry__description {
   margin-bottom: 2rem; }
 

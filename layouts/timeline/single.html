@@ -1,8 +1,22 @@
 {{ define "customclasses" }}template--entry{{ end }}
 {{ define "main" }}
 <r-grid columns-s="4" columns="12">
-    <r-cell span-s="row" span="3" class="entry__date">
+    <r-cell span-s="row" span="3" class="entry__meta">
         <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
+
+        {{ if .Params.Relations }}
+        <h3>Relations</h3>
+        <ul class="relations --ghost">
+            {{ range $relation := .Params.Relations }}
+            <li>
+                <a href="{{ $relation.url }}">
+                    <span class="title">{{ $relation.title }}</span>
+                    <span class="description">{{ $relation.platform }}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
     </r-cell>
 
     <r-cell span-s="row" span="6" span-l="5" class="entry__content">

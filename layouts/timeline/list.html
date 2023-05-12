@@ -58,6 +58,8 @@
                     {{ end }}
                 </div>
             {{ end }}
+
+            {{ .Content | safeHTML }}
         {{ else }}
             {{ if eq .Params.Crop false }}
                 {{ .Content | safeHTML }}

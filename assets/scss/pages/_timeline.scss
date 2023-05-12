@@ -193,6 +193,7 @@
                     }
                 }
 
+                & + * { margin-top: $spacing-24; }
                 & + .song { margin-top: $spacing-8;}
             }
         }

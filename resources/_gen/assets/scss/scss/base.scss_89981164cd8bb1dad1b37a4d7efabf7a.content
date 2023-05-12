@@ -992,6 +992,8 @@ main hr, .footer hr {
       @media screen and (max-width: 835px) {
         .template--timeline .timeline__item .song__links {
           grid-column: span 2; } }
+    .template--timeline .timeline__item .song + * {
+      margin-top: 1.5rem; }
     .template--timeline .timeline__item .song + .song {
       margin-top: 0.5rem; }
 

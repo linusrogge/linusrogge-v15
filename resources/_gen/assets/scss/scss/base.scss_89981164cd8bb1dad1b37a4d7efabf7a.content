@@ -402,7 +402,7 @@ main ul, main ol, .footer ul, .footer ol {
     font-size: 1rem;
     line-height: 1.5;
     color: var(--color-foreground);
-    padding: 0.625rem 0 0.5rem;
+    padding: 0.625rem 0.5rem 0.5rem 0;
     border-bottom: 1px solid var(--color-border); }
   main ul.--ghost, main ol.--ghost, .footer ul.--ghost, .footer ol.--ghost {
     gap: 0.125rem 0; }

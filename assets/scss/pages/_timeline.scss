@@ -11,6 +11,11 @@
                 gap: $spacing-32;
             }
 
+            .anchor {
+                top: calc(var(--navigation-height) * -1);
+                position: absolute;
+            }
+
             &.--important {
                 p {
                     color: var(--color-red);
@@ -53,7 +58,7 @@
                 @include mobile(min) {
                     align-self: flex-start;
                     position: sticky;
-                    top: calc(var(--navigation-height) + #{$spacing-32});
+                    top: calc(var(--navigation-height) + #{$spacing-24});
                 }
                 
                 h3 {

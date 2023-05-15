@@ -858,6 +858,9 @@ main hr, .footer hr {
       padding-top: 1rem;
       padding-bottom: 8rem;
       gap: 2rem; } }
+  .template--timeline .timeline__item .anchor {
+    top: calc(var(--navigation-height) * -1);
+    position: absolute; }
   .template--timeline .timeline__item.--important p {
     color: var(--color-red); }
     .template--timeline .timeline__item.--important p::selection {
@@ -886,7 +889,7 @@ main hr, .footer hr {
     .template--timeline .timeline__item__meta {
       align-self: flex-start;
       position: sticky;
-      top: calc(var(--navigation-height) + 2rem); } }
+      top: calc(var(--navigation-height) + 1.5rem); } }
   .template--timeline .timeline__item__meta h3 {
     margin-bottom: 0.5rem; }
   .template--timeline .timeline__item__meta .relations li {

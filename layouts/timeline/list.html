@@ -11,7 +11,8 @@
 </r-grid>
 
 {{ range $entries }}
-<r-grid columns-s="4" columns="12" class="timeline__item{{ if .Params.Important }} --important{{ end }}" id="{{ .File.TranslationBaseName }}">
+<r-grid columns-s="4" columns="12" class="timeline__item{{ if .Params.Important }} --important{{ end }}">
+    <div class="anchor" id="{{ .File.TranslationBaseName }}"></div>
     <r-cell span-s="row" span="3" class="timeline__item__meta">
         <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
 

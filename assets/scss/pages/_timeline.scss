@@ -201,6 +201,75 @@
                 & + * { margin-top: $spacing-24; }
                 & + .song { margin-top: $spacing-8;}
             }
+
+            * + .messages { margin-top: $spacing-32; }
+
+            .messages {
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-16;
+
+                & + * { margin-top: $spacing-64; }
+
+                .message {
+                    width: 100%;
+                    
+                    &__inner {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: $spacing-8;
+                    }
+
+                    &:not(.--self) {
+                        .message__inner {
+                            flex-direction: row-reverse;
+                        }
+                    }
+
+                    &.--thread {
+                        margin-top: -$spacing-6;
+                    }
+
+                    &__avatar {
+                        @include Link(default);
+                        position: relative;
+                        width: 24px;
+                        height: 24px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        box-shadow: inset 0 0 0 1px rgba($color-grey, 0.1);
+                        flex-shrink: 0;
+
+                        &.--hidden { opacity: 0; }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: relative;
+                            z-index: -1;
+                        }
+                    }
+
+                    &__text {
+                        background: var(--color-background);
+                        border: 1px solid var(--color-border);
+                        border-radius: var(--radius-inner);
+                        padding: $spacing-8 $spacing-12;
+                        max-width: 85%;
+
+                        @include mobile(min) {
+                            max-width: 75%;
+                        }
+                    }
+
+                    &__meta {
+                        display: block;
+                        margin-bottom: $spacing-8;
+                        @include Paragraph($muted: true);
+                    }
+                }
+            }
         }
     }
 }

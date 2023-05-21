@@ -61,6 +61,24 @@
             {{ end }}
 
             {{ .Content | safeHTML }}
+        {{ else if .Params.messages }}
+            {{ if not .Params.messagesAfterContent }}{{ .Content | safeHTML }}{{ end }}
+
+            <div class="messages">
+                {{ range $message := .Params.messages }}
+                    <div class="message{{ if eq $message.author.name "Linus" }} --self{{ end }}{{ if $message.thread }} --thread{{ end }}">
+                        <div class="message__inner">
+                            <a href="{{ $message.author.url }}" target="_blank" class="message__avatar{{ if not $message.author.avatar }} --hidden{{ end }}"><img src="{{ $message.author.avatar }}"></a>
+                            <div class="message__text">
+                                {{ if not $message.thread }}<span class="message__meta">{{ $message.author.name }} at {{ $message.timestamp }}</span>{{ end }}
+                                {{ $message.text | safeHTML }}
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+
+            {{ if .Params.messagesAfterContent }}{{ .Content | safeHTML }}{{ end }}
         {{ else }}
             {{ if eq .Params.Crop false }}
                 {{ .Content | safeHTML }}

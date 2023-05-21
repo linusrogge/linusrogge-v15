@@ -246,6 +246,9 @@ main p, main .paragraph, .footer p, .footer .paragraph {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--color-foreground); }
+  @media screen and (prefers-color-scheme: dark) {
+    main p, main .paragraph, .footer p, .footer .paragraph {
+      letter-spacing: 0.3px; } }
   main p + *, main .paragraph + *, .footer p + *, .footer .paragraph + * {
     margin-top: 2rem; }
   main p + h3, main .paragraph + h3, .footer p + h3, .footer .paragraph + h3 {
@@ -261,6 +264,9 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     @media screen and (max-width: 835px) {
       main p.--large, main .paragraph.--large, .footer p.--large, .footer .paragraph.--large {
         font-size: 1.2rem; } }
+    @media screen and (prefers-color-scheme: dark) {
+      main p.--large, main .paragraph.--large, .footer p.--large, .footer .paragraph.--large {
+        letter-spacing: 0.3px; } }
     main p.--large + *, main .paragraph.--large + *, .footer p.--large + *, .footer .paragraph.--large + * {
       margin-top: 2rem; }
     main p.--large + h3, main .paragraph.--large + h3, .footer p.--large + h3, .footer .paragraph.--large + h3 {
@@ -277,6 +283,13 @@ main p, main .paragraph, .footer p, .footer .paragraph {
     font-size: 1rem;
     line-height: 1.5;
     color: var(--color-grey); }
+    @media screen and (prefers-color-scheme: dark) {
+      main p.--muted,
+      main p small, main .paragraph.--muted,
+      main .paragraph small, .footer p.--muted,
+      .footer p small, .footer .paragraph.--muted,
+      .footer .paragraph small {
+        letter-spacing: 0.3px; } }
     main p.--muted::selection,
     main p small::selection, main .paragraph.--muted::selection,
     main .paragraph small::selection, .footer p.--muted::selection,
@@ -343,6 +356,9 @@ main date, .footer date {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--color-grey); }
+  @media screen and (prefers-color-scheme: dark) {
+    main date, .footer date {
+      letter-spacing: 0.3px; } }
   main date::selection, .footer date::selection {
     background: rgba(247, 247, 247, 0.1); }
     @media screen and (prefers-color-scheme: dark) {
@@ -404,6 +420,9 @@ main ul, main ol, .footer ul, .footer ol {
     color: var(--color-foreground);
     padding: 0.625rem 0.5rem 0.5rem 0;
     border-bottom: 1px solid var(--color-border); }
+    @media screen and (prefers-color-scheme: dark) {
+      main ul li, main ol li, .footer ul li, .footer ol li {
+        letter-spacing: 0.3px; } }
   main ul.--ghost, main ol.--ghost, .footer ul.--ghost, .footer ol.--ghost {
     gap: 0.125rem 0; }
     main ul.--ghost li, main ol.--ghost li, .footer ul.--ghost li, .footer ol.--ghost li {
@@ -486,6 +505,9 @@ main blockquote, .footer blockquote {
     @media screen and (max-width: 835px) {
       main blockquote p, .footer blockquote p {
         font-size: 1.2rem; } }
+    @media screen and (prefers-color-scheme: dark) {
+      main blockquote p, .footer blockquote p {
+        letter-spacing: 0.3px; } }
     main blockquote p + *, .footer blockquote p + * {
       margin-top: 2rem; }
     main blockquote p + h3, .footer blockquote p + h3 {
@@ -503,6 +525,11 @@ main blockquote, .footer blockquote {
       font-size: 1rem;
       line-height: 1.5;
       color: var(--color-grey); }
+      @media screen and (prefers-color-scheme: dark) {
+        main blockquote p + cite,
+        main blockquote p em, main blockquote p cite, .footer blockquote p + cite,
+        .footer blockquote p em, .footer blockquote p cite {
+          letter-spacing: 0.3px; } }
       main blockquote p + cite::selection,
       main blockquote p em::selection, main blockquote p cite::selection, .footer blockquote p + cite::selection,
       .footer blockquote p em::selection, .footer blockquote p cite::selection {
@@ -628,6 +655,9 @@ main hr, .footer hr {
           font-size: 1rem;
           line-height: 1.5;
           color: var(--color-foreground); }
+          @media screen and (prefers-color-scheme: dark) {
+            .navigation .name .avatar__tooltip p {
+              letter-spacing: 0.3px; } }
           .navigation .name .avatar__tooltip p + * {
             margin-top: 2rem; }
           .navigation .name .avatar__tooltip p + h3 {
@@ -805,6 +835,9 @@ main hr, .footer hr {
       font-size: 1rem;
       line-height: 1.5;
       color: var(--color-foreground); }
+      @media screen and (prefers-color-scheme: dark) {
+        .footer .footer__quote blockquote p {
+          letter-spacing: 0.3px; } }
       @media screen and (min-width: 835px) {
         .footer .footer__quote blockquote p {
           max-width: 80%; } }
@@ -812,6 +845,9 @@ main hr, .footer hr {
       font-size: 1rem;
       line-height: 1.5;
       color: var(--color-grey); }
+      @media screen and (prefers-color-scheme: dark) {
+        .footer .footer__quote blockquote cite {
+          letter-spacing: 0.3px; } }
       .footer .footer__quote blockquote cite::selection {
         background: rgba(247, 247, 247, 0.1); }
         @media screen and (prefers-color-scheme: dark) {
@@ -980,10 +1016,16 @@ main hr, .footer hr {
       font-size: 1rem;
       line-height: 1.5;
       color: var(--color-foreground); }
+      @media screen and (prefers-color-scheme: dark) {
+        .template--timeline .timeline__item .song__title {
+          letter-spacing: 0.3px; } }
     .template--timeline .timeline__item .song__artist {
       font-size: 1rem;
       line-height: 1.5;
       color: var(--color-grey); }
+      @media screen and (prefers-color-scheme: dark) {
+        .template--timeline .timeline__item .song__artist {
+          letter-spacing: 0.3px; } }
       .template--timeline .timeline__item .song__artist::selection {
         background: rgba(247, 247, 247, 0.1); }
         @media screen and (prefers-color-scheme: dark) {
@@ -1056,6 +1098,9 @@ main hr, .footer hr {
         font-size: 1rem;
         line-height: 1.5;
         color: var(--color-grey); }
+        @media screen and (prefers-color-scheme: dark) {
+          .template--timeline .timeline__item .messages .message__meta {
+            letter-spacing: 0.3px; } }
         .template--timeline .timeline__item .messages .message__meta::selection {
           background: rgba(247, 247, 247, 0.1); }
           @media screen and (prefers-color-scheme: dark) {

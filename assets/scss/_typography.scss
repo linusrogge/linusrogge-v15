@@ -8,7 +8,9 @@
     @else { font-size: 1rem; }
 
     line-height: 1.5;
-    // letter-spacing: 0.4px;
+    @include dark {
+        letter-spacing: 0.3px;
+    }
 
     @if $muted { 
         color: var(--color-grey);

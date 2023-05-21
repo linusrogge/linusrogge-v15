@@ -8,4 +8,4 @@ date = "2023-05-12"
     spotify = "https://open.spotify.com/track/3PKd9beBPjwU9RP7e1Bvke?si=74327779286a4bcf"
 +++
 
-I discovered Model Man throough [this Mahogany Session](https://youtu.be/H6_rh0xEuWc) and still fail to describe what makes his sounds so special to me, but I enjoy listening every time. The only thing I still hope for is a collaboration with Fred again..
+I discovered Model Man through [this Mahogany Session](https://youtu.be/H6_rh0xEuWc) and still fail to describe what makes his sounds so special to me, but I enjoy listening every time. The only thing I still hope for is a collaboration with Fred again..

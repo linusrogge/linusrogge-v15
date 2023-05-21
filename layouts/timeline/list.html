@@ -21,7 +21,7 @@
         <ul class="relations --ghost">
             {{ range $relation := .Params.Relations }}
             <li>
-                <a href="{{ $relation.url }}">
+                <a href="{{ $relation.url }}" target="_blank">
                     <span class="title">{{ $relation.title }}</span>
                     <span class="description">{{ $relation.platform }}</span>
                 </a>

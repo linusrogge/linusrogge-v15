@@ -26,5 +26,9 @@
         
         {{ .Content | safeHTML }}
     </r-cell>
+
+    <r-cell span-s="row" span="4+6" span-l="4+5" class="entry__footer">
+        <a href="{{ .Site.BaseURL }}timeline" class="button --primary">Back to timeline</a>
+    </r-cell>
 </r-grid>
 {{ end }}

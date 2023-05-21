@@ -4,6 +4,7 @@ title = "Responsible fashion brands"
 +++
 
 - [Nomen Nescio](https://nomennescio.fi)
+- [OMEN](https://thomasipunkt.de/collections/omen)
 - [Asket](https://asket.com)
 - [Armedangels](https://armedangels.com)
 - [Rotholz](https://rotholz-store.com)

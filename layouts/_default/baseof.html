@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png">
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}raster/raster.grid.css">
     {{ $stylesheet := resources.Get "scss/base.scss" | resources.ToCSS "base.css" }}

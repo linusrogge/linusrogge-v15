@@ -204,6 +204,9 @@ main h1, main h2, main h3, main h4, .footer h1, .footer h2, .footer h3, .footer 
   font-size: inherit;
   font-weight: 700;
   margin-bottom: 0.5rem; }
+  @media screen and (prefers-color-scheme: dark) {
+    main h1, main h2, main h3, main h4, .footer h1, .footer h2, .footer h3, .footer h4 {
+      letter-spacing: 0.4px; } }
   main h1 + figure, main h2 + figure, main h3 + figure, main h4 + figure, .footer h1 + figure, .footer h2 + figure, .footer h3 + figure, .footer h4 + figure {
     margin-top: 2rem; }
   main h1 + .project, main h2 + .project, main h3 + .project, main h4 + .project, .footer h1 + .project, .footer h2 + .project, .footer h3 + .project, .footer h4 + .project {

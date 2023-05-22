@@ -129,8 +129,11 @@ main, .footer {
     h1, h2, h3, h4 {
         font-size: inherit;
         font-weight: 700;
-        // letter-spacing: 0.4px;
         margin-bottom: $spacing-8;
+
+        @include dark {
+            letter-spacing: 0.4px;
+        }
 
         & + figure { margin-top: $spacing-32; }
         & + .project { margin-top: $spacing-24; }

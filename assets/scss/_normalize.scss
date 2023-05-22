@@ -96,6 +96,10 @@ r-grid {
         border-radius: var(--radius-inner);
 
         & + * { margin-top: $spacing-80; }
+        & + img { margin-top: $spacing-16; }
+        @include mobile {
+            & + img { margin-top: $spacing-8; }
+        }
 
         & + figcaption,
         & + em {

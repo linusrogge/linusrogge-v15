@@ -67,7 +67,6 @@
         }
     }
 
-    * + blockquote {
-        margin-top: $spacing-80;
-    }
+    * + blockquote { margin-top: $spacing-80; }
+    blockquote + blockquote { margin-top: $spacing-16; }
 }

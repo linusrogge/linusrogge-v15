@@ -359,6 +359,15 @@ main, .footer {
             }
         }
 
+        blockquote {
+            padding-left: $spacing-16;
+            border-left: 2px solid var(--color-border);
+
+            p {
+                @include Paragraph;
+            }
+        }
+
         // & + p { margin-top: $spacing-160; }
         & + p { margin-top: $spacing-80; }
         & + hr { height: 160px; }

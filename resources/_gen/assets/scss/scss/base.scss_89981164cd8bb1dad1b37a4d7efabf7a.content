@@ -100,6 +100,11 @@ r-grid {
     border-radius: var(--radius-inner); }
     .main img + * {
       margin-top: 5rem; }
+    .main img + img {
+      margin-top: 1rem; }
+    @media screen and (max-width: 835px) {
+      .main img + img {
+        margin-top: 0.5rem; } }
     .main img + figcaption, .main img + em {
       display: inline-block;
       margin-top: 0.5rem;
@@ -542,6 +547,24 @@ main blockquote, .footer blockquote {
           main blockquote p em::selection, main blockquote p cite::selection, .footer blockquote p + cite::selection,
           .footer blockquote p em::selection, .footer blockquote p cite::selection {
             background: rgba(247, 247, 247, 0.2); } }
+  main blockquote blockquote, .footer blockquote blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-border); }
+    main blockquote blockquote p, .footer blockquote blockquote p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--color-foreground); }
+      @media screen and (prefers-color-scheme: dark) {
+        main blockquote blockquote p, .footer blockquote blockquote p {
+          letter-spacing: 0.3px; } }
+      main blockquote blockquote p + *, .footer blockquote blockquote p + * {
+        margin-top: 2rem; }
+      main blockquote blockquote p + h3, .footer blockquote blockquote p + h3 {
+        margin-top: 2.5rem; }
+      main blockquote blockquote p + p, .footer blockquote blockquote p + p {
+        margin-top: 0.75rem; }
+      main blockquote blockquote p + blockquote, .footer blockquote blockquote p + blockquote {
+        margin-top: 5rem; }
   main blockquote + p, .footer blockquote + p {
     margin-top: 5rem; }
   main blockquote + hr, .footer blockquote + hr {
@@ -986,6 +1009,10 @@ main hr, .footer hr {
     margin: 0; }
     .template--timeline .timeline__item blockquote + p {
       margin-top: 2rem; }
+    .template--timeline .timeline__item blockquote + blockquote {
+      margin-top: 0; }
+      .template--timeline .timeline__item blockquote + blockquote p {
+        padding-top: 0.75rem; }
   .template--timeline .timeline__item .song {
     display: grid;
     grid-template-columns: 128px minmax(0, 1fr);
@@ -1166,6 +1193,9 @@ main hr, .footer hr {
 
 .template--entry * + blockquote {
   margin-top: 5rem; }
+
+.template--entry blockquote + blockquote {
+  margin-top: 1rem; }
 
 .template--work .header__years {
   display: flex;

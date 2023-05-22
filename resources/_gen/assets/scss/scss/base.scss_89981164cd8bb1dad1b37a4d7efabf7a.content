@@ -805,6 +805,8 @@ main hr, .footer hr {
         .navigation.--open .pages r-cell {
           transform: translate(0);
           opacity: 1; }
+          .navigation.--open .pages r-cell a {
+            width: 100%; }
           .navigation.--open .pages r-cell:nth-child(1) {
             transition-delay: 350ms; }
           .navigation.--open .pages r-cell:nth-child(2) {

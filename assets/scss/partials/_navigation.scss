@@ -241,6 +241,10 @@
                     transform: translate(0);
                     opacity: 1;
 
+                    a {
+                        width: 100%;
+                    }
+
                     @for $i from 1 through 5 {
                         &:nth-child(#{$i}) { transition-delay: 300ms + 50ms * $i; }
                     }

@@ -3,6 +3,7 @@ date = "2023-05-22T08:00:00Z"
 title = "Brisbane Grotesk by Valentin Rudloff"
 crop = false
 cover = "/images/timeline/brisbane-grotesk.png"
+og = "/images/timeline/brisbane-grotesk-og.png"
 +++
 
 >> BRISBANE GROTESK is a low-contrast, elegant but somehow brutal font. Some characteristics of the font come from Swiss Design and Brutalism. The word “Brisbane” comes from the two ancient words “brise” meaning a break, and “ban” - a bone, “break bone”. Brisbane was a name first mentioned in the 13th century, either referring to a doctor who healed bones or it was a nickname of someone who broke bones. 

@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="{{ $stylesheet.Permalink }}?v=15">
 
     <meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}">
-    <meta property="og:image" content="{{ if not .Page.Params.og }}https://linusrogge.com/images/og.png{{ else }}{{ .Page.Params.og }}{{ end }}">
+    <meta property="og:image" content="{{ if not .Page.Params.og }}https://linusrogge.com/images/og.png{{ else }}{{ .Site.BaseURL }}{{ .Page.Params.og }}{{ end }}">
     <meta property="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="og:description" content="Hamburg based Software Designer">
     <meta name="description" content="Hamburg based Software Designer">
 
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="Hamburg based Software Designer">
-    <meta name="twitter:image" content="{{ if not .Page.Params.og }}https://linusrogge.com/images/og.png{{ else }}{{ .Page.Params.og }}{{ end }}">
+    <meta name="twitter:image" content="{{ if not .Page.Params.og }}https://linusrogge.com/images/og.png{{ else }}{{ .Site.BaseURL }}{{ .Page.Params.og }}{{ end }}">
     <meta name="twitter:card" content="{{ with .Page.Params.twitterCard }}{{ . }}{{ else }}summary_large_image{{ end }}">
 
     <script src="{{ .Site.BaseURL }}js/SwupScrollPlugin.min.js"></script> 

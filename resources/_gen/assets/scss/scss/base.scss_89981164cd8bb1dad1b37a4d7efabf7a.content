@@ -1007,6 +1007,10 @@ main hr, .footer hr {
     height: 48px; }
   .template--timeline .timeline__item blockquote {
     margin: 0; }
+    .template--timeline .timeline__item blockquote blockquote {
+      transform: translate(0);
+      border-left: 0;
+      padding-left: 0; }
     .template--timeline .timeline__item blockquote + p {
       margin-top: 2rem; }
     .template--timeline .timeline__item blockquote + blockquote {

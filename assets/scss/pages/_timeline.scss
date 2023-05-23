@@ -142,6 +142,12 @@
             blockquote {
                 margin: 0;
 
+                blockquote {
+                    transform: translate(0);
+                    border-left: 0;
+                    padding-left: 0;
+                }
+
                 & + p { margin-top: $spacing-32; }
 
                 & + blockquote { 

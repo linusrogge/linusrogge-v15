@@ -1,5 +1,6 @@
 +++
-date = "2023-05-21"
+# date = "2023-05-21"
+date = "2023-05-25"
 title = "Profound questions"
 crop = false
 +++
@@ -20,3 +21,7 @@ crop = false
 - Where have you felt the most comfortable recently?
 - When do you usually cry, if at all?
 - Would you wear the same outfit for one week in a row?
+- If you walked into a room with everyone youve ever meet, who would you go looking for?
+- How would you describe the most beautiful thing in the world?
+- What's the most admirable aspect of human nature and the worst?
+- What does living in the moment mean to you?

@@ -956,6 +956,9 @@ main hr, .footer hr {
       top: calc(var(--navigation-height) + 1.5rem); } }
   .template--timeline .timeline__item__meta h3 {
     margin-bottom: 0.5rem; }
+  .template--timeline .timeline__item__meta date {
+    display: block;
+    margin-top: 0; }
   .template--timeline .timeline__item__meta .relations li {
     padding-left: 1.5rem;
     position: relative; }

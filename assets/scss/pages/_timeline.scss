@@ -65,6 +65,11 @@
                     margin-bottom: $spacing-8;
                 }
 
+                date {
+                    display: block;
+                    margin-top: 0;
+                }
+
                 .relations {
                     li {
                         padding-left: $spacing-24;

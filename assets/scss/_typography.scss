@@ -188,7 +188,7 @@ main, .footer {
 
 
     date {
-        @include Paragraph($muted: true)
+        @include Paragraph($muted: true);
     }
     
     ol {

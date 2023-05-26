@@ -6,4 +6,5 @@ date = "2023-05-26"
     url = "https://twitter.com/thedulab/status/1662146146964324366"
     author = "du"
     username = "thedulab"
+    avatar = "https://pbs.twimg.com/profile_images/1636197991865262081/99MWvDGh_400x400.jpg"
 +++

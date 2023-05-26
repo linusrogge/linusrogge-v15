@@ -285,6 +285,82 @@
                     }
                 }
             }
+
+            .tweets {
+                .tweet {
+                    @include Link(default);
+                    text-decoration: none;
+                    white-space: unset;
+                    background: var(--color-background);
+                    border: 1px solid var(--color-border);
+                    border-radius: var(--radius-inner);
+                    padding: $spacing-8 $spacing-12;
+
+                    &__text {
+                        margin-bottom: $spacing-24;
+                        @include Paragraph;
+                    }
+
+                    &__meta {
+                        position: relative;
+                        display: flex;
+                        gap: $spacing-24;
+                    }
+
+                    &__avatar {
+                        position: relative;
+                        width: 48px;
+                        height: 48px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        box-shadow: inset 0 0 0 1px rgba($color-grey, 0.1);
+                        flex-shrink: 0;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: relative;
+                            z-index: -1;
+                        }
+                    }
+
+                    &__logo {
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        box-shadow: inset 0 0 0 1px rgba($color-grey, 0.1);
+                        flex-shrink: 0;
+                        bottom: 0;
+                        left: 0;
+                        transform: translate(calc(48px - 55%), 0);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--color-white);
+
+                        img {
+                            width: 60%;
+                            height: 60%;
+                            position: relative;
+                            z-index: -1;
+                            transform: translate(0.5px, 0.5px);
+                        }
+                    }
+
+                    &__author {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        &__username {
+                            color: var(--color-grey);
+                        }
+                    }
+                }
+            }
         }
     }
 }

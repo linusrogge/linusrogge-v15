@@ -1153,6 +1153,82 @@ main hr, .footer hr {
           margin-top: 0.75rem; }
         .template--timeline .timeline__item .messages .message__meta + blockquote {
           margin-top: 5rem; }
+  .template--timeline .timeline__item .tweets .tweet {
+    font-size: inherit;
+    color: inherit;
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    text-decoration: none;
+    white-space: unset;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-inner);
+    padding: 0.5rem 0.75rem; }
+    .template--timeline .timeline__item .tweets .tweet::before {
+      display: none; }
+    .template--timeline .timeline__item .tweets .tweet:hover {
+      text-decoration: none; }
+    .template--timeline .timeline__item .tweets .tweet__text {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--color-foreground); }
+      @media screen and (prefers-color-scheme: dark) {
+        .template--timeline .timeline__item .tweets .tweet__text {
+          letter-spacing: 0.3px; } }
+      .template--timeline .timeline__item .tweets .tweet__text + * {
+        margin-top: 2rem; }
+      .template--timeline .timeline__item .tweets .tweet__text + h3 {
+        margin-top: 2.5rem; }
+      .template--timeline .timeline__item .tweets .tweet__text + p {
+        margin-top: 0.75rem; }
+      .template--timeline .timeline__item .tweets .tweet__text + blockquote {
+        margin-top: 5rem; }
+    .template--timeline .timeline__item .tweets .tweet__meta {
+      position: relative;
+      display: flex;
+      gap: 1.5rem; }
+    .template--timeline .timeline__item .tweets .tweet__avatar {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px rgba(105, 105, 105, 0.1);
+      flex-shrink: 0; }
+      .template--timeline .timeline__item .tweets .tweet__avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1; }
+    .template--timeline .timeline__item .tweets .tweet__logo {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px rgba(105, 105, 105, 0.1);
+      flex-shrink: 0;
+      bottom: 0;
+      left: 0;
+      transform: translate(calc(48px - 55%), 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-white); }
+      .template--timeline .timeline__item .tweets .tweet__logo img {
+        width: 60%;
+        height: 60%;
+        position: relative;
+        z-index: -1;
+        transform: translate(0.5px, 0.5px); }
+    .template--timeline .timeline__item .tweets .tweet__author {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .template--timeline .timeline__item .tweets .tweet__author__username {
+        color: var(--color-grey); }
 
 .template--entry .entry__meta .relations li {
   padding-left: 1.5rem;

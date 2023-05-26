@@ -79,6 +79,24 @@
             </div>
 
             {{ if .Params.messagesAfterContent }}{{ .Content | safeHTML }}{{ end }}
+        {{ else if .Params.tweets }}
+            <div class="tweets">
+                {{ range $tweet := .Params.tweets }}
+                    <a href="{{ $tweet.url }}" target="_blank" class="tweet">
+                        <div class="tweet__text">{{ $tweet.text }}</div>
+                        <div class="tweet__meta">
+                            <div class="tweet__avatar">
+                                <img src="https://unavatar.io/twitter/{{ $tweet.username }}">
+                            </div>
+                            <div class="tweet__logo"><img src="https://unavatar.io/twitter.com"></div>
+                            <div class="tweet__author">
+                                <span class="tweet__author__name">{{ $tweet.author }}</span>
+                                <span class="tweet__author__username">@{{ $tweet.username }}</span>
+                            </div>
+                        </div>
+                    </a>
+                {{ end }}
+            </div>
         {{ else }}
             {{ if eq .Params.Crop false }}
                 {{ .Content | safeHTML }}

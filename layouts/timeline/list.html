@@ -86,7 +86,7 @@
                         <div class="tweet__text">{{ $tweet.text }}</div>
                         <div class="tweet__meta">
                             <div class="tweet__avatar">
-                                <img src="https://unavatar.io/twitter/{{ $tweet.username }}">
+                                <img src="{{ if not $tweet.avatar}}https://unavatar.io/twitter/{{ $tweet.username }}{{ else }}{{ $tweet.avatar }}{{ end }}">
                             </div>
                             <div class="tweet__logo"><img src="https://unavatar.io/twitter.com"></div>
                             <div class="tweet__author">

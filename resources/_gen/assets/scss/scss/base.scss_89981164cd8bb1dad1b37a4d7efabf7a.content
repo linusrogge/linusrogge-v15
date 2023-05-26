@@ -1163,7 +1163,8 @@ main hr, .footer hr {
     background: var(--color-background);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-inner);
-    padding: 0.5rem 0.75rem; }
+    padding: 0.5rem 0.75rem;
+    z-index: 1; }
     .template--timeline .timeline__item .tweets .tweet::before {
       display: none; }
     .template--timeline .timeline__item .tweets .tweet:hover {

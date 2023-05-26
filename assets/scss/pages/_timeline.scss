@@ -295,6 +295,7 @@
                     border: 1px solid var(--color-border);
                     border-radius: var(--radius-inner);
                     padding: $spacing-8 $spacing-12;
+                    z-index: 1;
 
                     &__text {
                         margin-bottom: $spacing-24;

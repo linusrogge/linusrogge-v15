@@ -895,6 +895,13 @@ main hr, .footer hr {
     -moz-user-select: none; }
     .footer .footer__copyright p {
       margin-top: 0; }
+      .footer .footer__copyright p:first-child {
+        display: inline-block; }
+  .footer .footer__pride {
+    margin-top: 0;
+    display: inline-block;
+    margin-left: 0.25rem;
+    transform: translate(0, 1px); }
   .footer .footer__legals {
     display: flex;
     user-select: none;

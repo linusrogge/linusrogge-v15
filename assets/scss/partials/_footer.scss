@@ -44,7 +44,18 @@
 
             p {
                 margin-top: 0;
+
+                &:first-child {
+                    display: inline-block;
+                }
             }
+        }
+
+        &__pride {
+            margin-top: 0;
+            display: inline-block;
+            margin-left: $spacing-4;
+            transform: translate(0, 1px);
         }
 
         &__legals {

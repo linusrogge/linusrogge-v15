@@ -1,6 +1,6 @@
 +++
 title = "Happy(?) Pride Month"
-date = "2023-06-01"
+date = "2023-06-01T11:00:00"
 +++
 
 The time of the year again for large companies to tint their logo with rainbow colors. A painful reminder that diversity and inclusivity are usually just hollow words instead of an act of betterment for bespoke people.

@@ -7,6 +7,10 @@ title = 'Linus Rogge'
     # status = 'Falling in love with <a href="https://antonstallboerger.com">Anton</a>'
     status = 'Happy Pride Month 🏳️‍🌈'
 
+[author]
+    name = 'Linus Rogge'
+    email = 'hello@linusrogge.com'
+
 [menu]
 [[menu.footer]]
     name = "Work"

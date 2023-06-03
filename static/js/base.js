@@ -97,5 +97,15 @@ function init() {
         }
     }
 
+    var clipboard = new ClipboardJS('.copy-to-clipboard')
+
+    clipboard.on('success', (e) => {
+        var hex = e.trigger.firstElementChild.firstElementChild.textContent;
+        e.trigger.firstElementChild.firstElementChild.textContent = "Copied!"
+        setTimeout(() => {
+            e.trigger.firstElementChild.firstElementChild.textContent = hex
+        }, 1000)
+    })
+
     lazyLoadInstance.update();
 }init()

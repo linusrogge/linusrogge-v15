@@ -1237,6 +1237,38 @@ main hr, .footer hr {
       flex-direction: column; }
       .template--timeline .timeline__item .tweets .tweet__author__username {
         color: var(--color-grey); }
+  .template--timeline .timeline__item .palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80px);
+    gap: 0.5rem; }
+    .template--timeline .timeline__item .palette .color {
+      position: relative;
+      background: var(--background);
+      height: 80px;
+      width: 80px;
+      border-radius: var(--radius-inner);
+      border: 1px solid transparent;
+      cursor: pointer; }
+      .template--timeline .timeline__item .palette .color.--border {
+        border: 1px solid var(--color-border); }
+      .template--timeline .timeline__item .palette .color__tooltip {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        padding-top: 0.5rem;
+        transform: translate(-50%, calc(100% + 0.5rem));
+        opacity: 0;
+        transition: 150ms ease; }
+        .template--timeline .timeline__item .palette .color__tooltip__inner {
+          padding: 0.5rem 0.5rem 0.25rem;
+          border-radius: var(--radius-inner);
+          background: var(--color-background);
+          border: 1px solid var(--color-border);
+          line-height: 1;
+          text-transform: uppercase; }
+      .template--timeline .timeline__item .palette .color:hover .color__tooltip {
+        transform: translate(-50%, 100%);
+        opacity: 1; }
 
 .template--entry .entry__meta .relations li {
   padding-left: 1.5rem;

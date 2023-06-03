@@ -61,6 +61,17 @@
             {{ end }}
 
             {{ .Content | safeHTML }}
+        {{ else if .Params.colors }}
+            <div class="palette">
+                {{ range $color := .Params.colors }}
+                    <div class="color copy-to-clipboard{{ if $color.border}} --border{{ end }}" style="--background: {{ $color.hex }}" data-clipboard-text="{{ $color.hex }}">
+                        <div class="color__tooltip">
+                            <div class="color__tooltip__inner">{{ $color.hex }}
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
         {{ else if .Params.messages }}
             {{ if not .Params.messagesAfterContent }}{{ .Content | safeHTML }}{{ end }}
 

@@ -15,22 +15,6 @@
     <div class="anchor" id="{{ .File.TranslationBaseName }}"></div>
     <r-cell span-s="row" span="3" class="timeline__item__meta">
         <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
-
-        {{ if .Params.Connections }}
-        <div class="connections">
-            <h3>Connections</h3>
-            <ul class="connections__list --ghost">
-                {{ range $relation := .Params.Connections }}
-                <li>
-                    <a href="{{ $relation.url }}" target="_blank">
-                        <span class="title">{{ $relation.title }}</span>
-                        <span class="description">{{ $relation.platform }}</span>
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-        </div>
-        {{ end }}
     </r-cell>
     <r-cell span-s="row" span="5">
         {{ with .Title }}<h2 class="timeline__item__title">{{ . }}</h2>{{ end }}
@@ -119,6 +103,24 @@
                 <a href="{{ .RelPermalink }}" class="button">Read more</a>
                 {{ end }}
             {{ end }}
+        {{ end }}
+    </r-cell>
+    <r-cell span-s="row" span="1" class="--empty"></r-cell>
+    <r-cell span-s="row" span="3" class="timeline__item__meta">
+        {{ if .Params.Connections }}
+        <div class="connections">
+            <h3>Connections</h3>
+            <ul class="connections__list --ghost">
+                {{ range $relation := .Params.Connections }}
+                <li>
+                    <a href="{{ $relation.url }}" target="_blank">
+                        <span class="title">{{ $relation.title }}</span>
+                        <span class="description">{{ $relation.platform }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
         {{ end }}
     </r-cell>
 </r-grid>

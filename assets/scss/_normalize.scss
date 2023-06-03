@@ -62,6 +62,10 @@ r-grid {
             @include mobile { margin-top: -$spacing-64; }
         }
 
+        &.--empty {
+            @include mobile { display: none; }
+        }
+
         &[id] {
             padding-top: calc(var(--navigation-height) + #{$spacing-32});
             margin-top: calc((var(--navigation-height) * -1) - #{$spacing-32});

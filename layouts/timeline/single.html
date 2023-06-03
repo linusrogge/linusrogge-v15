@@ -3,7 +3,17 @@
 <r-grid columns-s="4" columns="12">
     <r-cell span-s="row" span="3" class="entry__meta">
         <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
+    </r-cell>
 
+    <r-cell span-s="row" span="6" span-l="5" class="entry__content">
+        {{ with .Title }}<h1 class="entry__title">{{ . }}</h1>{{ end }}
+        {{ with .Description }}<p class="entry__description">{{ . }}</p>{{ end }}
+        {{ if and .Params.Cover (not .Params.HideCover) }}<img src="{{ .Site.BaseURL}}{{ .Params.Cover }}">{{ end }}
+        
+        {{ .Content | safeHTML }}
+    </r-cell>
+
+    <r-cell span-s="row" span="10+3" class="entry__meta">
         {{ if .Params.Connections }}
         <h3>Connections</h3>
         <ul class="connections --ghost">
@@ -17,14 +27,6 @@
             {{ end }}
         </ul>
         {{ end }}
-    </r-cell>
-
-    <r-cell span-s="row" span="6" span-l="5" class="entry__content">
-        {{ with .Title }}<h1 class="entry__title">{{ . }}</h1>{{ end }}
-        {{ with .Description }}<p class="entry__description">{{ . }}</p>{{ end }}
-        {{ if and .Params.Cover (not .Params.HideCover) }}<img src="{{ .Site.BaseURL}}{{ .Params.Cover }}">{{ end }}
-        
-        {{ .Content | safeHTML }}
     </r-cell>
 
     <r-cell span-s="row" span="4+6" span-l="4+5" class="entry__footer">

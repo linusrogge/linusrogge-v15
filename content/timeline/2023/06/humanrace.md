@@ -2,6 +2,11 @@
 date = "2023-06-03"
 title = "Humanrace color palette"
 
+[[connections]]
+    url = "https://humanrace.com"
+    title = "Humanrace"
+    platform = "humanrace.com"
+
 [[colors]]
     hex = "#ffffff"
     border = true

@@ -1,7 +1,7 @@
 +++
 date = "2023-05-08"
 
-[[relations]]
+[[connections]]
     url = "https://manuelmoreale.com/selflessness"
     title = "Selflesness"
     platform = "manuelmoreale.com"

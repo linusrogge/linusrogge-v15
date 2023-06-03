@@ -1,7 +1,7 @@
 +++
 date = "2023-05-23T11:00:00"
 
-[[relations]]
+[[connections]]
     url = "https://www.ofc.software/blank/19"
     title = "Act without Ask"
     platform = "ofc.software/blank"

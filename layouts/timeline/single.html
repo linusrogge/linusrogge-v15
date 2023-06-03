@@ -4,10 +4,10 @@
     <r-cell span-s="row" span="3" class="entry__meta">
         <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
 
-        {{ if .Params.Relations }}
-        <h3>Relations</h3>
-        <ul class="relations --ghost">
-            {{ range $relation := .Params.Relations }}
+        {{ if .Params.Connections }}
+        <h3>Connections</h3>
+        <ul class="connections --ghost">
+            {{ range $relation := .Params.Connections }}
             <li>
                 <a href="{{ $relation.url }}">
                     <span class="title">{{ $relation.title }}</span>

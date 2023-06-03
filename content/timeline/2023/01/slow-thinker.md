@@ -2,7 +2,7 @@
 title = "Re: On Being a Slow Thinker"
 date = "2023-01-18"
 crop = false
-[[relations]]
+[[connections]]
     url = "https://cmhb.de/slow-thinker"
     title = "On Being a Slow Thinker"
     platform = "cmhb.de"

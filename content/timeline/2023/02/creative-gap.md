@@ -2,7 +2,7 @@
 date = "2023-02-04"
 crop = false
 
-[[relations]]
+[[connections]]
     url = "https://www.goodreads.com/quotes/309485-nobody-tells-this-to-people-who-are-beginners-i-wish"
     title = "Quote by Ira Glass"
     platform = "GoodReads"

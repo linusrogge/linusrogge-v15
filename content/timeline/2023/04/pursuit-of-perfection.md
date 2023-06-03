@@ -2,7 +2,7 @@
 title = "Re: The Pursuit of Perfection"
 date = "2023-04-29"
 
-[[relations]]
+[[connections]]
     url = "https://www.antonstallboerger.com/thoughts#thepursuitofperfection"
     title = "The Pursuit of Perfection"
     platform = "antonstallboerger.com"

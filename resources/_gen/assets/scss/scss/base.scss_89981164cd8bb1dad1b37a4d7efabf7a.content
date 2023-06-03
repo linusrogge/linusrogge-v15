@@ -1235,7 +1235,8 @@ main hr, .footer hr {
         padding-top: 0.5rem;
         transform: translate(-50%, calc(100% + 0.5rem));
         opacity: 0;
-        transition: 150ms ease; }
+        transition: 150ms ease;
+        z-index: 2; }
         .template--timeline .timeline__item .palette .color__tooltip__inner {
           padding: 0.5rem 0.5rem 0.25rem;
           border-radius: var(--radius-inner);

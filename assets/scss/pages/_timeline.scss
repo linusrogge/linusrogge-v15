@@ -390,6 +390,7 @@
                         transform: translate(-50%, calc(100% + #{$spacing-8}));
                         opacity: 0;
                         transition: 150ms ease;
+                        z-index: 2;
                         
                         &__inner {
                             padding: $spacing-8 $spacing-8 $spacing-4;

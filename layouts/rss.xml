@@ -26,14 +26,14 @@
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
         {{- end -}}-->
         {{ range where $pages "Section" "timeline" }}
-            {{ if .Title }}
+            {{ if and .Title .Content }}
                 <item>
                     <title>{{ .Title }}</title>
                     <link>{{ .Permalink }}</link>
                     <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
                     <guid>{{ .Permalink }}</guid>
                     <author>{{ $.Site.Author.name }}</author>
-                    <description>&lt;![CDATA[{{ .Content | safeHTML }}]]&gt;</description>
+                    <description>&lt;![CDATA[{{ .Content | html }}]]&gt;</description>
                     <!-- <image>
                         <url>{{ .Site.BaseURL }}profile-images/{{ .Title }}.jpg</url>
                         <title>{{ .Title }}</title>

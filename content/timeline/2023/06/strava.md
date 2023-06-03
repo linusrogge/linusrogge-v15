@@ -2,6 +2,11 @@
 date = "2023-06-03"
 title = "Strava color palette"
 
+[[connections]]
+    url = "https://strava.com"
+    title = "Strava"
+    platform = "strava.com"
+
 [[colors]]
     hex = "#F6F7F3"
     border = true

@@ -17,17 +17,19 @@
         <date>{{ dateFormat "Monday · January 2, 2006" .Params.Date }}</date>
 
         {{ if .Params.Connections }}
-        <h3>Connections</h3>
-        <ul class="connections --ghost">
-            {{ range $relation := .Params.Connections }}
-            <li>
-                <a href="{{ $relation.url }}" target="_blank">
-                    <span class="title">{{ $relation.title }}</span>
-                    <span class="description">{{ $relation.platform }}</span>
-                </a>
-            </li>
-            {{ end }}
-        </ul>
+        <div class="connections">
+            <h3>Connections</h3>
+            <ul class="connections__list --ghost">
+                {{ range $relation := .Params.Connections }}
+                <li>
+                    <a href="{{ $relation.url }}" target="_blank">
+                        <span class="title">{{ $relation.title }}</span>
+                        <span class="description">{{ $relation.platform }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
         {{ end }}
     </r-cell>
     <r-cell span-s="row" span="5">

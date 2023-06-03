@@ -972,7 +972,8 @@ main hr, .footer hr {
       display: inline-flex;
       flex-direction: column;
       white-space: pre-line;
-      text-decoration: none; }
+      text-decoration: none;
+      margin-left: 0; }
       .template--timeline .timeline__item__meta .connections li a .title {
         text-decoration: underline;
         text-underline-offset: 2px; }
@@ -1252,7 +1253,8 @@ main hr, .footer hr {
     display: inline-flex;
     flex-direction: column;
     white-space: pre-line;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-left: 0; }
     .template--entry .entry__meta .connections li a .title {
       text-decoration: underline;
       text-underline-offset: 2px; }

@@ -1451,8 +1451,11 @@ main hr, .footer hr {
       font-size: inherit;
       line-height: 1;
       outline: none;
+      background: var(--color-background);
       border: 1px solid var(--color-border);
       padding: 0.5rem 0.625rem 0.375rem; }
+      .template--newsletter .embeddable-buttondown-form input[type=text]::placeholder, .template--newsletter .embeddable-buttondown-form input[type=email]::placeholder {
+        color: var(--color-grey); }
       .template--newsletter .embeddable-buttondown-form input[type=text]:focus, .template--newsletter .embeddable-buttondown-form input[type=text]:focus-visible, .template--newsletter .embeddable-buttondown-form input[type=text]:focus-within, .template--newsletter .embeddable-buttondown-form input[type=email]:focus, .template--newsletter .embeddable-buttondown-form input[type=email]:focus-visible, .template--newsletter .embeddable-buttondown-form input[type=email]:focus-within {
         box-shadow: 0 0 0 2px var(--color-border); }
     .template--newsletter .embeddable-buttondown-form input[type=submit] {

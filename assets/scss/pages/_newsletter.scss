@@ -20,8 +20,13 @@
                 font-size: inherit;
                 line-height: 1;
                 outline: none;
+                background: var(--color-background);
                 border: 1px solid var(--color-border);
                 padding: $spacing-8 $spacing-10 $spacing-6;
+
+                &::placeholder {
+                    color: var(--color-grey);
+                }
 
                 &:focus,
                 &:focus-visible,

@@ -107,5 +107,14 @@ function init() {
         }, 500)
     })
 
+    if(document.querySelector('#subscriber-greeting')) {
+        const queryString = window.location.search;
+        console.log(queryString)
+        const urlParams = new URLSearchParams(queryString);
+        var name = urlParams.get('name')
+        if(name != null)
+        document.querySelector('#subscriber-greeting').textContent = `Feel hugged, ${name}.`;
+    }
+
     lazyLoadInstance.update();
 }init()

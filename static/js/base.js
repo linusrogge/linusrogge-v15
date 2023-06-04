@@ -104,7 +104,7 @@ function init() {
         e.trigger.firstElementChild.firstElementChild.textContent = "Copied!"
         setTimeout(() => {
             e.trigger.firstElementChild.firstElementChild.textContent = hex
-        }, 1000)
+        }, 500)
     })
 
     lazyLoadInstance.update();

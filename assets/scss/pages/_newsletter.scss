@@ -1,0 +1,38 @@
+.template--newsletter {
+    .embeddable-buttondown-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: flex-start;
+        gap: $spacing-8;
+
+        @include mobile {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        input {
+            appearance: none;
+
+            &[type=text],
+            &[type=email] {
+                border-radius: var(--radius-inner);
+                border: none;
+                font-family: inherit;
+                font-size: inherit;
+                line-height: 1;
+                outline: none;
+                border: 1px solid var(--color-border);
+                padding: $spacing-8 $spacing-10 $spacing-6;
+
+                &:focus,
+                &:focus-visible,
+                &:focus-within {
+                    box-shadow: 0 0 0 2px var(--color-border);
+                }
+            }
+
+            &[type=submit] {
+                justify-self: flex-start;
+            }
+        }
+    }
+}

@@ -81,6 +81,7 @@
     appearance: none;
     text-decoration: none;
     border-radius: var(--radius-inner);
+    border: none;
     font-family: inherit;
     font-size: inherit;
     line-height: 1;
@@ -88,6 +89,7 @@
     // letter-spacing: 0.4px;
     padding: $spacing-8 $spacing-10 $spacing-6;
     transition: 150ms ease;
+    cursor: pointer;
     @include noselect;
 
     @if $type == primary {

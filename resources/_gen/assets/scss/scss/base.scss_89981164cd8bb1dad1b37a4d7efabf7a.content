@@ -140,12 +140,14 @@ r-grid {
   appearance: none;
   text-decoration: none;
   border-radius: var(--radius-inner);
+  border: none;
   font-family: inherit;
   font-size: inherit;
   line-height: 1;
   font-weight: 700;
   padding: 0.5rem 0.625rem 0.375rem;
   transition: 150ms ease;
+  cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -163,12 +165,14 @@ r-grid {
     appearance: none;
     text-decoration: none;
     border-radius: var(--radius-inner);
+    border: none;
     font-family: inherit;
     font-size: inherit;
     line-height: 1;
     font-weight: 700;
     padding: 0.5rem 0.625rem 0.375rem;
     transition: 150ms ease;
+    cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -189,12 +193,14 @@ r-grid {
     appearance: none;
     text-decoration: none;
     border-radius: var(--radius-inner);
+    border: none;
     font-family: inherit;
     font-size: inherit;
     line-height: 1;
     font-weight: 700;
     padding: 0.5rem 0.625rem 0.375rem;
     transition: 150ms ease;
+    cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1427,3 +1433,27 @@ main hr, .footer hr {
 
 .template--colophon r-grid {
   row-gap: 5rem; }
+
+.template--newsletter .embeddable-buttondown-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: flex-start;
+  gap: 0.5rem; }
+  @media screen and (max-width: 835px) {
+    .template--newsletter .embeddable-buttondown-form {
+      grid-template-columns: minmax(0, 1fr); } }
+  .template--newsletter .embeddable-buttondown-form input {
+    appearance: none; }
+    .template--newsletter .embeddable-buttondown-form input[type=text], .template--newsletter .embeddable-buttondown-form input[type=email] {
+      border-radius: var(--radius-inner);
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: 1;
+      outline: none;
+      border: 1px solid var(--color-border);
+      padding: 0.5rem 0.625rem 0.375rem; }
+      .template--newsletter .embeddable-buttondown-form input[type=text]:focus, .template--newsletter .embeddable-buttondown-form input[type=text]:focus-visible, .template--newsletter .embeddable-buttondown-form input[type=text]:focus-within, .template--newsletter .embeddable-buttondown-form input[type=email]:focus, .template--newsletter .embeddable-buttondown-form input[type=email]:focus-visible, .template--newsletter .embeddable-buttondown-form input[type=email]:focus-within {
+        box-shadow: 0 0 0 2px var(--color-border); }
+    .template--newsletter .embeddable-buttondown-form input[type=submit] {
+      justify-self: flex-start; }

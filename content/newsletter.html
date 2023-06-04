@@ -1,0 +1,21 @@
++++
+title = "Other Side of the Screen"
+Customclasses = "template--newsletter"
++++
+
+<r-cell span-s="row" span="4+6" span-l="4+5">
+    <p>
+        In infrequent issues, I will curate inspiring content and thoughts of yours truly. No spam, ever.
+    </p>
+    <form
+        action="https://buttondown.email/api/emails/embed-subscribe/linusrogge"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/linusrogge', 'popupwindow')"
+        class="embeddable-buttondown-form"
+        >
+        <input type="text" required id="first_name" name="metadata__first_name" placeholder="First name" autocomplete="given-name">
+        <input type="email" name="email" required id="bd-email"  placeholder="E-Mail"/>
+        <input type="submit" value="Subscribe" class="button --primary" />
+    </form>
+</r-cell>

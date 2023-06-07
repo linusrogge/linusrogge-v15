@@ -45,6 +45,9 @@ title = 'Linus Rogge'
 [[menu.socials]]
     name = "Read.cv"
     url = "https://read.cv/linusrogge"
+[[menu.socials]]
+    name = "Newsletter"
+    url = "/newsletter"
 
 [[menu.legals]]
     name = "Imprint"

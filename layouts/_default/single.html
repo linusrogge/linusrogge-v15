@@ -6,8 +6,8 @@
         {{ if and .Params.Cover (not .Params.HideCover) }}<img src="{{ .Site.BaseURL}}{{ .Params.Cover }}">{{ end }}
         {{ with .Params.LastMod }}
         <p><date>{{ dateFormat "Last updated January 2, 2006" . }}</date></p>
+        {{ end }}
     </r-cell>
-    {{ end }}
 
     {{ .Content | safeHTML }}
 </r-grid>

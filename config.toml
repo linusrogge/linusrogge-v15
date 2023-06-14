@@ -48,6 +48,9 @@ title = 'Linus Rogge'
 [[menu.socials]]
     name = "Newsletter"
     url = "/newsletter"
+[[menu.socials]]
+    name = "iMessage"
+    url = "imessage://hello@linusrogge.com"
 
 [[menu.legals]]
     name = "Imprint"

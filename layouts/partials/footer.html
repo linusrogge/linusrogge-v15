@@ -16,7 +16,7 @@
             <ul class="--ghost">
                 {{ range .Site.Menus.socials }}
                     <li>
-                        <a href="{{ .URL | safeHTMLAttr }}" target="_blank">{{ .Name }}</a>
+                        <a {{ printf "href=%q" .URL | safeHTMLAttr }} target="_blank">{{ .Name }}</a>
                     </li>
                 {{ end }}
             </ul>

@@ -53,7 +53,8 @@
 
         &__pride {
             margin-top: 0;
-            display: inline-block;
+            // display: inline-block;
+            display: none;
             margin-left: $spacing-4;
             transform: translate(0, 1px);
         }

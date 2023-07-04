@@ -908,7 +908,7 @@ main hr, .footer hr {
         display: inline-block; }
   .footer .footer__pride {
     margin-top: 0;
-    display: inline-block;
+    display: none;
     margin-left: 0.25rem;
     transform: translate(0, 1px); }
   .footer .footer__legals {
@@ -965,6 +965,18 @@ main hr, .footer hr {
       .template--timeline .timeline__item::before {
         left: 1rem;
         width: calc(100% - 2rem); } }
+  .template--timeline .timeline__item.--now {
+    padding-bottom: 10rem; }
+    .template--timeline .timeline__item.--now::before {
+      background: var(--color-red);
+      opacity: 0.1; }
+    .template--timeline .timeline__item.--now * {
+      color: var(--color-red) !important;
+      border-color: rgba(243, 11, 11, 0.1); }
+    .template--timeline .timeline__item.--now date {
+      display: inline-block;
+      margin-top: 4rem;
+      opacity: 0.6; }
   @media screen and (min-width: 835px) {
     .template--timeline .timeline__item__meta {
       align-self: flex-start;

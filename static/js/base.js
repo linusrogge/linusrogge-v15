@@ -116,5 +116,14 @@ function init() {
         document.querySelector('#subscriber-greeting').textContent = `Feel hugged, ${name}.`;
     }
 
+    if (document.querySelector('#days')) {
+        var futureDate = new Date("2023-07-10");
+        var currentDate = new Date();
+        
+        var timeDifference = futureDate.getTime() - currentDate.getTime();
+        var dayDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        document.querySelector('#days').innerHTML = dayDifference
+    }
+
     lazyLoadInstance.update();
 }init()

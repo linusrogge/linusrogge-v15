@@ -54,6 +54,26 @@
                 }
             }
 
+            &.--now {
+                padding-bottom: $spacing-160;
+
+                &::before {
+                    background: var(--color-red);
+                    opacity: 0.1;
+                }
+
+                & * {
+                    color: var(--color-red) !important;
+                    border-color: rgba($color-red, 0.1);
+                }
+
+                date {
+                    display: inline-block;
+                    margin-top: $spacing-64;
+                    opacity: 0.6;
+                }
+            }
+
             &__meta {
                 @include mobile(min) {
                     align-self: flex-start;

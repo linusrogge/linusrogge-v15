@@ -10,6 +10,24 @@
     </r-cell>
 </r-grid>
 
+<r-grid columns-s="4" columns="12" class="timeline__item --now">
+    <r-cell span-s="row" span="3" class="timeline__item__meta">
+        <h2>Now</h2>
+    </r-cell>
+    <r-cell span-s="row" span="5">
+        <p>
+            A short summary of current happenings. More about why and how to create a “now” page on <a href="https://nownownow.com/about" target="_blank">nownownow.com</a>.
+        </p>
+        <ul>
+            <li>Joyfully sweating through summer days</li>
+            <li>Falling in love</li>
+            <li>Counting days (<span id="days">0</span>) until graduation</li>
+            <li>Moving to Berlin as of August</li>
+        </ul>
+        <date>Last updated on {{ dateFormat "Monday · January 2, 2006" "2023-07-04" }}</date>
+    </r-cell>
+</r-grid>
+
 {{ range $entries }}
 <r-grid columns-s="4" columns="12" class="timeline__item{{ if .Params.Important }} --important{{ end }}">
     <div class="anchor" id="{{ .File.TranslationBaseName }}"></div>

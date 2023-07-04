@@ -4,8 +4,7 @@ title = 'Linus Rogge'
 
 [Params]
     description = 'Software Designer'
-    # status = 'Falling in love with <a href="https://antonstallboerger.com">Anton</a>'
-    status = 'Happy Pride Month 🏳️‍🌈'
+    status = 'Moving to Berlin in August'
 
 [author]
     name = 'Linus Rogge'

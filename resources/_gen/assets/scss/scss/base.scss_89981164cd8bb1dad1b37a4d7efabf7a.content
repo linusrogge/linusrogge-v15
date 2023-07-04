@@ -973,6 +973,11 @@ main hr, .footer hr {
     .template--timeline .timeline__item.--now * {
       color: var(--color-red) !important;
       border-color: rgba(243, 11, 11, 0.1); }
+    @media screen and (prefers-color-scheme: dark) {
+      .template--timeline .timeline__item.--now::before {
+        opacity: 0.2; }
+      .template--timeline .timeline__item.--now * {
+        border-color: rgba(243, 11, 11, 0.2); } }
     .template--timeline .timeline__item.--now date {
       display: inline-block;
       margin-top: 4rem;

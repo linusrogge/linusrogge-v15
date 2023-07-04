@@ -66,6 +66,16 @@
                     color: var(--color-red) !important;
                     border-color: rgba($color-red, 0.1);
                 }
+                
+                @include dark {
+                    &::before {
+                        opacity: 0.2;
+                    }
+
+                    & * {
+                        border-color: rgba($color-red, 0.2);
+                    }
+                }
 
                 date {
                     display: inline-block;

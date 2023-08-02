@@ -19,12 +19,13 @@
             A short summary of current happenings. More about why and how to create a “now” page on <a href="https://nownownow.com/about" target="_blank">nownownow.com</a>.
         </p>
         <ul>
-            <li>Joyfully sweating through summer days</li>
-            <li>Falling in love</li>
-            <li>Counting days (<span id="days">0</span>) until graduation</li>
-            <li>Moving to Berlin as of August</li>
+            <li>Moving to Berlin</li>
+            <li>Exploring the depths of myself</li>
+            <li>Evaluating friendships</li>
+            <li>Trying to be in nature more</li>
+            <li>Getting back into podcasts</li>
         </ul>
-        <date>Last updated on {{ dateFormat "Monday · January 2, 2006" "2023-07-04" }}</date>
+        <date>Last updated on {{ dateFormat "Monday · January 2, 2006" "2023-08-02" }}</date>
     </r-cell>
 </r-grid>
 
@@ -101,7 +102,7 @@
                         <div class="tweet__text">{{ $tweet.text }}</div>
                         <div class="tweet__meta">
                             <div class="tweet__avatar">
-                                <img src="{{ if not $tweet.avatar}}https://unavatar.io/twitter/{{ $tweet.username }}{{ else }}{{ $tweet.avatar }}{{ end }}">
+                                <img src="{{ if not $tweet.avatar}}https://unavatar.io/twitter.com/{{ $tweet.username }}{{ else }}{{ $tweet.avatar }}{{ end }}">
                             </div>
                             <div class="tweet__logo"><img src="https://unavatar.io/twitter.com"></div>
                             <div class="tweet__author">

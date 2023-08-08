@@ -18,3 +18,4 @@ title = "Responsible fashion brands"
 - [RÓHE](https://roheframes.com)
 - [LAUGÉ](https://lauge.shop)
 - [Daniel Simmons](https://danielsimmons.co)
+- [SANVT](https://sanvt.com)

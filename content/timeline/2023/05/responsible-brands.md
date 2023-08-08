@@ -11,7 +11,7 @@ title = "Responsible fashion brands"
 - [Organic Basics](https://lowimpact.organicbasics.com)
 - [FRNKOW](https://frnkow.com)
 - [L’ESTRANGE](https://eu.lestrangelondon.com)
-- [SENSE Studios](https://sensestudiosofficial.com) 
+<!-- - [SENSE Studios](https://sensestudiosofficial.com) -->
 - [SAMSØE](https://samsoe.com)
 - [oftt](https://oftt.world)
 - [Salzwasser](https://salzwasser.eu)

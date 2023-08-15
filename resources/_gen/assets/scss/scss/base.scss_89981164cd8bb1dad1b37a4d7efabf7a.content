@@ -253,7 +253,7 @@ main a:not(.button), main .link, .footer a:not(.button), .footer .link {
     text-decoration: none; }
     main a:not(.button):hover::before, main .link:hover::before, .footer a:not(.button):hover::before, .footer .link:hover::before {
       opacity: 1;
-      transform: translate(-50%, calc(-50% - 2px)) scale(1); }
+      transform: translate(-50%, calc(-50% - 1px)) scale(1); }
   main a:not(.button).--nowrap, main .link.--nowrap, .footer a:not(.button).--nowrap, .footer .link.--nowrap {
     white-space: nowrap; }
   main a:not(.button).--ghost, main .link.--ghost, .footer a:not(.button).--ghost, .footer .link.--ghost {
@@ -440,6 +440,8 @@ main ul, main ol, .footer ul, .footer ol {
     @media screen and (prefers-color-scheme: dark) {
       main ul li, main ol li, .footer ul li, .footer ol li {
         letter-spacing: 0.3px; } }
+    main ul li a, main ol li a, .footer ul li a, .footer ol li a {
+      white-space: unset !important; }
   main ul.--ghost, main ol.--ghost, .footer ul.--ghost, .footer ol.--ghost {
     gap: 0.125rem 0; }
     main ul.--ghost li, main ol.--ghost li, .footer ul.--ghost li, .footer ol.--ghost li {
@@ -644,7 +646,7 @@ main hr, .footer hr {
       text-decoration: none; }
       .navigation__link:hover::before {
         opacity: 1;
-        transform: translate(-50%, calc(-50% - 2px)) scale(1); }
+        transform: translate(-50%, calc(-50% - 1px)) scale(1); }
     .navigation__link::before {
       height: calc(100% + 4px); }
     .navigation__link .description {
@@ -728,7 +730,7 @@ main hr, .footer hr {
               text-decoration: none; }
               .navigation .name .avatar__tooltip p a:hover::before {
                 opacity: 1;
-                transform: translate(-50%, calc(-50% - 2px)) scale(1); }
+                transform: translate(-50%, calc(-50% - 1px)) scale(1); }
         .navigation .name .avatar__tooltip::before {
           content: '';
           width: 12px;
@@ -1414,7 +1416,7 @@ main hr, .footer hr {
     text-decoration: none; }
     .template--work .project a:hover::before {
       opacity: 1;
-      transform: translate(-50%, calc(-50% - 2px)) scale(1); }
+      transform: translate(-50%, calc(-50% - 1px)) scale(1); }
   .template--work .project a::before {
     height: calc(100% + 1.5rem);
     width: calc(100% + 1.5rem);
